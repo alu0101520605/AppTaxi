@@ -1,0 +1,29 @@
+[data-theme="dark"] {
+
+  --base-white: #FFFFFF;
+  --base-neutral-light: #94A3B8;
+  --base-neutral: #64748B;
+  --base-neutral-dark: #334155;
+  --base-blue: #1D4ED8;
+  --base-blue-light: #2563EB;
+  --base-green: #16A34A;
+  --base-red: #B91C1C;
+  --base-surface: #1E293B;
+  --base-bg: #0F172A;
+
+
+  --color-background: var(--base-bg);
+  --color-surface: var(--base-surface);
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #CBD5E1;
+  --color-border: var(--base-neutral-dark);
+  --color-brand: var(--base-blue);
+  --color-success: var(--base-green);
+  --color-error: var(--base-red);
+
+ 
+  --state-brand-hover: rgba(37, 99, 235, 0.16);
+  --state-brand-pressed: rgba(29, 78, 216, 0.24);
+  --state-neutral-hover: rgba(248, 250, 252, 0.08);
+  --state-neutral-pressed: rgba(248, 250, 252, 0.16);
+}

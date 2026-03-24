@@ -1,0 +1,62 @@
+:root {
+
+  --button-primary-bg: var(--color-brand);
+  --button-primary-text: #FFFFFF;
+  --button-primary-hover: #2145AC;
+  --button-primary-pressed: #162B63;
+
+ 
+  --button-secondary-bg: transparent;
+  --button-secondary-text: var(--color-brand);
+  --button-secondary-border: var(--color-brand);
+  --button-secondary-hover: var(--state-brand-hover);
+  --button-secondary-pressed: var(--state-brand-pressed);
+
+  --button-disabled-bg: #E5E7EB;
+  --button-disabled-text: #4B5563;
+  --button-disabled-border: #D1D5DB;
+
+
+  --button-apple-bg: #111827;
+  --button-apple-text: #FFFFFF;
+  --button-apple-hover: #0F172A;
+  --button-apple-pressed: #0B1220;
+
+
+  --button-google-bg: #FFFFFF;
+  --button-google-text: var(--color-text-primary);
+  --button-google-border: var(--color-border);
+  --button-google-hover: #F9FAFB;
+  --button-google-pressed: var(--base-neutral-light);
+}
+
+[data-theme="dark"] {
+
+  --button-primary-bg: var(--color-brand);
+  --button-primary-text: #FFFFFF;
+  --button-primary-hover: var(--base-blue-light);
+  --button-primary-pressed: #1E40AF;
+
+  --button-secondary-bg: transparent;
+  --button-secondary-text: #F9FAFB;
+  --button-secondary-border: var(--color-border);
+  --button-secondary-hover: var(--state-neutral-hover);
+  --button-secondary-pressed: var(--state-neutral-pressed);
+
+  --button-disabled-bg: #1E293B;
+  --button-disabled-text: #94A3B8;
+  --button-disabled-border: #475569;
+
+
+  --button-apple-bg: #111827;
+  --button-apple-text: #FFFFFF;
+  --button-apple-hover: #1F2937;
+  --button-apple-pressed: #374151;
+
+
+  --button-google-bg: var(--base-surface);
+  --button-google-text: var(--color-text-primary);
+  --button-google-border: var(--color-border);
+  --button-google-hover: #273449;
+  --button-google-pressed: var(--base-neutral-dark);
+}

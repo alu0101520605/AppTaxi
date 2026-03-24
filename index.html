@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Acesso | Need Taxi</title>
+</head>
+
+<body>
+  <main>
+    <div>
+      <label for="language">Idioma:</label>
+      <select id="language">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    <header>
+      <h1 data-i18n="app.name">Need Taxi</h1>
+      <p data-i18n="app.tagline">Tu taxi fácil y completo</p>
+    </header>
+
+    <section>
+      <h2 data-i18n="auth.login.welcome">¡Bienvenido!</h2>
+      <p data-i18n="auth.login.subtitle">Inicia sesión para continuar</p>
+    </section>
+
+    <section>
+      <button type="button" class="btn btn-apple" data-i18n="auth.login.continue_with_apple">
+        Continuar con Apple
+      </button>
+
+      <button type="button" class="btn btn-google" data-i18n="auth.login.continue_with_google">
+        Continuar con Google
+      </button>
+
+      <button type="button" class="btn btn-primary" data-i18n="auth.login.continue_with_phone">
+        Continuar con teléfono
+      </button>
+    </section>
+
+    <footer>
+      <p data-i18n="auth.login.no_account">¿No tienes cuenta?</p>
+    </footer>
+  </main>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

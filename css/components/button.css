@@ -1,0 +1,42 @@
+.btn-primary {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background: var(--button-primary-hover);
+  border-radius: 25%;
+}
+
+.btn-primary:active {
+  background: var(--button-primary-pressed);
+}
+
+.btn-apple {
+  background: var(--button-apple-bg);
+  color: var(--button-apple-text);
+  border: 1px solid transparent;
+}
+
+.btn-apple:hover {
+  background: var(--button-apple-hover);
+}
+
+.btn-apple:active {
+  background: var(--button-apple-pressed);
+}
+
+.btn-google {
+  background: var(--button-google-bg);
+  color: var(--button-google-text);
+  border: 1px solid var(--button-google-border);
+}
+
+.btn-google:hover {
+  background: var(--button-google-hover);
+}
+
+.btn-google:active {
+  background: var(--button-google-pressed);
+}

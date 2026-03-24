@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--! Solucionar problemas con icons Resvisar generador "https://realfavicongenerator.net/" o alternativa-->
+  <link rel="icon" href="../assets/icons/favicon-96x96.png" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Reserva | Need Taxi</title>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <h1>Reserva</h1>
+
+    <!--! TEMPORAL -->
+    <div>
+      <label for="language">Idioma:</label>
+      <select id="language" name="language">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <!--! FIN TEMPORAL -->
+    <div class="booking-type">
+      <input type="radio" id="booking-now" name="booking-type" value="now" checked>
+      <label for="booking-now">Ahora</label>
+
+      <input type="radio" id="booking-later" name="booking-type" value="date-time">
+      <label for="booking-later">Programar</label>
+    </div>
+    <form action="" method="post">
+
+      <section id="booking-form-main-view">
+        <h2>Datos del trayecto</h2>
+
+        <div class="form-row date-container">
+          <div class="form-group">
+            <label for="date" data-i18n="booking.date">Fecha</label>
+            <input type="date" id="date" name="date">
+          </div>
+
+          <div class="form-group">
+            <label for="time" data-i18n="booking.time">Hora</label>
+            <input type="time" id="time" name="time">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="origin" data-i18n="booking.origin">Origen</label>
+            <select id="origin" name="origin">
+              <option value="" disabled selected>Selecciona un origen</option>
+              <option value="tfs">Aeropuerto Tenerife Sur</option>
+              <option value="tfn">Aeropuerto Tenerife Norte</option>
+              <option value="lpa">Aeropuerto Gran Canaria</option>
+              <option value="tfs">Aeropuerto Tenerife Sur</option>
+              <option value="tfn">Aeropuerto Tenerife Norte</option>
+              <option value="lpa">Aeropuerto Gran Canaria</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="destination" data-i18n="booking.destination">Destino</label>
+            <select id="destination" name="destination">
+              <option value="" disabled selected>Selecciona un destino</option>
+              <option value="tfn">DST1</option>
+              <option value="lpa">DST2</option>
+
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="passengers" data-i18n="booking.passengers">Pasajeros</label>
+            <input type="number" id="passengers" name="passengers" min="1" step="1" value="1">
+          </div>
+
+          <div class="form-group">
+            <label for="luggage" data-i18n="booking.luggage">Maletas</label>
+            <input type="number" id="luggage" name="luggage" min="0" step="1" value="0">
+          </div>
+        </div>
+
+        <div>
+          <label for="reduced-mobility">
+            <input type="checkbox" id="reduced-mobility" name="reduced_mobility"
+              aria-describedby="reduced-mobility-help">
+            <span data-i18n="booking.reduced_mobility">Personas con movilidad reducida</span>
+          </label>
+
+          <p id="reduced-mobility-help" data-i18n="booking.accessibility_details">
+            Indicar si algún pasajero necesita espacio o asistencia adicional
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="accessibility-notes" data-i18n="booking.accessibility_notes">
+            Observaciones de accesibilidad (PRM)
+          </label>
+          <textarea id="accessibility-notes" name="accessibility_notes" rows="4"></textarea>
+        </div>
+
+        <div>
+          <button type="button" class="btn" data-i18n="booking.specifications" aria-controls="booking-form-options-view"
+            aria-expanded="false">
+            Opciones adicionales
+          </button>
+        </div>
+      </section>
+
+      <section id="booking-form-options-view" hidden>
+        <h2>Opciones adicionales</h2>
+
+        <div class="additional-options-container">
+          <!--? Contenido de opciones adicionales -->
+        </div>
+      </section>
+
+      <section id="booking-form-summary-view">
+        <div class="summary-container">
+          <h2>Resumen</h2>
+
+          <button type="button" class="btn btn-primary" data-i18n="booking.confirm">
+            Continuar al pago
+          </button>
+        </div>
+      </section>
+
+    </form>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+
+</html>

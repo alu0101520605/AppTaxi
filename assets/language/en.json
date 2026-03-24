@@ -1,0 +1,98 @@
+{
+  "app": {
+    "name": "Need Taxi",
+    "tagline": "Your easy and complete taxi app"
+  },
+  "auth": {
+    "login": {
+      "welcome": "Welcome!",
+      "subtitle": "Sign in to continue",
+      "continue_with_apple": "Continue with Apple",
+      "continue_with_google": "Continue with Google",
+      "continue_with_phone": "Continue with phone",
+      "no_account": "Don't have an account?"
+    },
+    "register": {
+      "title": "Create account",
+      "phone_label": "Country code and phone number",
+      "phone_placeholder": "Enter your phone number",
+      "otp_method_label": "Verification method",
+      "otp_methods": {
+        "sms": "SMS",
+        "whatsapp": "WhatsApp",
+        "email": "Email"
+      },
+      "continue": "Continue",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "email_optional": "Email (optional, for billing)",
+      "terms": "I accept the Terms and Conditions",
+      "privacy": "I accept the Privacy Policy",
+      "create_account": "Create account",
+      "success_title": "Registration completed",
+      "success_subtitle": "Your account has been created successfully",
+      "go_to_login": "Go to login"
+    },
+    "otp": {
+      "title": "Verification",
+      "subtitle": "Enter the code we sent you",
+      "code_label": "Verification code",
+      "code_placeholder": "Enter the code",
+      "sent_by_sms": "We have sent you a code by SMS",
+      "sent_by_whatsapp": "We have sent you a code by WhatsApp",
+      "sent_by_email": "We have sent you a code by email",
+      "verifying": "Verifying code...",
+      "success": "Code verified successfully",
+      "error": "The code is not valid",
+      "try_again": "Please try again",
+      "resend_code": "Resend code"
+    }
+  },
+  "booking": {
+    "tabs": {
+      "request_now": "Request now",
+      "schedule": "Schedule"
+    },
+    "origin": "Origin",
+    "destination": "Destination",
+    "date": "Date",
+    "time": "Time",
+    "select_option": "Select an option",
+    "select_date": "Select a date",
+    "select_time": "Select a time",
+    "passengers": "Passengers",
+    "luggage": "Luggage",
+    "reduced_mobility": "People with reduced mobility(PRM)",
+    "accessibility_details": "Please let us know if any passenger requires extra space or additional assistance.",
+    "accessibility_notes": "Accessibility notes(PRM)",
+    "additional_options": "Additional options",
+    "summary": {
+      "origin": "Origin",
+      "destination": "Destination",
+      "price": "Estimated price"
+    },
+    "confirm": "Confirm",
+    "continue_to_payment": "Pay"
+  },
+  "payment": {
+    "title": "Payment",
+    "trip_summary": "Trip summary",
+    "origin": "Origin",
+    "destination": "Destination",
+    "total": "Total price",
+    "pay": "Pay"
+  },
+  "additional_options": {
+    "pets": "Pets",
+    "pets_hint": "Does not include assistance animals.",
+    "special_luggage": "Special luggage",
+    "special_luggage_examples": "Foldable strollers, bicycles, surfboards...",
+    "notes": "Additional details",
+    "notes_placeholder": "Add details about pets or special luggage.",
+    "origin": "Origin",
+    "destination": "Destination",
+    "continue_to_payment": "Continue",
+    "pay": "Pay"
+  }
+}

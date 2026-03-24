@@ -1,0 +1,28 @@
+:root {
+
+  --base-white: #FFFFFF;
+  --base-neutral-light: #F3F4F6;
+  --base-neutral: #6B7280;
+  --base-neutral-dark: #1F2937;
+  --base-blue: #1E3A8A;
+  --base-blue-light: #2145AC;
+  --base-green: #16A34A;
+  --base-red: #B91C1C;
+  --base-surface: #FFFFFF;
+  --base-bg: #F3F4F6;
+
+  --color-background: var(--base-bg);
+  --color-surface: var(--base-surface);
+  --color-text-primary: var(--base-neutral-dark);
+  --color-text-secondary: var(--base-neutral);
+  --color-border: #E5E7EB;
+  --color-brand: var(--base-blue);
+  --color-success: var(--base-green);
+  --color-error: var(--base-red);
+
+
+  --state-brand-hover: rgba(30, 58, 138, 0.08);
+  --state-brand-pressed: rgba(30, 58, 138, 0.16);
+  --state-neutral-hover: rgba(31, 41, 55, 0.06);
+  --state-neutral-pressed: rgba(31, 41, 55, 0.12);
+}
