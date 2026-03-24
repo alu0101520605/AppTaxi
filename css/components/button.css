@@ -6,7 +6,7 @@
 
 .btn-primary:hover {
   background: var(--button-primary-hover);
-  border-radius: 25%;
+  border-radius: 15px;
 }
 
 .btn-primary:active {
