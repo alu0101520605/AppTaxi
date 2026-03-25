@@ -68,6 +68,7 @@
     "accessibility_notes": "Observaciones de accesibilidad(PMR)",
     "additional_options": "Opciones adicionales",
     "summary": {
+      "title": "Resumen",
       "origin": "Origen",
       "destination": "Destino",
       "price": "Precio estimado"
@@ -94,5 +95,32 @@
     "destination": "Destino",
     "continue_to_payment": "Continuar al pago",
     "pay": "Pagar"
+  },
+  "components": {
+    "header": {
+      "home": "Inicio",
+      "request_reservation": "Solicitar reserva",
+      "manage_reservation": "Gestionar reserva",
+      "logo_alt": "NeedTaxi - Volver al inicio",
+      "login": "Iniciar sesión",
+      "contact": "Contacto",
+      "profile": "Perfil"
+    },
+    "footer": {
+      "company": "Compañía",
+      "about_us": "Sobre nosotros",
+      "drivers": "Nuestros conductores",
+      "help_center": "Centro de ayuda",
+      "legal": "Legal",
+      "terms": "Términos de servicio",
+      "privacy": "Política de privacidad",
+      "cookies": "Política de cookies",
+      "copyright": "&copy; 2026 NeedTaxi. Todos los derechos reservados."
+    }
+  },
+  "language_selector": {
+    "language": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español"
   }
 }
