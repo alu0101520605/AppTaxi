@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="icon" href="/assets/icons/favicon-96x96.png" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/pages/gestionar.css">
+  <script type="module" src="/js/app.js"></script>
+  <title>Gestionar reserva | Need Taxi</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <header-taxi></header-taxi>
+
+    <main class="manage-page" id="main">
+
+      <article class="manage-widget" role="dialog" aria-labelledby="widget-title" aria-describedby="widget-desc">
+
+        <!-- Header band -->
+        <div class="widget-header">
+          <div class="widget-header-icon" aria-hidden="true">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <h1 id="widget-title" data-i18n="manage.page_title">Gestionar reserva</h1>
+          <p id="widget-desc" data-i18n="manage.page_subtitle">Consulta o cancela tu reserva sin necesidad de iniciar sesión.</p>
+        </div>
+
+        <!-- Body: search form -->
+        <div class="widget-body">
+
+          <div class="hint-box" role="note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <p data-i18n="manage.hint">Introduce el <strong>código de reserva</strong> y el <strong>correo electrónico</strong> con el que realizaste la reserva.</p>
+          </div>
+
+          <form id="manage-form" novalidate aria-label="Formulario de búsqueda de reserva">
+
+            <div class="field-group">
+              <label for="booking-code">
+                <i class="fa-solid fa-hashtag" aria-hidden="true"></i>
+                <span data-i18n="manage.code_label">Código de reserva</span>
+              </label>
+              <input
+                type="text"
+                id="booking-code"
+                name="booking_code"
+                placeholder="Ej. NT-20251234"
+                data-i18n-placeholder="manage.code_placeholder"
+                autocomplete="off"
+                autocapitalize="characters"
+                spellcheck="false"
+                maxlength="20"
+                required
+                aria-required="true"
+              >
+            </div>
+
+            <div class="field-group">
+              <label for="booking-email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span data-i18n="manage.email_label">Correo electrónico</span>
+              </label>
+              <input
+                type="email"
+                id="booking-email"
+                name="email"
+                placeholder="tu@correo.com"
+                autocomplete="email"
+                required
+                aria-required="true"
+              >
+            </div>
+
+            <button type="submit" class="btn-manage" id="search-btn" aria-live="polite">
+              <span class="btn-text">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <span data-i18n="manage.search_btn">Buscar reserva</span>
+              </span>
+              <span class="spinner" role="status" aria-label="Buscando reserva…"></span>
+            </button>
+
+          </form>
+
+          <div class="error-msg" id="error-msg" role="alert" aria-atomic="true">
+            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+            <span data-i18n="manage.error">No encontramos ninguna reserva con esos datos. Comprueba el código y el correo.</span>
+          </div>
+
+          <!-- Result panel (shown after search) -->
+          <div class="result-panel" id="result-panel" aria-live="polite" aria-atomic="false">
+
+            <div class="widget-divider" role="separator"></div>
+
+            <div class="result-status confirmed" id="result-status-badge" role="status">
+              <div class="status-icon">
+                <i class="fa-solid fa-check" id="status-icon-i" aria-hidden="true"></i>
+              </div>
+              <div class="status-text">
+                <strong id="status-label">Reserva confirmada</strong>
+                <span id="booking-ref">Ref. NT-20251234</span>
+              </div>
+            </div>
+
+            <div class="reservation-detail-grid">
+
+              <div class="route-cell" role="region" aria-label="Trayecto">
+                <div class="route-endpoint">
+                  <div class="endpoint-label" data-i18n="manage.label_origin">Origen</div>
+                  <div class="endpoint-value" id="detail-origin">Aeropuerto Tenerife Sur</div>
+                </div>
+                <div class="route-arrow" aria-hidden="true">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="route-endpoint" style="text-align:right">
+                  <div class="endpoint-label" data-i18n="manage.label_destination">Destino</div>
+                  <div class="endpoint-value" id="detail-destination">Hotel Costa Adeje</div>
+                </div>
+              </div>
+
+              <div class="detail-cell">
+                <div class="cell-label">
+                  <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+                  <span data-i18n="manage.label_date">Fecha</span>
+                </div>
+                <div class="cell-value" id="detail-date">—</div>
+              </div>
+
+              <div class="detail-cell">
+                <div class="cell-label">
+                  <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                  <span data-i18n="manage.label_time">Hora</span>
+                </div>
+                <div class="cell-value" id="detail-time">—</div>
+              </div>
+
+              <div class="detail-cell">
+                <div class="cell-label">
+                  <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                  <span data-i18n="manage.label_passengers">Pasajeros</span>
+                </div>
+                <div class="cell-value" id="detail-passengers">—</div>
+              </div>
+
+              <div class="detail-cell">
+                <div class="cell-label">
+                  <i class="fa-solid fa-suitcase" aria-hidden="true"></i>
+                  <span data-i18n="manage.label_luggage">Maletas</span>
+                </div>
+                <div class="cell-value" id="detail-luggage">—</div>
+              </div>
+
+            </div>
+
+            <div class="result-actions">
+              <button type="button" class="btn-outline" id="btn-download" aria-label="Descargar confirmación de reserva en PDF">
+                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                <span data-i18n="manage.btn_download">Descargar</span>
+              </button>
+              <button type="button" class="btn-danger" id="btn-cancel" aria-label="Solicitar cancelación de esta reserva">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                <span data-i18n="manage.btn_cancel">Cancelar reserva</span>
+              </button>
+            </div>
+
+          </div>
+          <!-- /result-panel -->
+
+        </div>
+        <!-- /widget-body -->
+
+        <div class="widget-footer-note">
+          <p><span data-i18n="manage.footer_note">¿Tienes cuenta?</span> <a href="/login.html" data-i18n="manage.footer_link">Inicia sesión</a> para ver todas tus reservas.</p>
+        </div>
+
+      </article>
+
+    </main>
+
+    <footer-taxi></footer-taxi>
+
+  </div>
+
+  <script>
+    // ── Demo data (replace with real API call) ──
+    const MOCK_RESERVATIONS = {
+      'NT-20251234': {
+        email: 'demo@needtaxi.com',
+        status: 'confirmed',
+        origin: 'Aeropuerto Tenerife Sur',
+        destination: 'Costa Adeje – Hotel',
+        date: '28 mar 2025',
+        time: '15:30',
+        passengers: 2,
+        luggage: 3
+      },
+      'NT-20251100': {
+        email: 'usuario@gmail.com',
+        status: 'pending',
+        origin: 'Aeropuerto Tenerife Norte',
+        destination: 'Santa Cruz de Tenerife',
+        date: '02 abr 2025',
+        time: '09:00',
+        passengers: 1,
+        luggage: 1
+      }
+    };
+
+    const STATUS_CONFIG = {
+      confirmed: { label: 'Reserva confirmada',  icon: 'fa-check',   cssClass: 'confirmed' },
+      pending:   { label: 'Pendiente de confirmar', icon: 'fa-clock', cssClass: 'pending'   },
+      cancelled: { label: 'Reserva cancelada',    icon: 'fa-xmark',   cssClass: 'cancelled' }
+    };
+
+    const form       = document.getElementById('manage-form');
+    const searchBtn  = document.getElementById('search-btn');
+    const errorMsg   = document.getElementById('error-msg');
+    const resultPanel= document.getElementById('result-panel');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const code  = document.getElementById('booking-code').value.trim().toUpperCase();
+      const email = document.getElementById('booking-email').value.trim().toLowerCase();
+
+      // Reset state
+      errorMsg.classList.remove('visible');
+      resultPanel.classList.remove('visible');
+      searchBtn.classList.add('loading');
+      searchBtn.setAttribute('aria-busy', 'true');
+
+      // Simulated async lookup (swap for real fetch())
+      await new Promise(r => setTimeout(r, 900));
+
+      const reservation = MOCK_RESERVATIONS[code];
+      searchBtn.classList.remove('loading');
+      searchBtn.removeAttribute('aria-busy');
+
+      if (!reservation || reservation.email !== email) {
+        errorMsg.classList.add('visible');
+        document.getElementById('booking-code').focus();
+        return;
+      }
+
+      // Populate result
+      const cfg = STATUS_CONFIG[reservation.status] || STATUS_CONFIG.confirmed;
+      const badge = document.getElementById('result-status-badge');
+      badge.className = 'result-status ' + cfg.cssClass;
+      document.getElementById('status-icon-i').className = 'fa-solid ' + cfg.icon;
+      document.getElementById('status-label').textContent = cfg.label;
+      document.getElementById('booking-ref').textContent = 'Ref. ' + code;
+
+      document.getElementById('detail-origin').textContent      = reservation.origin;
+      document.getElementById('detail-destination').textContent = reservation.destination;
+      document.getElementById('detail-date').textContent        = reservation.date;
+      document.getElementById('detail-time').textContent        = reservation.time;
+      document.getElementById('detail-passengers').textContent  = reservation.passengers + (reservation.passengers === 1 ? ' persona' : ' personas');
+      document.getElementById('detail-luggage').textContent     = reservation.luggage + (reservation.luggage === 1 ? ' maleta' : ' maletas');
+
+      resultPanel.classList.add('visible');
+      resultPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Disable cancel for already-cancelled reservations
+      document.getElementById('btn-cancel').disabled = reservation.status === 'cancelled';
+    });
+
+    // Cancel button demo
+    document.getElementById('btn-cancel').addEventListener('click', () => {
+      if (confirm('¿Seguro que deseas cancelar esta reserva? Esta acción no se puede deshacer.')) {
+        const badge = document.getElementById('result-status-badge');
+        badge.className = 'result-status cancelled';
+        document.getElementById('status-icon-i').className = 'fa-solid fa-xmark';
+        document.getElementById('status-label').textContent = 'Reserva cancelada';
+        document.getElementById('btn-cancel').disabled = true;
+      }
+    });
+
+    // Download button demo
+    document.getElementById('btn-download').addEventListener('click', () => {
+      alert('La confirmación se enviará al correo electrónico de la reserva.');
+    });
+  </script>
+
+</body>
+
+</html>
