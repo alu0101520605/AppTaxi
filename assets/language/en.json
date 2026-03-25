@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Need Taxi",
-    "tagline": "Your easy and complete taxi app"
+    "tagline": "Safe, fast, and stress-free transfers. Wherever you are, we’re there."
   },
   "auth": {
     "login": {
@@ -104,7 +104,11 @@
       "logo_alt": "NeedTaxi - Back to Home",
       "login": "Login",
       "contact": "Contact",
-      "profile": "Profile"
+      "profile": "Profile",
+      "mobile": {
+        "request_reservation": "Request",
+        "manage_reservation": "Manage"
+      } 
     },
     "footer": {
       "company": "Company",
@@ -115,7 +119,7 @@
       "terms": "Terms of service",
       "privacy": "Privacy policy",
       "cookies": "Cookies policy",
-      "copyright": "&copy; 2026 NeedTaxi. All rights reserved."
+      "copyright": " 2026 NeedTaxi. All rights reserved."
     }
   },
   "language_selector": {
