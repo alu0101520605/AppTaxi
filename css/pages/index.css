@@ -1,0 +1,58 @@
+.banner-carousel {
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
+    height: 400px;
+}
+
+.slide-image-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-image-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(
+        to right, 
+        #0a1b48 0%, 
+        rgba(3, 25, 74, 0.765) 20%, 
+        rgba(4, 158, 193, 0) 90%
+    );
+    z-index: 2;
+}
+
+.slide-image-overlay img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    
+    z-index: 3; 
+    text-align: left;
+    color: #ffffff; 
+    width: 90%; 
+    max-width: 600px;
+}
+
+.slide-content h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
