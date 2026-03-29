@@ -3,7 +3,7 @@
 @import url("./tokens/button.css");
 @import url("./components/button.css");
 @import url("./components/form.css");
-@import url("./components/headerfooter.css");
+@import url("./components/header-footer.css");
 
 * {
   margin: 0;
