@@ -96,6 +96,76 @@
     "continue_to_payment": "Continue",
     "pay": "Pay"
   },
+  "pages": {
+    "landing": {
+      "carousel": {
+        "slide1": {
+          "title": "Welcome!",
+          "text": "Enjoy without worries. <br>We take care of the transport."
+        },
+        "slide2": {
+          "title": "ANYWHERE IN TENERIFE",
+          "text": "Service across the island, airport transfers, beaches, and tourist areas.<br> Coverage in the Canary Islands."
+        },
+        "slide3": {
+          "title": "ADAPTED MOBILITY",
+          "text": "Spacious vehicles equipped with ramps."
+        },
+        "slide4": {
+          "title": "FAST AND SECURE",
+          "text": "We arrive in minutes. <br>Professional drivers for a journey with total peace of mind."
+        }
+      },
+      "intro_form": {
+        "title": "Manage Booking",
+        "subtitle": "Quickly view or cancel your transfer.",
+        "code_label": "Booking code",
+        "code_placeholder": "E.g. NT-20251234",
+        "email_label": "Email address",
+        "email_placeholder": "you@email.com",
+        "submit_btn": "Continue"
+      },
+      "features": {
+        "airport": {
+          "title": "Airport Transfers",
+          "text": "Direct connection to Tenerife South (TFS) and Tenerife North (TFN). No waiting."
+        },
+        "price": {
+          "title": "Fixed Price",
+          "text": "Know the cost of your journey before you get in. No surprises or hidden fees."
+        },
+        "coverage": {
+          "title": "Total Coverage",
+          "text": "From Santa Cruz to Costa Adeje. We reach every corner of the island."
+        },
+        "adapted": {
+          "title": "Adapted Fleet",
+          "text": "100% accessible vehicles for people with reduced mobility (PRM)."
+        }
+      },
+      "services": {
+        "header": {
+          "title": "Our Services",
+          "subtitle": "Discover everything Need Taxi can do for you during your stay in the Canary Islands."
+        },
+        "tours": {
+          "title": "Excursions and Tours",
+          "text": "Discover Teide National Park, Masca, or Garachico with our expert local drivers.",
+          "btn": "View Routes"
+        },
+        "business": {
+          "title": "Business Service",
+          "text": "Corporate transfer management, monthly billing, and priority support for your employees.",
+          "btn": "Learn more"
+        },
+        "app": {
+          "title": "Book from the App",
+          "text": "Download our free app. Track your taxi in real-time and manage your bookings easily.",
+          "btn": "Download App"
+        }
+      }
+    }
+  },
   "components": {
     "header": {
       "home": "Home",

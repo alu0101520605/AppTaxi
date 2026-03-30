@@ -96,6 +96,76 @@
     "continue_to_payment": "Continuar al pago",
     "pay": "Pagar"
   },
+  "pages": {
+    "landing": {
+      "carousel": {
+        "slide1": {
+          "title": "¡Bienvenido!",
+          "text": "Disfruta sin preocupaciones. <br>Nosotros nos encargamos del transporte."
+        },
+        "slide2": {
+          "title": "CUALQUIER ZONA DE TENERIFE",
+          "text": "Servicio en toda la isla, traslados al aeropuerto, playas y zonas turísticas.<br> Cobertura en Canarias."
+        },
+        "slide3": {
+          "title": "MOVILIDAD ADAPTADA",
+          "text": "Vehículos amplios y equipados con rampa."
+        },
+        "slide4": {
+          "title": "RÁPIDO Y SEGURO",
+          "text": "Llegamos en minutos. <br>Conductores profesionales para un viaje con total tranquilidad."
+        }
+      },
+      "intro_form": {
+        "title": "Gestión de Reserva",
+        "subtitle": "Consulta o cancela tu traslado rápidamente.",
+        "code_label": "Código de reserva",
+        "code_placeholder": "Ej. NT-20251234",
+        "email_label": "Correo electrónico",
+        "email_placeholder": "tu@correo.com",
+        "submit_btn": "Continuar"
+      },
+      "features": {
+        "airport": {
+          "title": "Traslados desde Aeropuerto",
+          "text": "Conexión directa con Tenerife Sur (TFS) y Tenerife Norte (TFN). Sin esperas."
+        },
+        "price": {
+          "title": "Precio Cerrado",
+          "text": "Conoce el coste de tu trayecto antes de subir. Sin sorpresas ni tarifas ocultas."
+        },
+        "coverage": {
+          "title": "Cobertura Total",
+          "text": "Desde Santa Cruz hasta Costa Adeje. Llegamos a cualquier rincón de la isla."
+        },
+        "adapted": {
+          "title": "Flota Adaptada",
+          "text": "Vehículos 100% accesibles para personas con movilidad reducida (PMR)."
+        }
+      },
+      "services": {
+        "header": {
+          "title": "Nuestros Servicios",
+          "subtitle": "Descubre todo lo que Need Taxi puede hacer por ti durante tu estancia en Canarias."
+        },
+        "tours": {
+          "title": "Excursiones y Tours",
+          "text": "Descubre el Parque Nacional del Teide, Masca o Garachico con nuestros conductores locales expertos.",
+          "btn": "Ver Rutas"
+        },
+        "business": {
+          "title": "Servicio para Empresas",
+          "text": "Gestión de traslados corporativos, facturación mensual y atención prioritaria para tus empleados.",
+          "btn": "Saber más"
+        },
+        "app": {
+          "title": "Reserva desde la App",
+          "text": "Descarga nuestra aplicación gratuita. Rastrea tu taxi en tiempo real y gestiona tus reservas fácilmente.",
+          "btn": "Descargar App"
+        }
+      }
+    }
+  },
   "components": {
     "header": {
       "home": "Inicio",
