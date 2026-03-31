@@ -51,7 +51,8 @@
 }
 
 .nav-right {
-    justify-content: center; 
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-logo {
@@ -139,6 +140,70 @@
 .badge-wcag img {
     border: 1px solid #ffffff;
     border-radius: 4px;
+}
+
+.language-selector {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    color: inherit; /* Hereda el color del padre para el hover */
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    padding: 0;     
+}
+
+.lang-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el icono y las letras */
+    color: #6B7280; /* Color gris de tus enlaces */
+    transition: color 0.3s ease;
+}
+
+.lang-wrapper:hover, 
+.lang-wrapper:focus-within {
+    color: #2563EB; /* Se vuelve azul al pasar el ratón */
+}
+
+.lang-wrapper .language-selector {
+    font-size: large; /* Mismo tamaño que nav-right a */
+    font-weight: bold;
+}
+
+.lang-wrapper .language-selector option {
+    color: #333; /* Color oscuro para las opciones al desplegarse */
+}
+
+/* MÓVIL */
+.lang-wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6B7280;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lang-wrapper-mobile:hover, 
+.lang-wrapper-mobile:focus-within {
+    color: #2563EB; /* Azul al tocar */
+}
+
+.lang-wrapper-mobile .icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.lang-wrapper-mobile .language-selector {
+    font-size: 12px; /* Mismo tamaño que tus enlaces móviles */
+    font-weight: bold;
+}
+
+.lang-wrapper-mobile .language-selector option {
+    color: #333;
 }
 
 /* Tablets y móviles */

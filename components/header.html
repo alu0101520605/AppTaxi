@@ -1,44 +1,62 @@
 <header class="header">
     <nav class="navigation" aria-label="main menu">
         <ul class="nav-left">
-            <li><a href="booking.html" data-i18n="components.header.request_reservation">Solicitar reserva</a></li>
-            <li><a href="manage-booking.html" data-i18n="components.header.manage_reservation">Gestionar reserva</a></li>
+            <li><a href="/pages/booking.html" data-i18n="components.header.request_reservation">Solicitar reserva</a></li>
+            <li><a href="/pages/manage-booking.html" data-i18n="components.header.manage_reservation">Gestionar reserva</a></li>
         </ul>
 
         <div class="nav-logo">
-            <a href="index.html">
-                <img id="logo" src="../assets/imagenes/logo.png" alt="NeedTaxi - Volver al inicio" data-i18n="components.header.logo_alt" />
+            <a href="/index.html">
+                <img id="logo" src="/assets/imagenes/logo.png" alt="NeedTaxi - Volver al inicio" data-i18n="components.header.logo_alt" />
             </a>
         </div>
 
         <ul class="nav-right">
-            <li><a href="login.html" data-i18n="components.header.login">Iniciar sesión</a></li>
-            <li><a href="contact.html" data-i18n="components.header.contact">Contacto</a></li>
+            <li class="lang-item">
+                <label for="language" class="lang-wrapper">
+                    <i class="fa-solid fa-language icon" aria-hidden="true"></i>
+                    <select name="language" class="language-selector" aria-label="Seleccionar idioma">
+                        <option value="es" data-i18n="language_selector.spanish">ES</option>
+                        <option value="en" data-i18n="language_selector.english">EN</option>
+                    </select>
+                </label>
+            </li>
+            <li><a href="/pages/login.html" data-i18n="components.header.login">Iniciar sesión</a></li>
+            <li><a href="/pages/contact.html" data-i18n="components.header.contact">Contacto</a></li>
         </ul>
     </nav>
 </header>
 <nav class="navigation-mobile" aria-label="Navegación principal de la aplicación" data-i18n="">
     <ul class="nav-mobile-list">
         <li>
-            <a href="solicitar.html">
+            <a href="/pages/booking.html">
                 <i class="fa-solid fa-taxi icon" aria-hidden="true"></i>
                 <span class="text" data-i18n="components.header.mobile.request_reservation">Solicitar</span>
             </a>
         </li>
         <li>
-            <a href="gestionar.html">
+            <a href="/pages/manage-booking.html">
                 <i class="fa-solid fa-calendar-days icon" aria-hidden="true"></i>
                 <span class="text" data-i18n="components.header.mobile.manage_reservation">Gestionar</span>
             </a>
         </li>
         <li>
-            <a href="/login.html">
+            <label for="language" class="lang-wrapper-mobile">  
+                <i class="fa-solid fa-language icon" aria-hidden="true"></i>  
+                <select name="language" class="language-selector" aria-label="Seleccionar idioma">
+                    <option value="es" data-i18n="language_selector.spanish">ES</option>
+                    <option value="en" data-i18n="language_selector.english">EN</option>
+                </select>
+            </label>
+        </li>
+        <li>
+            <a href="/pages/login.html">
                 <i class="fa-solid fa-user icon" aria-hidden="true"></i>
                 <span class="text" data-i18n="components.header.profile">Perfil</span>
             </a>
         </li>
         <li>
-            <a href="/contacto.html">
+            <a href="/pages/contact.html">
                 <i class="fa-solid fa-paper-plane icon" aria-hidden="true"></i>
                 <span class="text" data-i18n="components.header.contact">Contacto</span>
             </a>

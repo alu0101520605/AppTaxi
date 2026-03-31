@@ -1,5 +1,3 @@
-const languageSelector = document.getElementById("language");
-
 export async function loadLanguage(language) {
   try {
     const response = await fetch(`/assets/language/${language}.json`);
@@ -12,6 +10,8 @@ export async function loadLanguage(language) {
 
     translatePage(translations);
     document.documentElement.lang = language;
+
+    const languageSelector = document.getElementById("language");
     languageSelector.value = language;
   } catch (error) {
     console.error("Error loading translations:", error);
@@ -41,8 +41,14 @@ function translatePage(translations) {
   });
 }
 
-if (languageSelector) {
-    languageSelector.addEventListener("change", (event) => {
-        loadLanguage(event.target.value);
-    });
-}
+document.addEventListener("change", (event) => {
+    if (event.target && event.target.classList.contains("language-selector")) {
+        const nuevoIdioma = event.target.value;
+        
+        loadLanguage(nuevoIdioma);
+        
+        document.querySelectorAll(".language-selector").forEach(select => {
+            select.value = nuevoIdioma;
+        });
+    }
+});
