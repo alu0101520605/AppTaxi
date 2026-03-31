@@ -12,7 +12,7 @@ export async function loadLanguage(language) {
     document.documentElement.lang = language;
 
     const languageSelector = document.getElementById("language");
-    languageSelector.value = language;
+    if (language.value) languageSelector.value = language;
   } catch (error) {
     console.error("Error loading translations:", error);
   }
@@ -32,23 +32,23 @@ function translatePage(translations) {
     const translatedText = getTranslation(translations, translationKey);
 
     if (translatedText !== undefined) {
-      if (translatedText.includes('<')) {
-            element.innerHTML = translatedText;
-        } else {
-            element.textContent = translatedText;
-        }
+      if (translatedText.includes("<")) {
+        element.innerHTML = translatedText;
+      } else {
+        element.textContent = translatedText;
+      }
     }
   });
 }
 
 document.addEventListener("change", (event) => {
-    if (event.target && event.target.classList.contains("language-selector")) {
-        const nuevoIdioma = event.target.value;
-        
-        loadLanguage(nuevoIdioma);
-        
-        document.querySelectorAll(".language-selector").forEach(select => {
-            select.value = nuevoIdioma;
-        });
-    }
+  if (event.target && event.target.classList.contains("language-selector")) {
+    const nuevoIdioma = event.target.value;
+
+    loadLanguage(nuevoIdioma);
+
+    document.querySelectorAll(".language-selector").forEach((select) => {
+      select.value = nuevoIdioma;
+    });
+  }
 });
