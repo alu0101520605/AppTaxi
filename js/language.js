@@ -12,6 +12,7 @@ export async function loadLanguage(language) {
     document.documentElement.lang = language;
 
     const languageSelector = document.getElementById("language");
+
     if (language.value) languageSelector.value = language;
   } catch (error) {
     console.error("Error loading translations:", error);
