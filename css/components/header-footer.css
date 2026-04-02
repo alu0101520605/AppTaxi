@@ -1,11 +1,11 @@
 .container {
-    background-color: #F3F4F6;
+    background-color: var(--color-background);
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
 
 .header {   
-    background-color: #FFFFFF;
+    background-color: var(--color-surface);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -38,12 +38,12 @@
 }
 
 .nav-left a, .nav-right a {
-    color: #6B7280;
+    color: var(--color-text-secondary);
     text-decoration: none;
 }
 
 .nav-left a:focus, .nav-left a:hover, .nav-right a:focus, .nav-right a:hover {
-    color: #2563EB;
+    color: var(--color-brand);
 }
 
 .nav-left {
@@ -53,6 +53,12 @@
 .nav-right {
     justify-content: center;
     align-items: center;
+}
+
+.nav-left a[aria-current="page"],
+.nav-right a[aria-current="page"],
+.nav-mobile-list a[aria-current="page"] {
+    color: var(--base-blue-light2);
 }
 
 .nav-logo {
@@ -72,7 +78,7 @@
 
 .footer {
     background-color: #1a1a1a; 
-    color: #e0e0e0; 
+    color: var(--base-neutral-light); 
     padding: 60px 20px 20px 20px; 
     font-size: 14px;
 }
@@ -94,7 +100,7 @@
 }
 
 .footer-title {
-    color: #ffffff;
+    color: var(--base-white);
     font-size: 18px;
     margin-bottom: 20px;
     font-weight: 600;
@@ -114,7 +120,7 @@
 }
 
 .footer-links a {
-    color: #e0e0e0;
+    color: var(--base-neutral-light);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -138,8 +144,20 @@
 }
 
 .badge-wcag img {
-    border: 1px solid #ffffff;
+    border: 1px solid var(--base-white);
     border-radius: 4px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .language-selector {
@@ -147,7 +165,7 @@
     -webkit-appearance: none;
     background: transparent;
     border: none;
-    color: inherit; /* Hereda el color del padre para el hover */
+    color: inherit; 
     font-family: inherit;
     cursor: pointer;
     outline: none;
@@ -158,23 +176,23 @@
 .lang-wrapper {
     display: flex;
     align-items: center;
-    gap: 8px; /* Espacio entre el icono y las letras */
-    color: #6B7280; /* Color gris de tus enlaces */
+    gap: 8px; 
+    color: var(--color-text-secondary); 
     transition: color 0.3s ease;
 }
 
 .lang-wrapper:hover, 
 .lang-wrapper:focus-within {
-    color: #2563EB; /* Se vuelve azul al pasar el ratón */
+    color: var(--color-brand); 
 }
 
 .lang-wrapper .language-selector {
-    font-size: large; /* Mismo tamaño que nav-right a */
+    font-size: large;
     font-weight: bold;
 }
 
 .lang-wrapper .language-selector option {
-    color: #333; /* Color oscuro para las opciones al desplegarse */
+    color: var(--color-text-primary); 
 }
 
 /* MÓVIL */
@@ -182,14 +200,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #6B7280;
+    color: var(--color-text-secondary);
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .lang-wrapper-mobile:hover, 
 .lang-wrapper-mobile:focus-within {
-    color: #2563EB; /* Azul al tocar */
+    color: var(--color-brand); 
 }
 
 .lang-wrapper-mobile .icon {
@@ -198,12 +216,12 @@
 }
 
 .lang-wrapper-mobile .language-selector {
-    font-size: 12px; /* Mismo tamaño que tus enlaces móviles */
+    font-size: 12px;
     font-weight: bold;
 }
 
 .lang-wrapper-mobile .language-selector option {
-    color: #333;
+    color: var(--color-text-primary);
 }
 
 /* Tablets y móviles */
@@ -223,7 +241,7 @@
         bottom: 0;       
         left: 0;
         width: 100%;
-        background-color: #ffffff;
+        background-color: var(--base-white);
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
@@ -244,13 +262,13 @@
         flex-direction: column; 
         align-items: center;
         text-decoration: none;
-        color: #6B7280;
+        color: var(--color-text-secondary);
         font-size: 12px;
         font-weight: bold;
     }
 
     .nav-mobile-list a:hover, .nav-mobile-list a:focus {
-        color: #2563EB;
+        color: var(--color-brand);
     }
 
     .nav-mobile-list .icon {
