@@ -73,6 +73,10 @@
       "destination": "Destination",
       "price": "Estimated price"
     },
+    "errors": {
+      "origin_invalid": "Select a valid origin",
+      "destination_invalid": "Select a valid destination"
+    },
     "confirm": "Confirm",
     "continue_to_payment": "Pay"
   },
@@ -178,7 +182,7 @@
       "mobile": {
         "request_reservation": "Request",
         "manage_reservation": "Manage"
-      } 
+      }
     },
     "footer": {
       "company": "Company",

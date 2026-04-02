@@ -17,6 +17,9 @@
     <!--! ELIMINAR TEMP-->
     <script type="module" src="/js/temp-summary.js"></script>
 
+    <!--? Cambiar a importacion ?-->
+    <script type="module" src="/js/booking.js"></script>
+
     <title>Reserva : Need Taxi</title>
 </head>
 
@@ -35,73 +38,93 @@
                 <label for="booking-later" data-i18n="booking.tabs.schedule">Programar</label>
             </div>
 
-            <form action="" method="post">
+            <form action="" method="post" novalidate>
 
                 <section id="booking-form-main-view">
-
-
-                    <div class="form-row date-container">
-                        <div class="form-group">
-                            <label for="date" data-i18n="booking.date">Fecha</label>
-                            <input type="date" id="date" name="date">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="time" data-i18n="booking.time">Hora</label>
-                            <input type="time" id="time" name="time">
-                        </div>
-                    </div>
 
                     <div class="form-row">
                         <div class="form-group">
 
                             <label for="origin" data-i18n="booking.origin">Origen</label>
 
-                            <select id="origin" name="origin">
+                            <select id="origin" name="origin" required>
                                 <option value="" disabled selected>Selecciona un origen</option>
                                 <option value="tfs">Aeropuerto Tenerife Sur</option>
                                 <option value="tfn">Aeropuerto Tenerife Norte</option>
                                 <option value="lpa">Aeropuerto Gran Canaria</option>
-                                <option value="tfs">Aeropuerto Tenerife Sur</option>
                             </select>
+                           
+                            <p id="origin-error" class="error" hidden>
+                                <i class="fa-regular fa-circle-xmark"></i>
+                                <span data-i18n="booking.errors.destination_invalid">Selecciona un origen válido</span>
+                            </p>
+                            
                         </div>
 
                         <div class="form-group">
                             <label for="destination" data-i18n="booking.destination">Destino</label>
-                            <select id="destination" name="destination">
+                            <select id="destination" name="destination" required>
                                 <option value="" disabled selected>Selecciona un destino</option>
                                 <option value="DST1">DST1</option>
                                 <option value="DST2">DST2</option>
                             </select>
+                            
+                            <p id="destination-error" class="error" hidden>
+                                <i class="fa-regular fa-circle-xmark"></i>
+                                <span data-i18n="booking.errors.destination_invalid">Selecciona un destino válido</span>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="form-row date-container">
+                        <div class="form-group form-group-small">
+                            <label for="date" data-i18n="booking.date">Fecha</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+
+                        <div class="form-group form-group-small">
+                            <label for="time" data-i18n="booking.time">Hora</label>
+                            <input type="time" id="time" name="time">
                         </div>
                     </div>
 
                     <div class="form-row">
-                        <div class="form-group">
+                        <div class="form-group form-group-small form-group-icon">
                             <label for="passengers" data-i18n="booking.passengers">Pasajeros</label>
-                            <input type="number" id="passengers" name="passengers" min="1" step="1" value="1">
+                            <div class="input-icon-wrapper">
+                                <i class="fa-solid fa-person" aria-hidden="true"></i>
+                                <input type="number" id="passengers" name="passengers" min="1" step="1" value="1">
+                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-group-small form-group-icon">
                             <label for="luggage" data-i18n="booking.luggage">Maletas</label>
-                            <input type="number" id="luggage" name="luggage" min="0" step="1" value="0">
+                            <div class="input-icon-wrapper">
+                                <i class="fa-solid fa-suitcase-rolling" aria-hidden="true"></i>
+                                <input type="number" id="luggage" name="luggage" min="0" step="1" value="0">
+                            </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="reduced-mobility-group">
+                        <label for="reduced-mobility" class="reduced-mobility-label">
+                            <span class="switch">
+                                <input type="checkbox" id="reduced-mobility" name="reduced_mobility"
+                                    aria-describedby="reduced-mobility-help">
+                                <span class="slider round" aria-hidden="true"></span>
+                            </span>
 
-                        <label for="reduced-mobility">
+                            <span class="reduced-mobility-text" data-i18n="booking.reduced_mobility">
+                                Personas con movilidad reducida
+                            </span>
 
-                            <input type="checkbox" id="reduced-mobility" name="reduced_mobility"
-                                aria-describedby="reduced-mobility-help">
-                            <span data-i18n="booking.reduced_mobility">Personas con movilidad reducida</span>
-
+                            <i class="fa-brands fa-accessible-icon" aria-hidden="true"></i>
                         </label>
 
                         <p id="reduced-mobility-help" class="help-text" data-i18n="booking.accessibility_details">
                             Indicar si algún pasajero necesita espacio o asistencia adicional
                         </p>
-
                     </div>
 
                     <div class="form-group">
@@ -136,12 +159,9 @@
 
                         <h2 data-i18n="booking.summary.title">Resumen</h2>
 
-                        <div class="summary-item" id="summary-date-item" hidden>
-                            <span class="summary-label" data-i18n="booking.date">Fecha</span>
-                            <span class="summary-value" id="summary-date">---</span>
-
-                            <span class="summary-label" data-i18n="booking.time">Hora</span>
-                            <span class="summary-value" id="summary-time">---</span>
+                        <div class="summary-item" id="summary-date-time-item" hidden>
+                            <span class="summary-label" data-i18n="booking.date_time">Fecha y hora</span>
+                            <span class="summary-value" id="summary-date-time">---</span>
                         </div>
 
                         <div class="summary-item">
@@ -170,7 +190,7 @@
                         </div>
 
 
-                        <button type="button" class="btn btn-primary" data-i18n="booking.confirm">
+                        <button type="submit" class="btn btn-primary" data-i18n="booking.confirm">
                             Continuar al pago
                         </button>
 
