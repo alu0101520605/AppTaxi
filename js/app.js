@@ -1,9 +1,9 @@
-import './components.js'
-import { loadLanguage } from './language.js';
+import "./components.js";
+import { loadLanguage } from "./language.js";
 
-loadLanguage('es');
+loadLanguage("es");
 
-
-import './carrousel.js'
+import "./carrousel.js";
 import "./booking.js";
-import './summary.js'
+import "./summary.js";
+import "./home.js";
