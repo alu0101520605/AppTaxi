@@ -8,68 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/pages/home.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/pages/home.css" />
+    <script type="module" src="/js/app.js"></script>
   </head>
   <body>
     <div class="container">
 
-      <!-- HEADER -->
-      <header class="header">
-        <nav class="navigation" aria-label="Menú principal" data-i18n="">
-          <ul class="nav-left">
-            <li><a href="solicitar.html" data-i18n="">Solicitar reserva</a></li>
-            <li><a href="gestionar.html" data-i18n="">Gestionar reserva</a></li>
-          </ul>
-          <div class="nav-logo">
-            <a href="../index.html">
-              <img id="logo" src="../assets/imagenes/logo.png" alt="NeedTaxi - Volver al inicio" data-i18n="" />
-            </a>
-          </div>
-          <ul class="nav-right">
-            <li><a href="./login.html" data-i18n="">Mi cuenta</a></li>
-            <li><a href="/contacto.html" data-i18n="">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
+      <header-taxi></header-taxi>
 
-      <!-- NAV MÓVIL -->
-      <nav class="navigation-mobile" aria-label="Navegación principal de la aplicación" data-i18n="">
-        <ul class="nav-mobile-list">
-          <li>
-            <a href="./home.html" aria-current="page">
-              <i class="fa-solid fa-house icon" aria-hidden="true"></i>
-              <span class="text" data-i18n="">Inicio</span>
-            </a>
-          </li>
-          <li>
-            <a href="solicitar.html">
-              <i class="fa-solid fa-taxi icon" aria-hidden="true"></i>
-              <span class="text" data-i18n="">Solicitar</span>
-            </a>
-          </li>
-          <li>
-            <a href="gestionar.html">
-              <i class="fa-solid fa-calendar-days icon" aria-hidden="true"></i>
-              <span class="text" data-i18n="">Gestionar</span>
-            </a>
-          </li>
-          <li>
-            <a href="./login.html">
-              <i class="fa-solid fa-user icon" aria-hidden="true"></i>
-              <span class="text" data-i18n="">Perfil</span>
-            </a>
-          </li>
-          <li>
-            <a href="/contacto.html">
-              <i class="fa-solid fa-paper-plane icon" aria-hidden="true"></i>
-              <span class="text" data-i18n="">Contacto</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- CONTENIDO PRINCIPAL — HOME DE USUARIO -->
       <main class="page-content" id="main-content">
 
         <!-- 1. SALUDO + ESTADÍSTICAS -->
@@ -342,40 +289,8 @@
 
       </main>
 
-      <!-- FOOTER -->
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-col brand">
-            <h2 class="footer-title" data-i18n="">NeedTaxi</h2>
-            <p data-i18n="">Tu traslado seguro, rápido y sin complicaciones. Llegamos donde estés.</p>
-          </div>
-          <div class="footer-col">
-            <h2 class="footer-title" data-i18n="">Compañía</h2>
-            <ul class="footer-links">
-              <li><a href="/nosotros.html" data-i18n="">Sobre nosotros</a></li>
-              <li><a href="/conductores.html" data-i18n="">Nuestros conductores</a></li>
-              <li><a href="/contacto.html" data-i18n="">Centro de ayuda</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2 class="footer-title" data-i18n="">Legal</h2>
-            <ul class="footer-links" data-i18n="">
-              <li><a href="/terminos.html" data-i18n="">Términos de servicio</a></li>
-              <li><a href="/privacidad.html" data-i18n="">Política de privacidad</a></li>
-              <li><a href="/cookies.html" data-i18n="">Política de cookies</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-legal">
-          <p data-i18n="">&copy; 2026 NeedTaxi. Todos los derechos reservados.</p>
-          <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" rel="noopener noreferrer" class="badge-wcag">
-            <img src="https://www.w3.org/WAI/wcag21/wcag2.1AA-v.png" alt="Conformidad Nivel AA, Directrices de Accesibilidad para el Contenido Web 2.1 del W3C" width="88" height="32" data-i18n="">
-          </a>
-        </div>
-      </footer>
+      <footer-taxi></footer-taxi>
 
-    </div><!-- /container -->
-
-    <script src="../js/home.js"></script>
+    </div>
   </body>
 </html>
