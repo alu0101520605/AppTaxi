@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>NeedTaxi – Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/pages/home.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- HEADER -->
+      <header class="header">
+        <nav class="navigation" aria-label="Menú principal" data-i18n="">
+          <ul class="nav-left">
+            <li><a href="solicitar.html" data-i18n="">Solicitar reserva</a></li>
+            <li><a href="gestionar.html" data-i18n="">Gestionar reserva</a></li>
+          </ul>
+          <div class="nav-logo">
+            <a href="../index.html">
+              <img id="logo" src="../assets/imagenes/logo.png" alt="NeedTaxi - Volver al inicio" data-i18n="" />
+            </a>
+          </div>
+          <ul class="nav-right">
+            <li><a href="./login.html" data-i18n="">Mi cuenta</a></li>
+            <li><a href="/contacto.html" data-i18n="">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- NAV MÓVIL -->
+      <nav class="navigation-mobile" aria-label="Navegación principal de la aplicación" data-i18n="">
+        <ul class="nav-mobile-list">
+          <li>
+            <a href="./home.html" aria-current="page">
+              <i class="fa-solid fa-house icon" aria-hidden="true"></i>
+              <span class="text" data-i18n="">Inicio</span>
+            </a>
+          </li>
+          <li>
+            <a href="solicitar.html">
+              <i class="fa-solid fa-taxi icon" aria-hidden="true"></i>
+              <span class="text" data-i18n="">Solicitar</span>
+            </a>
+          </li>
+          <li>
+            <a href="gestionar.html">
+              <i class="fa-solid fa-calendar-days icon" aria-hidden="true"></i>
+              <span class="text" data-i18n="">Gestionar</span>
+            </a>
+          </li>
+          <li>
+            <a href="./login.html">
+              <i class="fa-solid fa-user icon" aria-hidden="true"></i>
+              <span class="text" data-i18n="">Perfil</span>
+            </a>
+          </li>
+          <li>
+            <a href="/contacto.html">
+              <i class="fa-solid fa-paper-plane icon" aria-hidden="true"></i>
+              <span class="text" data-i18n="">Contacto</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- CONTENIDO PRINCIPAL — HOME DE USUARIO -->
+      <main class="page-content" id="main-content">
+
+        <!-- 1. SALUDO + ESTADÍSTICAS -->
+        <section class="greeting-section anim anim-1" aria-label="Bienvenida y estadísticas">
+          <div class="greeting-text">
+            <p class="greeting-label">Bienvenido de nuevo</p>
+            <h1 class="greeting-name">¡Hola, <span>Carlos!</span> 👋</h1>
+          </div>
+          <div class="stats-chips" role="list" aria-label="Estadísticas de viajes">
+            <div class="stat-chip" role="listitem">
+              <div class="stat-chip-icon" aria-hidden="true"><i class="fa-solid fa-taxi"></i></div>
+              <div>
+                <div class="stat-chip-val">12</div>
+                <div class="stat-chip-label">Viajes totales</div>
+              </div>
+            </div>
+            <div class="stat-chip" role="listitem">
+              <div class="stat-chip-icon" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
+              <div>
+                <div class="stat-chip-val">4,9</div>
+                <div class="stat-chip-label">Valoración</div>
+              </div>
+            </div>
+            <div class="stat-chip" role="listitem">
+              <div class="stat-chip-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="stat-chip-val">S/C</div>
+                <div class="stat-chip-label">Último destino</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. BARRA DE BÚSQUEDA -->
+        <section class="search-wrap anim anim-2" aria-label="Buscar destino" >
+          <div class="search-bar form-select" role="search">
+            <i class="fa-solid fa-location-dot pin" aria-hidden="true"></i>
+            <input placeholder="¿A dónde te apetece ir o viajar?" aria-label="Introduce tu destino">
+            <button class="search-btn" type="button" aria-label="Buscar y reservar">
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              Reservar
+            </button>
+          </div>
+        </section>
+
+        <!-- 3. ACCIONES RÁPIDAS -->
+        <section class="anim anim-3" aria-labelledby="quick-actions-title">
+          <div class="section-header">
+            <h2 class="section-title" id="quick-actions-title">Acciones rápidas</h2>
+          </div>
+          <div class="quick-actions">
+            <a href="solicitar.html" class="action-card primary" aria-label="Crear nueva reserva de taxi">
+              <div class="action-icon" aria-hidden="true"><i class="fa-solid fa-taxi"></i></div>
+              <div class="action-text">
+                <div class="action-label">Nueva reserva</div>
+                <div class="action-sub">Reserva tu próximo viaje</div>
+              </div>
+              <div class="action-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+            <a href="gestionar.html" class="action-card" aria-label="Gestionar mis reservas">
+              <div class="action-icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></div>
+              <div class="action-text">
+                <div class="action-label">Mis reservas</div>
+                <div class="action-sub">Consulta o modifica</div>
+              </div>
+            </a>
+            <a href="solicitar.html?repeat=last" class="action-card" aria-label="Repetir último viaje a S/C Tenerife Centro">
+              <div class="action-icon" aria-hidden="true"><i class="fa-solid fa-rotate-right"></i></div>
+              <div class="action-text">
+                <div class="action-label">Repetir viaje</div>
+                <div class="action-sub">S/C → Aeropuerto</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- 4. HISTORIAL DE VIAJES -->
+        <section class="anim anim-4" aria-labelledby="history-title">
+          <div class="section-header">
+            <h2 class="section-title" id="history-title">Historial de viajes</h2>
+            <a href="gestionar.html" class="section-link" aria-label="Ver todos los viajes">Ver todos →</a>
+          </div>
+          <div class="trips-list">
+
+            <!-- Viaje 1 -->
+            <article class="trip-card" tabindex="0" aria-label="Viaje del 28 de marzo, 18,50 euros">
+              <div class="trip-meta">
+                <span class="trip-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 28 mar 2026 · 09:14</span>
+                <span class="trip-status">Completado</span>
+              </div>
+              <div class="trip-price-col">
+                <div class="trip-price">18,50 €</div>
+                <div class="trip-stars" aria-label="Valoración: 5 de 5 estrellas">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="trip-route" aria-label="Ruta del viaje">
+                <div class="route-point">
+                  <span class="route-dot origin" aria-hidden="true"></span>
+                  <span class="route-tag">Origen</span>
+                  <span class="route-name">S/C de Tenerife Centro</span>
+                </div>
+                <div class="route-point">
+                  <span class="route-dot dest" aria-hidden="true"></span>
+                  <span class="route-tag">Destino</span>
+                  <span class="route-name">Aeropuerto Norte TFN</span>
+                </div>
+              </div>
+              <div class="trip-footer">
+                <div class="trip-driver-info">
+                  <div class="driver-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
+                  <span>Conductor: Miguel R.</span>
+                </div>
+                <a href="solicitar.html?repeat=1" class="trip-repeat-btn" aria-label="Repetir este viaje">
+                  <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Repetir
+                </a>
+              </div>
+            </article>
+
+            <!-- Viaje 2 -->
+            <article class="trip-card" tabindex="0" aria-label="Viaje del 21 de marzo, 7,20 euros">
+              <div class="trip-meta">
+                <span class="trip-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 21 mar 2026 · 18:45</span>
+                <span class="trip-status">Completado</span>
+              </div>
+              <div class="trip-price-col">
+                <div class="trip-price">7,20 €</div>
+                <div class="trip-stars" aria-label="Valoración: 4 de 5 estrellas">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star star-empty" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="trip-route" aria-label="Ruta del viaje">
+                <div class="route-point">
+                  <span class="route-dot origin" aria-hidden="true"></span>
+                  <span class="route-tag">Origen</span>
+                  <span class="route-name">La Laguna – Pl. del Adelantado</span>
+                </div>
+                <div class="route-point">
+                  <span class="route-dot dest" aria-hidden="true"></span>
+                  <span class="route-tag">Destino</span>
+                  <span class="route-name">S/C de Tenerife – Meridiano</span>
+                </div>
+              </div>
+              <div class="trip-footer">
+                <div class="trip-driver-info">
+                  <div class="driver-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
+                  <span>Conductora: Laura M.</span>
+                </div>
+                <a href="solicitar.html?repeat=2" class="trip-repeat-btn" aria-label="Repetir este viaje">
+                  <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Repetir
+                </a>
+              </div>
+            </article>
+
+            <!-- Viaje 3 -->
+            <article class="trip-card" tabindex="0" aria-label="Viaje del 15 de marzo, 24 euros">
+              <div class="trip-meta">
+                <span class="trip-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 15 mar 2026 · 11:00</span>
+                <span class="trip-status">Completado</span>
+              </div>
+              <div class="trip-price-col">
+                <div class="trip-price">24,00 €</div>
+                <div class="trip-stars" aria-label="Valoración: 5 de 5 estrellas">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="trip-route" aria-label="Ruta del viaje">
+                <div class="route-point">
+                  <span class="route-dot origin" aria-hidden="true"></span>
+                  <span class="route-tag">Origen</span>
+                  <span class="route-name">Puerto de la Cruz</span>
+                </div>
+                <div class="route-point">
+                  <span class="route-dot dest" aria-hidden="true"></span>
+                  <span class="route-tag">Destino</span>
+                  <span class="route-name">S/C de Tenerife Centro</span>
+                </div>
+              </div>
+              <div class="trip-footer">
+                <div class="trip-driver-info">
+                  <div class="driver-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
+                  <span>Conductor: José A.</span>
+                </div>
+                <a href="solicitar.html?repeat=3" class="trip-repeat-btn" aria-label="Repetir este viaje">
+                  <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Repetir
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- 5. CONFIGURACIÓN -->
+        <section class="anim anim-5" aria-labelledby="settings-title">
+          <div class="section-header">
+            <h2 class="section-title" id="settings-title">Configuración</h2>
+          </div>
+          <nav class="settings-block" aria-label="Opciones de configuración">
+
+            <a href="/pagos.html" class="setting-item" aria-label="Métodos de pago, Visa terminada en 4291">
+              <div class="setting-icon" aria-hidden="true"><i class="fa-solid fa-credit-card"></i></div>
+              <div class="setting-text">
+                <div class="setting-label">Métodos de pago</div>
+                <div class="setting-sub">Visa ···· 4291</div>
+              </div>
+              <div class="setting-right" aria-hidden="true">Gestionar <i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <a href="/notificaciones.html" class="setting-item" aria-label="Notificaciones, push y email activos">
+              <div class="setting-icon" aria-hidden="true"><i class="fa-solid fa-bell"></i></div>
+              <div class="setting-text">
+                <div class="setting-label">Notificaciones</div>
+                <div class="setting-sub">Push y email activos</div>
+              </div>
+              <div class="setting-right" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <a href="/idioma.html" class="setting-item" aria-label="Idioma, Español seleccionado">
+              <div class="setting-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></div>
+              <div class="setting-text">
+                <div class="setting-label">Idioma</div>
+                <div class="setting-sub">Español</div>
+              </div>
+              <div class="setting-right" aria-hidden="true">
+                <span class="setting-badge">ES</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </a>
+
+            <a href="/configuracion.html" class="setting-item" aria-label="Configuración general">
+              <div class="setting-icon" aria-hidden="true"><i class="fa-solid fa-sliders"></i></div>
+              <div class="setting-text">
+                <div class="setting-label">Configuración general</div>
+                <div class="setting-sub">Privacidad, accesibilidad, datos…</div>
+              </div>
+              <div class="setting-right" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <a href="/perfil.html" class="setting-item" aria-label="Mi perfil">
+              <div class="setting-icon success" aria-hidden="true"><i class="fa-solid fa-user-pen"></i></div>
+              <div class="setting-text">
+                <div class="setting-label">Mi perfil</div>
+                <div class="setting-sub">Editar nombre, foto, teléfono…</div>
+              </div>
+              <div class="setting-right" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <a href="/logout" class="setting-item logout" aria-label="Cerrar sesión">
+              <div class="setting-icon danger" aria-hidden="true"><i class="fa-solid fa-right-from-bracket"></i></div>
+              <div class="setting-text">
+                <div class="setting-label">Cerrar sesión</div>
+              </div>
+              <div class="setting-right" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+          </nav>
+        </section>
+
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-col brand">
+            <h2 class="footer-title" data-i18n="">NeedTaxi</h2>
+            <p data-i18n="">Tu traslado seguro, rápido y sin complicaciones. Llegamos donde estés.</p>
+          </div>
+          <div class="footer-col">
+            <h2 class="footer-title" data-i18n="">Compañía</h2>
+            <ul class="footer-links">
+              <li><a href="/nosotros.html" data-i18n="">Sobre nosotros</a></li>
+              <li><a href="/conductores.html" data-i18n="">Nuestros conductores</a></li>
+              <li><a href="/contacto.html" data-i18n="">Centro de ayuda</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2 class="footer-title" data-i18n="">Legal</h2>
+            <ul class="footer-links" data-i18n="">
+              <li><a href="/terminos.html" data-i18n="">Términos de servicio</a></li>
+              <li><a href="/privacidad.html" data-i18n="">Política de privacidad</a></li>
+              <li><a href="/cookies.html" data-i18n="">Política de cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p data-i18n="">&copy; 2026 NeedTaxi. Todos los derechos reservados.</p>
+          <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" rel="noopener noreferrer" class="badge-wcag">
+            <img src="https://www.w3.org/WAI/wcag21/wcag2.1AA-v.png" alt="Conformidad Nivel AA, Directrices de Accesibilidad para el Contenido Web 2.1 del W3C" width="88" height="32" data-i18n="">
+          </a>
+        </div>
+      </footer>
+
+    </div><!-- /container -->
+
+    <script src="../js/home.js"></script>
+  </body>
+</html>
