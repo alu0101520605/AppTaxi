@@ -1,5 +1,4 @@
 //!SCRIPT TEMPORAL Posible modificación
-const bookingLater = document.getElementById("booking-later").checked;
 const bookingNowRadio = document.getElementById("booking-now");
 const bookingLaterRadio = document.getElementById("booking-later");
 
@@ -9,13 +8,6 @@ const originSelect = document.getElementById("origin");
 const destinationSelect = document.getElementById("destination");
 const passengersInput = document.getElementById("passengers");
 const luggageInput = document.getElementById("luggage");
-
-const summaryDateTimeItem = document.getElementById("summary-date-time-item");
-const summaryDateTime = document.getElementById("summary-date-time");
-const summaryOrigin = document.getElementById("summary-origin");
-const summaryDestination = document.getElementById("summary-destination");
-const summaryPassengers = document.getElementById("summary-passengers");
-const summaryLuggage = document.getElementById("summary-luggage");
 
 function getSelectedText(select) {
   if (!select.value) {
@@ -42,8 +34,18 @@ function getDateTimeText() {
 }
 
 function updateSummary() {
-  const isScheduled = bookingLaterRadio.checked;
+  
+  const summaryDateTimeItem = document.getElementById("summary-date-time-item");
+  const summaryDateTime = document.getElementById("summary-date-time");
+  const summaryOrigin = document.getElementById("summary-origin");
+  const summaryDestination = document.getElementById("summary-destination");
+  const summaryPassengers = document.getElementById("summary-passengers");
+  const summaryLuggage = document.getElementById("summary-luggage");
 
+  const isScheduled = bookingLaterRadio.checked;
+  console.log(bookingLaterRadio);
+  console.log(isScheduled);
+  console.log(summaryDateTimeItem);
   summaryDateTimeItem.hidden = !isScheduled;
 
   summaryDateTime.textContent = getDateTimeText();

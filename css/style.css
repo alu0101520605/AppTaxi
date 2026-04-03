@@ -4,6 +4,7 @@
 @import url("./components/button.css");
 @import url("./components/form.css");
 @import url("./components/header-footer.css");
+@import url("./components/summary.css");
 
 * {
   margin: 0;

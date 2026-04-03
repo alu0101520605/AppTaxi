@@ -5,3 +5,5 @@ loadLanguage('es');
 
 
 import './carrousel.js'
+import "./booking.js";
+import './summary.js'
