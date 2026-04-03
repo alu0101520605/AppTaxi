@@ -2,11 +2,11 @@
 
   --button-primary-bg: var(--color-brand);
   --button-primary-text: #FFFFFF;
-  --button-primary-hover: #2145AC;
+  --button-primary-hover: var(--base-cian-light);
   --button-primary-pressed: #162B63;
 
  
-  --button-secondary-bg: transparent;
+  --button-secondary-bg: #D2D3D5;
   --button-secondary-text: var(--color-brand);
   --button-secondary-border: var(--color-brand);
   --button-secondary-hover: var(--state-brand-hover);
