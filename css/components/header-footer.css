@@ -173,6 +173,10 @@
     padding: 0;     
 }
 
+.language-selector:focus {
+    outline: 2px auto var(--color-brand);
+}
+
 .lang-wrapper {
     display: flex;
     align-items: center;
