@@ -1,38 +1,40 @@
-<section id="booking-form-summary-view">
-  <div class="summary-container" aria-live="polite">
+<section id="booking-form-summary-view" aria-labelledby="summary-title">
+  <div class="summary-container">
 
-    <h2 data-i18n="booking.summary.title">Resumen</h2>
+    <h2 id="summary-title" data-i18n="booking.summary.title">Resumen</h2>
 
-    <div class="summary-item" id="summary-date-time-item" hidden>
-      <span class="summary-label" data-i18n="booking.date_time">Fecha y hora</span>
-      <span class="summary-value" id="summary-date-time"></span>
-    </div>
+    <dl class="summary-list">
+      
+      <div class="summary-item" id="summary-date-time-item" hidden>
+        <dt class="summary-label" data-i18n="booking.date_time">Fecha y hora</dt>
+        <dd class="summary-value" id="summary-date-time"></dd>
+      </div>
 
-    <div class="summary-item">
-      <span class="summary-label" data-i18n="booking.origin">Origen</span>
-      <span class="summary-value" id="summary-origin">ORIGEN PRUEBA</span>
-    </div>
+      <div class="summary-item">
+        <dt class="summary-label" data-i18n="booking.origin">Origen</dt>
+        <dd class="summary-value" id="summary-origin">ORIGEN PRUEBA</dd>
+      </div>
 
-    <div class="summary-item">
-      <span class="summary-label" data-i18n="booking.destination">Destino</span>
-      <span class="summary-value" id="summary-destination">DESTINO PRUEBA</span>
-    </div>
+      <div class="summary-item">
+        <dt class="summary-label" data-i18n="booking.destination">Destino</dt>
+        <dd class="summary-value" id="summary-destination">DESTINO PRUEBA</dd>
+      </div>
 
-    <div class="summary-item">
-      <span class="summary-label" data-i18n="booking.passengers">Pasajeros</span>
-      <span class="summary-value" id="summary-passengers">1</span>
-    </div>
+      <div class="summary-item">
+        <dt class="summary-label" data-i18n="booking.passengers">Pasajeros</dt>
+        <dd class="summary-value" id="summary-passengers">1</dd>
+      </div>
 
-    <div class="summary-item">
-      <span class="summary-label" data-i18n="booking.luggage">Maletas</span>
-      <span class="summary-value" id="summary-luggage">0</span>
-    </div>
+      <div class="summary-item">
+        <dt class="summary-label" data-i18n="booking.luggage">Maletas</dt>
+        <dd class="summary-value" id="summary-luggage">0</dd>
+      </div>
 
-    <div class="summary-item summary-total">
-      <span class="summary-label" data-i18n="booking.price">Precio</span>
-      <span class="summary-value" id="summary-price">0 €</span>
-    </div>
+      <div class="summary-item summary-total">
+        <dt class="summary-label" data-i18n="booking.price">Precio</dt>
+        <dd class="summary-value" id="summary-price" aria-live="polite" aria-atomic="true">0 €</dd>
+      </div>
 
-
+    </dl>
   </div>
 </section>

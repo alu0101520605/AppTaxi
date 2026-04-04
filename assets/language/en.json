@@ -75,7 +75,9 @@
     },
     "errors": {
       "origin_invalid": "Select a valid origin",
-      "destination_invalid": "Select a valid destination"
+      "destination_invalid": "Select a valid destination",
+      "date_invalid": "Select a valid date",
+      "time_invalid": "Select a valid time"
     },
     "confirm": "Confirm",
     "continue_to_payment": "Pay"

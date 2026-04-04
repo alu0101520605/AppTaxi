@@ -58,7 +58,7 @@
 .nav-left a[aria-current="page"],
 .nav-right a[aria-current="page"],
 .nav-mobile-list a[aria-current="page"] {
-    color: var(--base-blue-light2);
+    color: var(--base-blue-light);
 }
 
 .nav-logo {

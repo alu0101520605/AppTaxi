@@ -24,6 +24,10 @@ fieldset{
   padding: 0.4rem;
 }
 
+#origin:invalid, #destination:invalid {
+    color: var(--base-neutral);
+}
+
 #booking-form-main-view,
 #booking-form-options-view,
 #booking-form-summary-view {
@@ -75,7 +79,7 @@ fieldset{
 }
 
 .booking-type input[type="radio"]:checked+label {
-  background-color: var(--base-blue-light2);
+  background-color: var(--base-blue-light);
   color: var(--base-white);
   border-color: var(--base-white);
   border-bottom-left-radius: 1rem;
@@ -181,6 +185,11 @@ fieldset{
   gap: 0.5rem;
 }
 
+#button-additional-options, .additional-options-group, #additional-options-title {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
 .reduced-mobility-label,
 .additional-option-label {
   display: inline-flex;
@@ -235,7 +244,7 @@ fieldset{
 }
 
 .switch input:checked+.slider {
-  background-color: var(--base-blue-light2);
+  background-color: var(--base-blue-light);
 }
 
 .switch input:focus+.slider {

@@ -51,6 +51,15 @@ if (bookingNowRadio) {
 
     if (showDateRow) {
       setCurrentDateTime();
+      dateInput.setAttribute("required", "true");
+      timeInput.setAttribute("required", "true");
+    } else {
+      dateInput.removeAttribute("required");
+      timeInput.removeAttribute("required");
+      document.getElementById("date-error").hidden = true;
+      document.getElementById("time-error").hidden = true;
+      dateInput.removeAttribute("aria-invalid");
+      timeInput.removeAttribute("aria-invalid");
     }
   }
 
@@ -100,14 +109,27 @@ if (bookingNowRadio) {
       destinationError,
     );
 
-    if (!isOriginValid || !isDestinationValid) {
-      event.preventDefault();
+    let isDateValid = true;
+    let isTimeValid = true;
+
+    if (bookingLaterRadio.checked) {
+      isDateValid = dateInput.value !== "";
+      isTimeValid = timeInput.value !== "";
+      
+      document.getElementById("date-error").hidden = isDateValid;
+      dateInput.setAttribute("aria-invalid", !isDateValid);
+      
+      document.getElementById("time-error").hidden = isTimeValid;
+      timeInput.setAttribute("aria-invalid", !isTimeValid);
     }
 
-    if (!isOriginValid) {
-      originSelect.focus();
-    } else {
-      destinationSelect.focus();
+    if (!isOriginValid || !isDestinationValid || !isDateValid || !isTimeValid) {
+      event.preventDefault();
+        
+      if (!isOriginValid) originSelect.focus();
+      else if (!isDestinationValid) destinationSelect.focus();
+      else if (!isDateValid) dateInput.focus();
+      else if (!isTimeValid) timeInput.focus();
     }
     
   });
