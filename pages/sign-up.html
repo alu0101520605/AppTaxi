@@ -9,11 +9,13 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="icon" href="../assets/icons/favicon-96x96.png" type="image/png">
+  <link rel="icon" href="/assets/icons/favicon-96x96.png" type="image/png">
+  
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/pages/sign-up.css">
   <script type="module" src="/js/app.js"></script>
-  <title>Acesso | Need Taxi</title>
+  
+  <title>Registro : Need Taxi</title>
 </head>
 
 <body>
@@ -26,102 +28,123 @@
       <form id="registration-form" novalidate>
           
         <div id="step-1" class="form-step">
-          <h1 tabindex="-1" style="text-align: center;">Registro</h1>
+          <h1 tabindex="-1" class="text-center" data-i18n="auth.register.title">Registro</h1>
+          
+          <p id="global-step-1-error" class="error global-error text-center" hidden aria-live="assertive" aria-atomic="true">
+            <i class="fa-solid fa-triangle-exclamation"></i> 
+            <span data-i18n="auth.register.otp_expired"></span>
+          </p>
           
           <div class="form-row">
-            <div class="form-group" style="flex: 0 1 120px;">
-              <label for="country-code">Prefijo</label>
+            <div class="form-group prefix-group">
+              <label for="country-code" data-i18n="auth.register.prefix">Prefijo</label>
               <select id="country-code" name="country-code">
                 <option value="+34">+34 (ES)</option>
                 <option value="+1">+1 (US)</option>
                 <option value="+44">+44 (UK)</option>
               </select>
             </div>
-            <div class="form-group" style="flex: 1 1 200px;">
-              <label for="phone-number">Número de teléfono</label>
-              <input type="tel" id="phone-number" name="phone-number" required placeholder="Ej: 600123456">
+            
+            <div class="form-group phone-group">
+              <label for="phone-number" data-i18n="auth.register.phone_label">Número de teléfono</label>
+              <input type="tel" id="phone-number" name="phone-number" required placeholder="Ej: 600123456" data-i18n="[placeholder]auth.register.phone_placeholder" aria-describedby="phone-error">
+              
+              <p id="phone-error" class="error" hidden aria-live="polite" aria-atomic="true">
+                <i class="fa-regular fa-circle-xmark"></i> 
+                <span data-i18n="auth.register.phone_error"></span>
+              </p>
             </div>
           </div>
 
-          <div class="form-group" style="margin-top: 1rem;">
-            <label>Método de verificación</label>
+          <div class="form-group mt-1">
+            <label data-i18n="auth.register.otp_method_label">Método de verificación</label>
             <div class="booking-type">
               <input type="radio" id="method-sms" name="otp-method" value="sms" checked>
-              <label for="method-sms">SMS</label>
+              <label for="method-sms" data-i18n="auth.register.otp_methods.sms">SMS</label>
               
               <input type="radio" id="method-whatsapp" name="otp-method" value="whatsapp">
-              <label for="method-whatsapp">WhatsApp</label>
+              <label for="method-whatsapp" data-i18n="auth.register.otp_methods.whatsapp">WhatsApp</label>
               
               <input type="radio" id="method-email" name="otp-method" value="email">
-              <label for="method-email">Email</label>
+              <label for="method-email" data-i18n="auth.register.otp_methods.email">Email</label>
             </div>
           </div>
 
-          <p id="step-1-error" class="error" hidden aria-live="polite"><i class="fa-regular fa-circle-xmark"></i> <span></span></p>
-
-          <button type="button" id="btn-to-step-2" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Continuar</button>
+          <button type="button" id="btn-to-step-2" class="btn btn-primary mt-1-5 w-100" data-i18n="auth.register.continue">Continuar</button>
         </div>
 
         <div id="step-2" class="form-step" hidden>
-          <h1 tabindex="-1" style="text-align: center;">Verifica tu número</h1>
-          <p class="help-text" style="text-align: center;">Hemos enviado un código al <span id="display-phone" style="font-weight: bold; color: var(--color-text-primary);"></span></p>
+          <h1 tabindex="-1" class="text-center" data-i18n="auth.otp.verify_number">Verifica tu número</h1>
+          <p class="help-text text-center">
+            <span data-i18n="auth.otp.sent_to">Hemos enviado un código al</span> <span id="display-phone" class="display-phone"></span>
+          </p>
           
-          <div class="form-group" style="margin-top: 1.5rem;">
-            <label for="otp-code" style="text-align: center;">Código de verificación</label>
-            <input type="text" id="otp-code" name="otp-code" maxlength="6" autocomplete="one-time-code" placeholder="------" style="font-size: 1.5rem; text-align: center; letter-spacing: 0.5rem;">
+          <div class="form-group mt-1-5">
+            <label for="otp-code" class="text-center" data-i18n="auth.otp.code_label">Código de verificación</label>
+            <input type="text" id="otp-code" name="otp-code" maxlength="6" autocomplete="one-time-code" placeholder="------" class="otp-input" data-i18n="[placeholder]auth.otp.code_placeholder">
           </div>
 
-          <div id="otp-feedback" aria-live="assertive" style="text-align: center; margin-top: 1rem;">
-            <div id="otp-success" hidden style="color: green; font-size: 3rem;"><i class="fa-regular fa-circle-check"></i></div>
-            <div id="otp-error" hidden style="color: var(--color-error); font-size: 3rem;"><i class="fa-regular fa-circle-xmark"></i></div>
+          <div id="otp-feedback" aria-live="assertive" aria-atomic="true" class="otp-feedback-container">
+            <div id="otp-success" hidden class="feedback-icon-success">
+              <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+              <span class="sr-only" data-i18n="auth.otp.success">Código verificado correctamente</span>
+            </div>
+            <div id="otp-error" hidden class="feedback-icon-error">
+              <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+              <span class="sr-only" data-i18n="auth.otp.error">Código incorrecto</span>
+            </div>
           </div>
         </div>
 
         <div id="step-3" class="form-step" hidden>
-          <h1 tabindex="-1" style="text-align: center;">Tus Datos</h1>
+          <h1 tabindex="-1" class="text-center" data-i18n="auth.register.your_data">Tus Datos</h1>
           
           <div class="form-row">
             <div class="form-group">
-              <label for="first-name">Nombre</label>
+              <label for="first-name" data-i18n="auth.register.first_name">Nombre</label>
               <input type="text" id="first-name" name="first-name" required>
             </div>
             <div class="form-group">
-              <label for="last-name">Apellido</label>
+              <label for="last-name" data-i18n="auth.register.last_name">Apellido</label>
               <input type="text" id="last-name" name="last-name" required>
             </div>
           </div>
 
-          <div class="form-group" style="margin-top: 1rem;">
-            <label for="email">E-mail (Opcional - Para facturación)</label>
+          <div class="form-group mt-1">
+            <label for="email" data-i18n="auth.register.email_optional">E-mail (Opcional - Para facturación)</label>
             <input type="email" id="email" name="email">
           </div>
 
-          <div class="reduced-mobility-group" style="margin-top: 1.5rem;">
+          <div class="reduced-mobility-group mt-1-5">
             <label class="reduced-mobility-label" for="terms">
-              <div class="switch">
+                <div class="switch">
                 <input type="checkbox" id="terms" name="terms" required>
-                <span class="slider round"></span>
-              </div>
-              <span class="reduced-mobility-text">Acepto los Términos y Condiciones</span>
+                <span class="slider round" aria-hidden="true"></span>
+                </div>
+                <span class="reduced-mobility-text" data-i18n="auth.register.terms">Acepto los Términos y Condiciones</span>
             </label>
             
             <label class="reduced-mobility-label" for="privacy">
-              <div class="switch">
+                <div class="switch">
                 <input type="checkbox" id="privacy" name="privacy" required>
-                <span class="slider round"></span>
-              </div>
-              <span class="reduced-mobility-text">Acepto la Política de Privacidad</span>
+                <span class="slider round" aria-hidden="true"></span>
+                </div>
+                <span class="reduced-mobility-text" data-i18n="auth.register.privacy">Acepto la Política de Privacidad</span>
             </label>
           </div>
 
-          <p id="step-3-error" class="error" hidden aria-live="polite"><i class="fa-regular fa-circle-xmark"></i> <span>Debes aceptar los términos para continuar.</span></p>
+          <p id="step-3-error" class="error" hidden aria-live="polite">
+            <i class="fa-regular fa-circle-xmark"></i> <span data-i18n="auth.register.terms_error">Debes aceptar los términos para continuar.</span>
+          </p>
 
-          <button type="button" id="btn-submit-form" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Crear cuenta</button>
+          <button type="button" id="btn-submit-form" class="btn btn-primary mt-1-5 w-100" data-i18n="auth.register.create_account">Crear cuenta</button>
         </div>
 
-        <div id="step-4" class="form-step" hidden style="text-align: center; padding: 3rem 0;">
-          <h1 tabindex="-1" style="color: green;"><i class="fa-regular fa-face-smile-wink"></i> ¡Registro completado!</h1>
-          <p class="help-text">Cargando tu sesión...</p>
+        <div id="step-4" class="form-step step-completed-container" hidden>
+          <h1 tabindex="-1" class="text-success">
+            <i class="fa-regular fa-face-smile-wink"></i> <span data-i18n="auth.register.success_title">¡Registro completado!</span>
+          </h1>
+          <p class="help-text" data-i18n="auth.register.loading_session">Cargando tu sesión...</p>
         </div>
 
       </form>

@@ -13,38 +13,46 @@
       "no_account": "¿No tienes cuenta?"
     },
     "register": {
-      "title": "Crear cuenta",
-      "phone_label": "Código de país y número de teléfono",
-      "phone_placeholder": "Introduce tu número de teléfono",
+      "title": "Registro",
+      "prefix": "Prefijo",
+      "phone_label": "Número de teléfono",
+      "phone_placeholder": "Ej: 600123456",
       "otp_method_label": "Método de verificación",
       "otp_methods": {
         "sms": "SMS",
         "whatsapp": "WhatsApp",
-        "email": "Correo electrónico"
+        "email": "Email"
       },
       "continue": "Continuar",
+      "your_data": "Tus Datos",
       "first_name": "Nombre",
       "last_name": "Apellido",
       "email": "Correo electrónico",
-      "email_optional": "Correo electrónico (opcional, para facturación)",
+      "email_optional": "E-mail (Opcional - Para facturación)",
       "terms": "Acepto los Términos y Condiciones",
       "privacy": "Acepto la Política de Privacidad",
+      "terms_error": "Debes aceptar los términos para continuar.",
       "create_account": "Crear cuenta",
-      "success_title": "Registro completado",
+      "success_title": "¡Registro completado!",
       "success_subtitle": "Tu cuenta se ha creado correctamente",
-      "go_to_login": "Ir al inicio de sesión"
+      "loading_session": "Cargando tu sesión...",
+      "go_to_login": "Ir al inicio de sesión",
+      "phone_error": "Por favor, introduce un número válido.",
+      "otp_expired": "El código OTP es incorrecto o ha expirado. Vuelve a intentarlo."
     },
     "otp": {
       "title": "Verificación",
+      "verify_number": "Verifica tu número",
       "subtitle": "Introduce el código que hemos enviado",
       "code_label": "Código de verificación",
-      "code_placeholder": "Ingresa el código",
+      "code_placeholder": "------",
+      "sent_to": "Hemos enviado un código al",
       "sent_by_sms": "Te hemos enviado un código por SMS",
       "sent_by_whatsapp": "Te hemos enviado un código por WhatsApp",
       "sent_by_email": "Te hemos enviado un código por correo electrónico",
       "verifying": "Verificando código...",
       "success": "Código verificado correctamente",
-      "error": "El código no es válido",
+      "error": "Código incorrecto",
       "try_again": "Vuelve a intentarlo",
       "resend_code": "Reenviar código"
     }

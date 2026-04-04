@@ -11,22 +11,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Transición a Pantalla 2
         btnToStep2.addEventListener('click', () => {
-            const phone = document.getElementById('phone-number').value;
+            const phoneInput = document.getElementById('phone-number');
+            const phone = phoneInput.value;
             const country = document.getElementById('country-code').value;
-            const errorMsg = document.getElementById('step-1-error');
+            
+            // Obtenemos los dos nuevos contenedores de error
+            const phoneErrorMsg = document.getElementById('phone-error');
+            const globalErrorMsg = document.getElementById('global-step-1-error');
 
-            if (phone.length < 9) { // Validación muy básica
-            errorMsg.querySelector('span').textContent = "Por favor, introduce un número válido.";
-            errorMsg.removeAttribute('hidden');
-            return;
+            // Ocultar error global por si estaba visible de un intento anterior
+            globalErrorMsg.setAttribute('hidden', '');
+
+            if (phone.length < 9) { 
+                // 1. Mostrar error ESPECÍFICO del teléfono
+                phoneErrorMsg.querySelector('span').textContent = "Por favor, introduce un número válido.";
+                phoneErrorMsg.removeAttribute('hidden');
+                
+                // 2. Accesibilidad: Marcar input como inválido y mover el foco
+                phoneInput.setAttribute('aria-invalid', 'true');
+                phoneInput.focus();
+                return;
             }
 
-            // Ocultar error si lo hubiera, mostrar teléfono en pantalla 2 y cambiar paso
-            errorMsg.setAttribute('hidden', '');
+            // Si todo está bien, limpiar errores de teléfono
+            phoneErrorMsg.setAttribute('hidden', '');
+            phoneInput.removeAttribute('aria-invalid');
+            
             document.getElementById('display-phone').textContent = `${country} ${phone}`;
-            
-            // Aquí harías tu llamada a la API (fetch) para enviar el SMS/Whatsapp
-            
             goToStep(1, 2);
         });
 
@@ -35,31 +46,34 @@ document.addEventListener('DOMContentLoaded', () => {
             const code = e.target.value;
             
             if (code.length === 6) {
-            inputOTP.disabled = true; // Bloquea el input mientras verifica
-            
-            // Simular llamada al servidor
-            setTimeout(() => {
-                // SIMULACIÓN: Si el código es 123456 es válido, sino falla.
-                if (code === "123456") {
-                document.getElementById('otp-success').removeAttribute('hidden');
+                inputOTP.disabled = true; 
+                
                 setTimeout(() => {
-                    goToStep(2, 3);
-                }, 2000); // 2 segundos verde y avanza
-                } else {
-                document.getElementById('otp-error').removeAttribute('hidden');
-                setTimeout(() => {
-                    // Falla: Oculta error, limpia input, vuelve a pantalla 1
-                    document.getElementById('otp-error').setAttribute('hidden', '');
-                    inputOTP.value = '';
-                    inputOTP.disabled = false;
-                    
-                    const errorStep1 = document.getElementById('step-1-error');
-                    errorStep1.querySelector('span').textContent = "El código OTP es incorrecto. Vuelve a intentarlo.";
-                    errorStep1.removeAttribute('hidden');
-                    goToStep(2, 1);
-                }, 2500); // 2.5 segundos rojo y retrocede
-                }
-            }, 1000); // Tarda 1 seg en responder
+                    if (code === "123456") {
+                        document.getElementById('otp-success').removeAttribute('hidden');
+                        setTimeout(() => {
+                            goToStep(2, 3);
+                        }, 2000); 
+                    } else {
+                        document.getElementById('otp-error').removeAttribute('hidden');
+                        setTimeout(() => {
+                            document.getElementById('otp-error').setAttribute('hidden', '');
+                            inputOTP.value = '';
+                            inputOTP.disabled = false;
+                            
+                            // Volvemos al paso 1, pero usamos el ERROR GLOBAL
+                            const globalErrorMsg = document.getElementById('global-step-1-error');
+                            globalErrorMsg.querySelector('span').textContent = "El código OTP es incorrecto o ha expirado. Vuelve a intentarlo.";
+                            globalErrorMsg.removeAttribute('hidden');
+                            
+                            goToStep(2, 1);
+                            
+                            // Accesibilidad: Mover el foco al mensaje de error para que el lector lo lea inmediatamente
+                            globalErrorMsg.setAttribute('tabindex', '-1');
+                            globalErrorMsg.focus();
+                        }, 2500); 
+                    }
+                }, 1000); 
             }
         });
 

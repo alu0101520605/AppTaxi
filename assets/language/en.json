@@ -13,9 +13,10 @@
       "no_account": "Don't have an account?"
     },
     "register": {
-      "title": "Create account",
-      "phone_label": "Country code and phone number",
-      "phone_placeholder": "Enter your phone number",
+      "title": "Registration",
+      "prefix": "Prefix",
+      "phone_label": "Phone number",
+      "phone_placeholder": "E.g: 600123456",
       "otp_method_label": "Verification method",
       "otp_methods": {
         "sms": "SMS",
@@ -23,28 +24,35 @@
         "email": "Email"
       },
       "continue": "Continue",
+      "your_data": "Your Details",
       "first_name": "First name",
       "last_name": "Last name",
       "email": "Email",
-      "email_optional": "Email (optional, for billing)",
+      "email_optional": "Email (Optional - For billing)",
       "terms": "I accept the Terms and Conditions",
       "privacy": "I accept the Privacy Policy",
+      "terms_error": "You must accept the terms to continue.",
       "create_account": "Create account",
-      "success_title": "Registration completed",
+      "success_title": "Registration completed!",
       "success_subtitle": "Your account has been created successfully",
-      "go_to_login": "Go to login"
+      "loading_session": "Loading your session...",
+      "go_to_login": "Go to login",
+      "phone_error": "Please enter a valid number.",
+      "otp_expired": "The OTP code is incorrect or has expired. Please try again."
     },
     "otp": {
       "title": "Verification",
+      "verify_number": "Verify your number",
       "subtitle": "Enter the code we sent you",
       "code_label": "Verification code",
-      "code_placeholder": "Enter the code",
+      "code_placeholder": "------",
+      "sent_to": "We have sent a code to",
       "sent_by_sms": "We have sent you a code by SMS",
       "sent_by_whatsapp": "We have sent you a code by WhatsApp",
       "sent_by_email": "We have sent you a code by email",
       "verifying": "Verifying code...",
       "success": "Code verified successfully",
-      "error": "The code is not valid",
+      "error": "Incorrect code",
       "try_again": "Please try again",
       "resend_code": "Resend code"
     }

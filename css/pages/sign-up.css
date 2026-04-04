@@ -1,3 +1,53 @@
 .form-group .booking-type label {
     color: var(--base-white);
 }
+
+.booking-type label {
+    flex: 1 1 0% !important; 
+    min-width: 0;
+    color: var(--base-white); 
+}
+
+.booking-type input[type="radio"] {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); 
+    position: absolute; 
+}
+
+.booking-type label:hover {
+    color: var(--base-blue);
+}
+
+@media (max-width: 480px) {
+    .booking-type {
+        flex-direction: column;
+        border-radius: 1rem;
+    }
+    .booking-type label {
+        flex: 1 1 auto !important;
+        width: 100%;
+    }
+}
+
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-1-5 { margin-top: 1.5rem; }
+.w-100 { width: 100%; }
+.text-success { color: green; }
+
+.prefix-group { flex: 0 1 120px; }
+.phone-group { flex: 1 1 200px; }
+
+
+.global-error {
+    margin-bottom: 1rem;
+}
+
+.display-phone { font-weight: bold; color: var(--color-text-primary); }
+.otp-input { font-size: 1.5rem; text-align: center; letter-spacing: 0.5rem; }
+.otp-feedback-container { text-align: center; margin-top: 1rem; }
+.feedback-icon-success { color: green; font-size: 3rem; }
+.feedback-icon-error { color: var(--color-error); font-size: 3rem; }
+.step-completed-container { text-align: center; padding: 3rem 0; }
