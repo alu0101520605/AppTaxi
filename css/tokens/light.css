@@ -18,7 +18,7 @@
   --color-surface: var(--base-surface);
   --color-text-primary: var(--base-neutral-dark);
   --color-text-secondary: var(--base-neutral);
-  --color-border: #E5E7EB;
+  --color-border: #c6c8cc;
   --color-brand: var(--base-blue);
   --color-success: var(--base-green);
   --color-error: var(--base-red);

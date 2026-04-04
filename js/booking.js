@@ -1,34 +1,34 @@
 const bookingNowRadio = document.getElementById("booking-now");
 
 if (bookingNowRadio) {
-    const bookingLaterRadio = document.getElementById("booking-later");
-    const dateRow = document.querySelector(".date-container");
-    const dateInput = document.getElementById("date");
-    const timeInput = document.getElementById("time");
+  const bookingLaterRadio = document.getElementById("booking-later");
+  const dateRow = document.querySelector(".date-container");
+  const dateInput = document.getElementById("date");
+  const timeInput = document.getElementById("time");
 
-    const passengersInput = document.getElementById("passengers");
-    const luggageInput = document.getElementById("luggage");
+  const passengersInput = document.getElementById("passengers");
+  const luggageInput = document.getElementById("luggage");
 
-    const bookingForm = document.querySelector("form");
-    const originSelect = document.getElementById("origin");
-    const destinationSelect = document.getElementById("destination");
-    const originError = document.getElementById("origin-error");
-    const destinationError = document.getElementById("destination-error");
+  const bookingForm = document.querySelector("form");
+  const originSelect = document.getElementById("origin");
+  const destinationSelect = document.getElementById("destination");
+  const originError = document.getElementById("origin-error");
+  const destinationError = document.getElementById("destination-error");
 
-    function twoDigits(value) {
+  function twoDigits(value) {
     return String(value).padStart(2, "0");
-    }
+  }
 
-    function setMinDateToday() {
+  function setMinDateToday() {
     const today = new Date();
     const year = today.getFullYear();
     const month = twoDigits(today.getMonth() + 1);
     const day = twoDigits(today.getDate());
 
     dateInput.min = `${year}-${month}-${day}`;
-    }
+  }
 
-    function setCurrentDateTime() {
+  function setCurrentDateTime() {
     const today = new Date();
 
     const year = today.getFullYear();
@@ -40,9 +40,9 @@ if (bookingNowRadio) {
 
     dateInput.value = `${year}-${month}-${day}`;
     timeInput.value = `${hours}:${minutes}`;
-    }
+  }
 
-    function updateDateRowVisibility() {
+  function updateDateRowVisibility() {
     const showDateRow = bookingLaterRadio.checked;
 
     dateRow.hidden = !showDateRow;
@@ -50,57 +50,76 @@ if (bookingNowRadio) {
     timeInput.disabled = !showDateRow;
 
     if (showDateRow) {
-        setCurrentDateTime();
+      setCurrentDateTime();
     }
-    }
+  }
 
-    function validateSelect(selectElement, errorElement) {
+  function validateSelect(selectElement, errorElement) {
     const isValid = selectElement.value !== "";
 
     errorElement.hidden = isValid;
     selectElement.setAttribute("aria-invalid", String(!isValid));
 
     return isValid;
-    }
+  }
 
-    bookingNowRadio.addEventListener("change", updateDateRowVisibility);
-    bookingLaterRadio.addEventListener("change", updateDateRowVisibility);
+  bookingNowRadio.addEventListener("change", updateDateRowVisibility);
+  bookingLaterRadio.addEventListener("change", updateDateRowVisibility);
 
-    passengersInput.min = "1";
-    luggageInput.min = "0";
+  passengersInput.min = "1";
+  luggageInput.min = "0";
 
-    passengersInput.addEventListener("change", () => {
+  passengersInput.addEventListener("change", () => {
     if (Number(passengersInput.value) < 1) {
-        passengersInput.value = 1;
+      passengersInput.value = 1;
     }
-    });
+  });
 
-    luggageInput.addEventListener("change", () => {
+  luggageInput.addEventListener("change", () => {
     if (Number(luggageInput.value) < 0) {
-        luggageInput.value = 0;
+      luggageInput.value = 0;
     }
-    });
+  });
 
-    originSelect.addEventListener("change", () => {
+  originSelect.addEventListener("change", () => {
     validateSelect(originSelect, originError);
-    });
+  });
 
-    destinationSelect.addEventListener("change", () => {
+  destinationSelect.addEventListener("change", () => {
     validateSelect(destinationSelect, destinationError);
-    });
+  });
 
-    bookingForm.addEventListener("submit", (event) => {
+  bookingForm.addEventListener("submit", (event) => {
     const isOriginValid = validateSelect(originSelect, originError);
     const isDestinationValid = validateSelect(
-        destinationSelect,
-        destinationError,
+      destinationSelect,
+      destinationError,
     );
 
     if (!isOriginValid || !isDestinationValid) {
-        event.preventDefault();
+      event.preventDefault();
     }
-    });
+  });
 
-    setMinDateToday();
-    updateDateRowVisibility();
+  setMinDateToday();
+  updateDateRowVisibility();
+
+  const buttonOptions = document.getElementById(
+    "button-additional-options",
+  );
+  const moreOptions = document.getElementById("booking-form-options-view");
+
+  function toggleAdditionalOptions() {
+    const isHidden = moreOptions.hasAttribute("hidden");
+
+    if (isHidden) {
+      moreOptions.removeAttribute("hidden");
+    } else {
+      moreOptions.setAttribute("hidden", "");
+    }
+  }
+
+  if (buttonOptions  && moreOptions) {
+    buttonOptions .addEventListener("click", toggleAdditionalOptions);
+  }
 }

@@ -23,7 +23,7 @@
         <header-taxi></header-taxi>
 
         <div class="container-form">
-            <h1>Reserva</h1>
+            <h1 data-i18n="booking.h1.title">Reserva</h1>
             <div class="booking-type">
                 <input type="radio" id="booking-now" name="booking-type" value="now" checked>
                 <label for="booking-now" data-i18n="booking.tabs.request_now">Ahora</label>
@@ -34,129 +34,180 @@
 
             <form action="" method="post" novalidate>
 
-                <section id="booking-form-main-view">
+                <fieldset>
+                    <legend>Datos</legend>
+                    <section id="booking-form-main-view">
 
-                    <div class="form-row date-container">
-                        <div class="form-group ">
-                            <label for="date" data-i18n="booking.date">Fecha</label>
-                            <input type="date" id="date" name="date">
-                        </div>
+                        <div class="form-row date-container" hidden>
+                            <div class="form-group ">
+                                <label for="date" data-i18n="booking.date">Fecha</label>
+                                <input type="date" id="date" name="date">
+                            </div>
 
-                        <div class="form-group ">
-                            <label for="time" data-i18n="booking.time">Hora</label>
-                            <input type="time" id="time" name="time">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-
-                            <label for="origin" data-i18n="booking.origin">Origen</label>
-
-                            <select id="origin" name="origin" required>
-                                <option value="" disabled selected>Selecciona un origen</option>
-                                <option value="tfs">Aeropuerto Tenerife Sur</option>
-                                <option value="tfn">Aeropuerto Tenerife Norte</option>
-                                <option value="lpa">Aeropuerto Gran Canaria</option>
-                            </select>
-
-                            <p id="origin-error" class="error" hidden>
-                                <i class="fa-regular fa-circle-xmark"></i>
-                                <span data-i18n="booking.errors.destination_invalid">Selecciona un origen válido</span>
-                            </p>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="destination" data-i18n="booking.destination">Destino</label>
-                            <select id="destination" name="destination" required>
-                                <option value="" disabled selected>Selecciona un destino</option>
-                                <option value="DST1">DST1</option>
-                                <option value="DST2">DST2</option>
-                            </select>
-
-                            <p id="destination-error" class="error" hidden>
-                                <i class="fa-regular fa-circle-xmark"></i>
-                                <span data-i18n="booking.errors.destination_invalid">Selecciona un destino válido</span>
-                            </p>
-
-                        </div>
-                    </div>
-
-
-                    <div class="form-row">
-                        <div class="form-group form-group-icon">
-                            <label for="passengers" data-i18n="booking.passengers">Pasajeros</label>
-                            <div class="input-icon-wrapper">
-                                <i class="fa-solid fa-person" aria-hidden="true"></i>
-                                <input type="number" id="passengers" name="passengers" min="1" step="1" value="1">
+                            <div class="form-group ">
+                                <label for="time" data-i18n="booking.time">Hora</label>
+                                <input type="time" id="time" name="time">
                             </div>
                         </div>
 
-                        <div class="form-group form-group-icon">
-                            <label for="luggage" data-i18n="booking.luggage">Maletas</label>
-                            <div class="input-icon-wrapper">
-                                <i class="fa-solid fa-suitcase-rolling" aria-hidden="true"></i>
-                                <input type="number" id="luggage" name="luggage" min="0" step="1" value="0">
+                        <div class="form-row">
+                            <div class="form-group">
+
+                                <label for="origin" data-i18n="booking.origin">Origen</label>
+
+                                <select id="origin" name="origin" required>
+                                    <option value="" disabled selected>Selecciona un origen</option>
+                                    <option value="tfs">Aeropuerto Tenerife Sur</option>
+                                    <option value="tfn">Aeropuerto Tenerife Norte</option>
+                                    <option value="lpa">Aeropuerto Gran Canaria</option>
+                                </select>
+
+                                <p id="origin-error" class="error" hidden>
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                    <span data-i18n="booking.errors.destination_invalid">Selecciona un origen
+                                        válido</span>
+                                </p>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="destination" data-i18n="booking.destination">Destino</label>
+                                <select id="destination" name="destination" required>
+                                    <option value="" disabled selected>Selecciona un destino</option>
+                                    <option value="DST1">DST1</option>
+                                    <option value="DST2">DST2</option>
+                                </select>
+
+                                <p id="destination-error" class="error" hidden>
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                    <span data-i18n="booking.errors.destination_invalid">Selecciona un destino
+                                        válido</span>
+                                </p>
+
                             </div>
                         </div>
-                    </div>
-
-                    <div class="reduced-mobility-group">
-                        <label for="reduced-mobility" class="reduced-mobility-label">
-                            <span class="switch">
-                                <input type="checkbox" id="reduced-mobility" name="reduced_mobility"
-                                    aria-describedby="reduced-mobility-help">
-                                <span class="slider round" aria-hidden="true"></span>
-                            </span>
-
-                            <span class="reduced-mobility-text" data-i18n="booking.reduced_mobility">
-                                Personas con movilidad reducida
-                            </span>
-
-                            <i class="fa-brands fa-accessible-icon" aria-hidden="true"></i>
-                        </label>
-
-                        <p id="reduced-mobility-help" class="help-text" data-i18n="booking.accessibility_details">
-                            Indicar si algún pasajero necesita espacio o asistencia adicional
-                        </p>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="accessibility-notes" data-i18n="booking.accessibility_notes">
-                            Observaciones de accesibilidad (PRM)
-                        </label>
-
-                        <textarea id="accessibility-notes" name="accessibility_notes" rows="4"></textarea>
-                    </div>
-
-                    <div>
-                        <button type="button" class="btn btn-secondary" data-i18n="booking.additional_options"
-                            aria-controls="booking-form-options-view" aria-expanded="false">
-                            Opciones adicionales
-                        </button>
-                    </div>
-
-                </section>
 
 
-                <section id="booking-form-options-view" hidden>
-                    <h2 data-i18n="booking.additional_options">Opciones adicionales</h2>
+                        <div class="form-row">
+                            <div class="form-group form-group-icon">
+                                <label for="passengers" data-i18n="booking.passengers">Pasajeros</label>
+                                <div class="input-icon-wrapper">
+                                    <i class="fa-solid fa-person" aria-hidden="true"></i>
+                                    <input type="number" id="passengers" name="passengers" min="1" step="1" value="1">
+                                </div>
+                            </div>
 
-                    <div class="additional-options-container">
-                        <!--? Contenido de opciones adicionales -->
-                    </div>
-                </section>
+                            <div class="form-group form-group-icon">
+                                <label for="luggage" data-i18n="booking.luggage">Maletas</label>
+                                <div class="input-icon-wrapper">
+                                    <i class="fa-solid fa-suitcase-rolling" aria-hidden="true"></i>
+                                    <input type="number" id="luggage" name="luggage" min="0" step="1" value="0">
+                                </div>
+                            </div>
+                        </div>
 
-                <summary-taxi></summary-taxi>
+                        <div class="reduced-mobility-group">
+                            <label for="reduced-mobility" class="reduced-mobility-label">
+                                <span class="switch">
+                                    <input type="checkbox" id="reduced-mobility" name="reduced_mobility"
+                                        aria-describedby="reduced-mobility-help">
+                                    <span class="slider round" aria-hidden="true"></span>
+                                </span>
 
-                <button type="submit" class="btn btn-primary" data-i18n="booking.confirm">
-                    Continuar al pago
-                </button>
-            </form>
+                                <span class="reduced-mobility-text" data-i18n="booking.reduced_mobility">
+                                    Personas con movilidad reducida
+                                </span>
+
+                                <i class="fa-brands fa-accessible-icon" aria-hidden="true"></i>
+                            </label>
+
+                            <p id="reduced-mobility-help" class="help-text" data-i18n="booking.accessibility_details">
+                                Indicar si algún pasajero necesita espacio o asistencia adicional
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accessibility-notes" data-i18n="booking.accessibility_notes">
+                                Observaciones de accesibilidad (PRM)
+                            </label>
+
+                            <textarea id="accessibility-notes" name="accessibility_notes" rows="4"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="button" id="button-additional-options" class="btn btn-secondary"
+                                data-i18n="booking.additional_options" aria-controls="booking-form-options-view"
+                                aria-expanded="false">
+                                Opciones adicionales
+                            </button>
+                        </div>
+
+                    </section>
+
+
+                    <section id="booking-form-options-view" hidden>
+                        <h3 data-i18n="booking.additional_options">Opciones adicionales</h2>
+                            <div class="additional-options-group">
+                                <label for="pets" class="additional-option-label">
+                                    <span class="switch">
+                                        <input type="checkbox" id="pets" name="pets" aria-describedby="pets-help">
+                                        <span class="slider round" aria-hidden="true"></span>
+                                    </span>
+
+                                    <span class="additional-option-text" data-i18n="booking.pets">
+                                        Mascotas
+                                    </span>
+
+                                    <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                                </label>
+
+                                <p id="pets-help" class="help-text" data-i18n="booking.pets_details">
+                                    Indicar si viajarán mascotas en el trayecto
+                                </p>
+                            </div>
+
+                            <div class="additional-options-group">
+                                <label for="special-luggage" class="additional-option-label">
+                                    <span class="switch">
+                                        <input type="checkbox" id="special-luggage" name="special_goods"
+                                            aria-describedby="special-luggage-help">
+                                        <span class="slider round" aria-hidden="true"></span>
+                                    </span>
+
+                                    <span class="additional-option-text" data-i18n="booking.special_goods">
+                                        Mercancías especiales
+                                    </span>
+
+                                    <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                                </label>
+
+                                <p id="special-luggage-help" class="help-text"
+                                    data-i18n="booking.special_goods_details">
+                                    Indicar si transportas mercancías especiales o equipaje no habitual
+                                </p>
+
+                                <div class="form-group">
+                                    <label for="accessibility-notes" data-i18n="booking.accessibility_notes">
+                                        Observaciones de accesibilidad (PRM)
+                                    </label>
+
+                                    <textarea id="accessibility-notes" name="accessibility_notes" rows="4"></textarea>
+                                </div>
+                            </div>
+                    </section>
         </div>
 
-        <footer-taxi></footer-taxi>
+
+        <summary-taxi></summary-taxi>
+
+        <button type="submit" class="btn btn-primary" data-i18n="booking.confirm">
+            Continuar al pago
+        </button>
+        </fieldset>
+        </form>
+    </div>
+
+    <footer-taxi></footer-taxi>
 
 
 
