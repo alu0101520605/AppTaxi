@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════
-   home.js — NeedTaxi home de usuario
-═══════════════════════════════════════════ */
-
-/* Toggle de disponibilidad del conductor */
 const driverToggle = document.getElementById('driverToggle');
 const toggleLabel  = document.getElementById('toggle-label');
 

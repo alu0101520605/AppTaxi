@@ -200,6 +200,46 @@
       }
     }
   },
+  "home": {
+    "greeting": {
+      "wellcome": "Welcome back",
+      "name": "Hello, Carlos! 👋",
+      "trip": "Total trips",
+      "summary": "Rating",
+      "last": "Last destination"
+    },
+    "nav_button": "Book now",
+    "quick_actions": {
+      "title": "Quick actions",
+      "new": "New reservation",
+      "new_trip": "Book your next trip",
+      "history": "My bookings",
+      "consult": "Check or modify",
+      "again": "Repeat trip",
+      "last_trip": "S/C → Airport"
+    },
+    "trip": {
+      "history": "Trip history",
+      "all": "View all →",
+      "status": "Completed",
+      "driver": "Driver:",
+      "again": "Repeat"
+    },
+    "configuration": {
+      "title": "Settings",
+      "payment": "Payment methods",
+      "notifications": "Notifications",
+      "cache": "Push and email active",
+      "general": "General settings",
+      "more": "Privacy, accessibility, data…",
+      "profile": "My profile",
+      "detailed_profile": "Edit name, photo, phone…",
+      "log_out": "Log out"
+    }
+  },
+  "search": {
+    "placeholder": "Where do you want to go?"
+  },
   "components": {
     "header": {
       "home": "Home",
@@ -229,6 +269,8 @@
   "language_selector": {
     "language": "Language",
     "english": "English",
-    "spanish": "Spanish"
+    "spanish": "Spanish",
+    "switch": "English",
+    "en": "EN"
   }
 }

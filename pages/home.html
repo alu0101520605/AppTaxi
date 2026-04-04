@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <title>NeedTaxi – Inicio</title>
+    <title>Home | NeedTaxi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,29 +22,29 @@
         <!-- 1. SALUDO + ESTADÍSTICAS -->
         <section class="greeting-section anim anim-1" aria-label="Bienvenida y estadísticas">
           <div class="greeting-text">
-            <p class="greeting-label">Bienvenido de nuevo</p>
-            <h1 class="greeting-name">¡Hola, <span>Carlos!</span> 👋</h1>
+            <p class="greeting-label" data-i18n="home.greeting.wellcome">Bienvenido de nuevo</p>
+            <h1 class="greeting-name" data-i18n="home.greeting.name">¡Hola, Carlos! 👋</h1>
           </div>
           <div class="stats-chips" role="list" aria-label="Estadísticas de viajes">
             <div class="stat-chip" role="listitem">
               <div class="stat-chip-icon" aria-hidden="true"><i class="fa-solid fa-taxi"></i></div>
               <div>
                 <div class="stat-chip-val">12</div>
-                <div class="stat-chip-label">Viajes totales</div>
+                <div class="stat-chip-label" data-i18n="home.greeting.trip">Viajes totales</div>
               </div>
             </div>
             <div class="stat-chip" role="listitem">
               <div class="stat-chip-icon" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
               <div>
                 <div class="stat-chip-val">4,9</div>
-                <div class="stat-chip-label">Valoración</div>
+                <div class="stat-chip-label" data-i18n="home.greeting.summary">Valoración</div>
               </div>
             </div>
             <div class="stat-chip" role="listitem">
               <div class="stat-chip-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
               <div>
                 <div class="stat-chip-val">S/C</div>
-                <div class="stat-chip-label">Último destino</div>
+                <div class="stat-chip-label" data-i18n="home.greeting.last">Último destino</div>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@
             <input placeholder="¿A dónde te apetece ir o viajar?" aria-label="Introduce tu destino">
             <button class="search-btn" type="button" aria-label="Buscar y reservar">
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              Reservar
+              <span data-i18n="home.nav_button">Reservar</span>
             </button>
           </div>
         </section>
@@ -65,29 +65,29 @@
         <!-- 3. ACCIONES RÁPIDAS -->
         <section class="anim anim-3" aria-labelledby="quick-actions-title">
           <div class="section-header">
-            <h2 class="section-title" id="quick-actions-title">Acciones rápidas</h2>
+            <h2 class="section-title" id="quick-actions-title" data-i18n="home.quick_actions.title">Acciones rápidas</h2>
           </div>
           <div class="quick-actions">
             <a href="solicitar.html" class="action-card primary" aria-label="Crear nueva reserva de taxi">
               <div class="action-icon" aria-hidden="true"><i class="fa-solid fa-taxi"></i></div>
               <div class="action-text">
-                <div class="action-label">Nueva reserva</div>
-                <div class="action-sub">Reserva tu próximo viaje</div>
+                <div class="action-label" data-i18n="home.quick_actions.new">Nueva reserva</div>
+                <div class="action-sub" data-i18n="home.quick_actions.new_trip">Reserva tu próximo viaje</div>
               </div>
               <div class="action-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
             <a href="gestionar.html" class="action-card" aria-label="Gestionar mis reservas">
               <div class="action-icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></div>
               <div class="action-text">
-                <div class="action-label">Mis reservas</div>
-                <div class="action-sub">Consulta o modifica</div>
+                <div class="action-label" data-i18n="home.quick_actions.history">Mis reservas</div>
+                <div class="action-sub" data-i18n="home.quick_actions.consult">Consulta o modifica</div>
               </div>
             </a>
             <a href="solicitar.html?repeat=last" class="action-card" aria-label="Repetir último viaje a S/C Tenerife Centro">
               <div class="action-icon" aria-hidden="true"><i class="fa-solid fa-rotate-right"></i></div>
               <div class="action-text">
-                <div class="action-label">Repetir viaje</div>
-                <div class="action-sub">S/C → Aeropuerto</div>
+                <div class="action-label" data-i18n="home.quick_actions.again">Repetir viaje</div>
+                <div class="action-sub" data-i18n="home.quick_actions.last_trip">S/C → Aeropuerto</div>
               </div>
             </a>
           </div>
@@ -96,8 +96,8 @@
         <!-- 4. HISTORIAL DE VIAJES -->
         <section class="anim anim-4" aria-labelledby="history-title">
           <div class="section-header">
-            <h2 class="section-title" id="history-title">Historial de viajes</h2>
-            <a href="gestionar.html" class="section-link" aria-label="Ver todos los viajes">Ver todos →</a>
+            <h2 class="section-title" id="history-title" data-i18n="home.trip.history">Historial de viajes</h2>
+            <a href="gestionar.html" class="section-link" aria-label="Ver todos los viajes" data-i18n="home.trip.all">Ver todos →</a>
           </div>
           <div class="trips-list">
 
@@ -105,7 +105,7 @@
             <article class="trip-card" tabindex="0" aria-label="Viaje del 28 de marzo, 18,50 euros">
               <div class="trip-meta">
                 <span class="trip-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 28 mar 2026 · 09:14</span>
-                <span class="trip-status">Completado</span>
+                <span class="trip-status" data-i18n="home.trip.status">Completado</span>
               </div>
               <div class="trip-price-col">
                 <div class="trip-price">18,50 €</div>
@@ -120,22 +120,22 @@
               <div class="trip-route" aria-label="Ruta del viaje">
                 <div class="route-point">
                   <span class="route-dot origin" aria-hidden="true"></span>
-                  <span class="route-tag">Origen</span>
+                  <span class="route-tag" data-i18n="booking.origin">Origen</span>
                   <span class="route-name">S/C de Tenerife Centro</span>
                 </div>
                 <div class="route-point">
                   <span class="route-dot dest" aria-hidden="true"></span>
-                  <span class="route-tag">Destino</span>
+                  <span class="route-tag" data-i18n="booking.destination">Destino</span>
                   <span class="route-name">Aeropuerto Norte TFN</span>
                 </div>
               </div>
               <div class="trip-footer">
                 <div class="trip-driver-info">
                   <div class="driver-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
-                  <span>Conductor: Miguel R.</span>
+                  <span data-i18n="home.trip.driver">Conductor:</span> <span>Miguel R.</span>
                 </div>
                 <a href="solicitar.html?repeat=1" class="trip-repeat-btn" aria-label="Repetir este viaje">
-                  <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Repetir
+                  <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> <span data-i18n="home.trip.again">Repetir</span>
                 </a>
               </div>
             </article>
@@ -144,7 +144,7 @@
             <article class="trip-card" tabindex="0" aria-label="Viaje del 21 de marzo, 7,20 euros">
               <div class="trip-meta">
                 <span class="trip-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 21 mar 2026 · 18:45</span>
-                <span class="trip-status">Completado</span>
+                <span class="trip-status" data-i18n="home.trip.status">Completado</span>
               </div>
               <div class="trip-price-col">
                 <div class="trip-price">7,20 €</div>
@@ -159,22 +159,22 @@
               <div class="trip-route" aria-label="Ruta del viaje">
                 <div class="route-point">
                   <span class="route-dot origin" aria-hidden="true"></span>
-                  <span class="route-tag">Origen</span>
+                  <span class="route-tag" data-i18n="booking.origin">Origen</span>
                   <span class="route-name">La Laguna – Pl. del Adelantado</span>
                 </div>
                 <div class="route-point">
                   <span class="route-dot dest" aria-hidden="true"></span>
-                  <span class="route-tag">Destino</span>
+                  <span class="route-tag" data-i18n="booking.destination">Destino</span>
                   <span class="route-name">S/C de Tenerife – Meridiano</span>
                 </div>
               </div>
               <div class="trip-footer">
                 <div class="trip-driver-info">
                   <div class="driver-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
-                  <span>Conductora: Laura M.</span>
+                  <span data-i18n="home.trip.driver">Conductor:</span> <span>Laura M.</span>
                 </div>
                 <a href="solicitar.html?repeat=2" class="trip-repeat-btn" aria-label="Repetir este viaje">
-                  <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Repetir
+                  <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> <span data-i18n="home.trip.again">Repetir</span>
                 </a>
               </div>
             </article>
@@ -183,7 +183,7 @@
             <article class="trip-card" tabindex="0" aria-label="Viaje del 15 de marzo, 24 euros">
               <div class="trip-meta">
                 <span class="trip-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 15 mar 2026 · 11:00</span>
-                <span class="trip-status">Completado</span>
+                <span class="trip-status" data-i18n="home.trip.status">Completado</span>
               </div>
               <div class="trip-price-col">
                 <div class="trip-price">24,00 €</div>
@@ -198,22 +198,22 @@
               <div class="trip-route" aria-label="Ruta del viaje">
                 <div class="route-point">
                   <span class="route-dot origin" aria-hidden="true"></span>
-                  <span class="route-tag">Origen</span>
+                  <span class="route-tag" data-i18n="booking.origin">Origen</span>
                   <span class="route-name">Puerto de la Cruz</span>
                 </div>
                 <div class="route-point">
                   <span class="route-dot dest" aria-hidden="true"></span>
-                  <span class="route-tag">Destino</span>
+                  <span class="route-tag" data-i18n="booking.destination">Destino</span>
                   <span class="route-name">S/C de Tenerife Centro</span>
                 </div>
               </div>
               <div class="trip-footer">
                 <div class="trip-driver-info">
                   <div class="driver-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
-                  <span>Conductor: José A.</span>
+                  <span data-i18n="home.trip.driver">Conductor:</span> <span>Jose A.</span>
                 </div>
                 <a href="solicitar.html?repeat=3" class="trip-repeat-btn" aria-label="Repetir este viaje">
-                  <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Repetir
+                  <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> <span data-i18n="home.trip.again">Repetir</span>
                 </a>
               </div>
             </article>
@@ -224,36 +224,41 @@
         <!-- 5. CONFIGURACIÓN -->
         <section class="anim anim-5" aria-labelledby="settings-title">
           <div class="section-header">
-            <h2 class="section-title" id="settings-title">Configuración</h2>
+            <h2 class="section-title" id="settings-title" data-i18n="home.configuration.title">Configuración</h2>
           </div>
           <nav class="settings-block" aria-label="Opciones de configuración">
 
             <a href="/pagos.html" class="setting-item" aria-label="Métodos de pago, Visa terminada en 4291">
               <div class="setting-icon" aria-hidden="true"><i class="fa-solid fa-credit-card"></i></div>
               <div class="setting-text">
-                <div class="setting-label">Métodos de pago</div>
+                <div class="setting-label" data-i18n="home.configuration.payment">Métodos de pago</div>
                 <div class="setting-sub">Visa ···· 4291</div>
               </div>
-              <div class="setting-right" aria-hidden="true">Gestionar <i class="fa-solid fa-chevron-right"></i></div>
+              <div class="setting-right" aria-hidden="true" data-i18n="components.header.mobile.manage_reservation">Gestionar <i class="fa-solid fa-chevron-right"></i></div>
             </a>
 
             <a href="/notificaciones.html" class="setting-item" aria-label="Notificaciones, push y email activos">
               <div class="setting-icon" aria-hidden="true"><i class="fa-solid fa-bell"></i></div>
               <div class="setting-text">
-                <div class="setting-label">Notificaciones</div>
-                <div class="setting-sub">Push y email activos</div>
+                <div class="setting-label" data-i18n="home.configuration.notifications">Notificaciones</div>
+                <div class="setting-sub" data-i18n="home.configuration.cache">Push y email activos</div>
               </div>
               <div class="setting-right" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
 
-            <a href="/idioma.html" class="setting-item" aria-label="Idioma, Español seleccionado">
+            <a class="setting-item" aria-label="Idioma, Español seleccionado">
               <div class="setting-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></div>
               <div class="setting-text">
-                <div class="setting-label">Idioma</div>
-                <div class="setting-sub">Español</div>
+                <div class="setting-label" data-i18n="language_selector.language">Idioma</div>
+                <div class="setting-sub" value="es" data-i18n="language_selector.switch">Español</div>
               </div>
               <div class="setting-right" aria-hidden="true">
-                <span class="setting-badge">ES</span>
+                <span class="setting-badge">
+                  <select id="language-desktop" name="language" class="language-selector" aria-label="Seleccionar idioma">
+                    <option class="setting-badge" value="es" data-i18n="language_selector.es">ES</option>
+                    <option class="setting-badge" value="en" data-i18n="language_selector.en">EN</option>
+                  </select>
+                </span>
                 <i class="fa-solid fa-chevron-right"></i>
               </div>
             </a>
@@ -261,8 +266,8 @@
             <a href="/configuracion.html" class="setting-item" aria-label="Configuración general">
               <div class="setting-icon" aria-hidden="true"><i class="fa-solid fa-sliders"></i></div>
               <div class="setting-text">
-                <div class="setting-label">Configuración general</div>
-                <div class="setting-sub">Privacidad, accesibilidad, datos…</div>
+                <div class="setting-label" data-i18n="home.configuration.general">Configuración general</div>
+                <div class="setting-sub" data-i18n="home.configuration.more">Privacidad, accesibilidad, datos…</div>
               </div>
               <div class="setting-right" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
@@ -270,8 +275,8 @@
             <a href="/perfil.html" class="setting-item" aria-label="Mi perfil">
               <div class="setting-icon success" aria-hidden="true"><i class="fa-solid fa-user-pen"></i></div>
               <div class="setting-text">
-                <div class="setting-label">Mi perfil</div>
-                <div class="setting-sub">Editar nombre, foto, teléfono…</div>
+                <div class="setting-label" data-i18n="home.configuration.profile">Mi perfil</div>
+                <div class="setting-sub" data-i18n="home.configuration.detailed_profile">Editar nombre, foto, teléfono…</div>
               </div>
               <div class="setting-right" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
@@ -279,7 +284,7 @@
             <a href="/logout" class="setting-item logout" aria-label="Cerrar sesión">
               <div class="setting-icon danger" aria-hidden="true"><i class="fa-solid fa-right-from-bracket"></i></div>
               <div class="setting-text">
-                <div class="setting-label">Cerrar sesión</div>
+                <div class="setting-label" data-i18n="home.configuration.log_out">Cerrar sesión</div>
               </div>
               <div class="setting-right" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
             </a>

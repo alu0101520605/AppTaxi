@@ -197,6 +197,46 @@
       }
     }
   },
+  "home":{
+    "greeting": {
+      "wellcome": "Bienvenido de nuevo",
+      "name": "¡Hola, Carlos! 👋",
+      "trip": "Viajes totales",
+      "summary": "Valoración",
+      "last": "Ultimo destino"
+    },
+    "nav_button": "Reservar",
+    "quick_actions": {
+      "title": "Acciones rápidas",
+      "new": "Nueva reserva",
+      "new_trip": "Reserva tu próximo viaje",
+      "history": "Mis reservas",
+      "consult": "Consulta o modifica",
+      "again": "Repetir viaje",
+      "last_trip": "S/C → Aeropuerto"
+    },
+    "trip": {
+      "history": "Historial de viajes",
+      "all": "Ver todos →",
+      "status": "Completado",
+      "driver": "Conductor:",
+      "again": "Repetir"
+    },
+    "configuration": {
+      "title": "Configuración",
+      "payment": "Métodos de pago",
+      "notifications": "Notificaciones",
+      "cache": "Push y email activos",
+      "general": "Configuración general",
+      "more": "Privacidad, accesibilidad, datos…",
+      "profile": "Mi perfil",
+      "detailed_profile": "Editar nombre, foto, teléfono…",
+      "log_out": "Cerrar sesión"
+    }
+  },
+  "search": {
+    "placeholder": "¿A dónde te apetece ir o viajar?"
+  },
   "components": {
     "header": {
       "home": "Inicio",
@@ -226,6 +266,8 @@
   "language_selector": {
     "language": "Idioma",
     "english": "Inglés",
-    "spanish": "Español"
+    "spanish": "Español",
+    "switch": "Español",
+    "es": "ES"
   }
 }
