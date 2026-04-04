@@ -50,28 +50,45 @@
     }
   },
   "booking": {
+    "h1": {
+      "title": "Reserva"
+    },
+    "type_legend": "Cuándo deseas el taxi",
+    "legend": {
+      "trip_data": "Datos"
+    },
     "tabs": {
-      "request_now": "Solicitar",
+      "request_now": "Ahora",
       "schedule": "Programar"
     },
     "origin": "Origen",
+    "origin_placeholder": "Selecciona un origen",
+    "destination_placeholder": "Selecciona un destino",
+    "origins": {
+      "tfs": "Aeropuerto Tenerife Sur",
+      "tfn": "Aeropuerto Tenerife Norte"
+    },
     "destination": "Destino",
     "date": "Fecha",
     "time": "Hora",
+    "date_time": "Fecha y hora",
     "select_option": "Selecciona una opción",
     "select_date": "Selecciona una fecha",
     "select_time": "Selecciona una hora",
     "passengers": "Pasajeros",
     "luggage": "Maletas",
-    "reduced_mobility": "Personas con movilidad reducida(PMR)",
-    "accessibility_details": "Indicar si algún pasajero necesita espacio o asistencia adicional.",
-    "accessibility_notes": "Observaciones de accesibilidad(PMR)",
+    "price": "Precio",
+    "reduced_mobility": "Personas con movilidad reducida",
+    "accessibility_details": "Indicar si algún pasajero necesita espacio o asistencia adicional",
+    "accessibility_notes": "Observaciones de accesibilidad (PRM)",
     "additional_options": "Opciones adicionales",
+    "pets": "Mascotas",
+    "pets_details": "Indicar si viajarán mascotas en el trayecto",
+    "special_luggage": "Mercancías especiales",
+    "special_luggage_details": "Indicar si transportas mercancías especiales o equipaje no habitual",
+    "special_luggage_notes": "Observaciones",
     "summary": {
-      "title": "Resumen",
-      "origin": "Origen",
-      "destination": "Destino",
-      "price": "Precio estimado"
+      "title": "Resumen"
     },
     "errors": {
       "origin_invalid": "Selecciona un origen válido",
@@ -80,7 +97,7 @@
       "time_invalid": "Selecciona una hora válida"
     },
     "confirm": "Confirmar",
-    "continue_to_payment": "Pagar"
+    "continue_to_payment": "Continuar al pago"
   },
   "payment": {
     "title": "Pago",

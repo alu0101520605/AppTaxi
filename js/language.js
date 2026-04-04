@@ -25,14 +25,28 @@ function getTranslation(translations, keyPath) {
     .reduce((currentValue, key) => currentValue?.[key], translations);
 }
 
-function translatePage(translations) {
-  const translatableElements = document.querySelectorAll("[data-i18n]");
+function translateAttribute(
+  translations,
+  selector,
+  attributeName,
+  dataKeyName,
+) {
+  document.querySelectorAll(selector).forEach((element) => {
+    const translationKey = element.getAttribute(dataKeyName);
+    const translatedText = getTranslation(translations, translationKey);
 
-  translatableElements.forEach((element) => {
+    if (typeof translatedText === "string") {
+      element.setAttribute(attributeName, translatedText);
+    }
+  });
+}
+
+function translatePage(translations) {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
     const translationKey = element.getAttribute("data-i18n");
     const translatedText = getTranslation(translations, translationKey);
 
-    if (translatedText !== undefined) {
+    if (typeof translatedText === "string") {
       if (translatedText.includes("<")) {
         element.innerHTML = translatedText;
       } else {
@@ -40,6 +54,20 @@ function translatePage(translations) {
       }
     }
   });
+
+  translateAttribute(
+    translations,
+    "[data-i18n-placeholder]",
+    "placeholder",
+    "data-i18n-placeholder",
+  );
+
+  translateAttribute(
+    translations,
+    "[data-i18n-aria-label]",
+    "aria-label",
+    "data-i18n-aria-label",
+  );
 }
 
 document.addEventListener("change", (event) => {

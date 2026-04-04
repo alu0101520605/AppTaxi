@@ -50,23 +50,43 @@
     }
   },
   "booking": {
+    "h1": {
+      "title": "Booking"
+    },
+    "type_legend": "When would you like the taxi",
+    "legend": {
+      "trip_data": "Trip details"
+    },
     "tabs": {
-      "request_now": "Request now",
+      "request_now": "Now",
       "schedule": "Schedule"
     },
     "origin": "Origin",
+    "origin_placeholder": "Select an origin",
+    "destination_placeholder": "Select a destination",
+    "origins": {
+      "tfs": "Tenerife South Airport",
+      "tfn": "Tenerife North Airport"
+    },
     "destination": "Destination",
     "date": "Date",
     "time": "Time",
+    "date_time": "Date and time",
     "select_option": "Select an option",
     "select_date": "Select a date",
     "select_time": "Select a time",
     "passengers": "Passengers",
     "luggage": "Luggage",
-    "reduced_mobility": "People with reduced mobility(PRM)",
-    "accessibility_details": "Please let us know if any passenger requires extra space or additional assistance.",
-    "accessibility_notes": "Accessibility notes(PRM)",
+    "price": "Price",
+    "reduced_mobility": "Passengers with reduced mobility",
+    "accessibility_details": "Indicate whether any passenger needs extra space or assistance",
+    "accessibility_notes": "Accessibility notes (PRM)",
     "additional_options": "Additional options",
+    "pets": "Pets",
+    "pets_details": "Indicate whether pets will travel during the trip",
+    "special_luggage": "Special goods",
+    "special_luggage_details": "Indicate whether you are carrying special goods or unusual luggage",
+    "special_luggage_notes": "Notes",
     "summary": {
       "title": "Summary",
       "origin": "Origin",
@@ -79,8 +99,8 @@
       "date_invalid": "Select a valid date",
       "time_invalid": "Select a valid time"
     },
-    "confirm": "Confirm",
-    "continue_to_payment": "Pay"
+    "confirm": "Continue to payment",
+    "continue_to_payment": "Continue to payment"
   },
   "payment": {
     "title": "Payment",

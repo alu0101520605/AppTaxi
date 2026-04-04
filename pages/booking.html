@@ -23,7 +23,7 @@
         <header-taxi></header-taxi>
 
         <div class="container-form">
-            <h1 data-i18n="booking.h1.title">Reserva</h1>   
+            <h1 data-i18n="booking.h1.title">Reserva</h1>
             <fieldset class="booking-type">
                 <legend class="sr-only" data-i18n="booking.type_legend">Cuándo deseas el taxi</legend>
 
@@ -48,7 +48,7 @@
                                 <input type="date" id="date" name="date">
                                 <p id="date-error" class="error" hidden aria-live="polite" aria-atomic="true">
                                     <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
-                                    <span data-i18n="booking.errors.date_invalid">Selecciona una fecha válida</span>                                    
+                                    <span data-i18n="booking.errors.date_invalid">Selecciona una fecha válida</span>
                                 </p>
                             </div>
 
@@ -68,10 +68,14 @@
                                 <label for="origin" data-i18n="booking.origin">Origen</label>
 
                                 <select id="origin" name="origin" required aria-describedby="origin-error">
-                                    <option value="" disabled selected>Selecciona un origen</option>
-                                    <option value="tfs">Aeropuerto Tenerife Sur</option>
-                                    <option value="tfn">Aeropuerto Tenerife Norte</option>
-                                    <option value="lpa">Aeropuerto Gran Canaria</option>
+                                    <option value="" disabled selected data-i18n="booking.origin_placeholder">Selecciona
+                                        un
+                                        origen</option>
+                                    <option value="tfs" data-i18n="booking.origins.tfs">Aeropuerto Tenerife Sur
+                                    </option>
+                                    <option value="tfn" data-i18n="booking.origins.tfs">Aeropuerto Tenerife
+                                        Norte
+                                    </option>
                                 </select>
 
                                 <p id="origin-error" class="error" hidden aria-live="polite" aria-atomic="true">
@@ -86,7 +90,9 @@
                                 <label for="destination" data-i18n="booking.destination">Destino</label>
                                 <select id="destination" name="destination" required
                                     aria-describedby="destination-error">
-                                    <option value="" disabled selected>Selecciona un destino</option>
+                                    <option value="" disabled selected data-i18n="booking.destination_placeholder">
+                                        Selecciona un destino
+                                    </option>
                                     <option value="DST1">DST1</option>
                                     <option value="DST2">DST2</option>
                                 </select>
