@@ -131,6 +131,8 @@ if (bookingNowRadio) {
       else if (!isDateValid) dateInput.focus();
       else if (!isTimeValid) timeInput.focus();
     }
+
+    event.preventDefault(); // Bloqueo de salto de página por novalidate
     
   });
 
