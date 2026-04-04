@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="icon" href="/assets/icons/favicon-96x96.png" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/pages/contacto.css">
+  <script type="module" src="/js/app.js"></script>
+  <title>Contacto | Need Taxi</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <header-taxi></header-taxi>
+
+    <main class="contact-page">
+
+      <!-- ── Hero ── -->
+      <section class="contact-hero" aria-labelledby="contact-page-title">
+        <div class="contact-hero-inner">
+          <div class="hero-eyebrow">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            <span data-i18n="contact.eyebrow">Contacto</span>
+          </div>
+          <h1 id="contact-page-title" data-i18n="contact.page_title">Estamos aquí para ayudarte</h1>
+          <p data-i18n="contact.page_subtitle">Escríbenos, llámanos o acércate a nuestras oficinas. Nuestro equipo responde en menos de 24&nbsp;horas.</p>
+        </div>
+      </section>
+
+      <!-- ── Contact methods strip ── -->
+      <section class="methods-strip" aria-label="Canales de contacto">
+        <div class="methods-inner">
+
+          <a href="tel:+34922000000" class="method-item" aria-label="Llámanos al +34 922 000 000">
+            <div class="method-icon" aria-hidden="true">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="method-text">
+              <strong data-i18n="contact.method_phone">Teléfono</strong>
+              <span data-i18n="contact.method_phone_value">+34 922 000 000</span>
+            </div>
+          </a>
+
+          <a href="mailto:info@needtaxi.com" class="method-item" aria-label="Envíanos un email a info@needtaxi.com">
+            <div class="method-icon" aria-hidden="true">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="method-text">
+              <strong data-i18n="contact.method_email">Correo electrónico</strong>
+              <span data-i18n="contact.method_email_value">info@needtaxi.com</span>
+            </div>
+          </a>
+
+          <a href="https://wa.me/34922000000" target="_blank" rel="noopener noreferrer" class="method-item" aria-label="Escríbenos por WhatsApp">
+            <div class="method-icon" aria-hidden="true">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="method-text">
+              <strong data-i18n="contact.method_whatsapp">WhatsApp</strong>
+              <span data-i18n="contact.method_whatsapp_value">Respuesta rápida</span>
+            </div>
+          </a>
+
+          <a href="#contact-form" class="method-item" aria-label="Rellena el formulario de contacto">
+            <div class="method-icon" aria-hidden="true">
+              <i class="fa-solid fa-comment-dots"></i>
+            </div>
+            <div class="method-text">
+              <strong data-i18n="contact.method_form">Formulario</strong>
+              <span data-i18n="contact.method_form_value">Respuesta en 24 h</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ── Main grid ── -->
+      <div class="contact-grid">
+
+        <!-- Contact form -->
+        <div class="form-card" id="contact-form">
+
+          <div id="form-body">
+            <h2 class="form-card-title" data-i18n="contact.form_title">Envíanos un mensaje</h2>
+            <p class="form-card-sub" data-i18n="contact.form_subtitle">Rellena el formulario y te contestaremos lo antes posible.</p>
+
+            <form id="cf-form" novalidate aria-label="Formulario de contacto" data-i18n-aria-label="contact.form_aria_label">
+
+              <div class="cf-row-group">
+                <div class="cf-group">
+                  <label for="cf-name" data-i18n="contact.field_name">Nombre *</label>
+                  <input type="text" id="cf-name" name="name" placeholder="Tu nombre" data-i18n-placeholder="contact.field_name_placeholder" autocomplete="given-name" required aria-required="true">
+                </div>
+                <div class="cf-group">
+                  <label for="cf-surname" data-i18n="contact.field_surname">Apellidos</label>
+                  <input type="text" id="cf-surname" name="surname" placeholder="Tus apellidos" data-i18n-placeholder="contact.field_surname_placeholder" autocomplete="family-name">
+                </div>
+              </div>
+
+              <div class="cf-row-group">
+                <div class="cf-group">
+                  <label for="cf-email" data-i18n="contact.field_email">Correo electrónico *</label>
+                  <input type="email" id="cf-email" name="email" placeholder="tu@correo.com" data-i18n-placeholder="contact.field_email_placeholder" autocomplete="email" required aria-required="true">
+                </div>
+                <div class="cf-group">
+                  <label for="cf-phone" data-i18n="contact.field_phone">Teléfono</label>
+                  <input type="tel" id="cf-phone" name="phone" placeholder="+34 6XX XXX XXX" data-i18n-placeholder="contact.field_phone_placeholder" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="cf-group">
+                <label for="cf-subject" data-i18n="contact.field_subject">Asunto *</label>
+                <select id="cf-subject" name="subject" required aria-required="true">
+                  <option value="" disabled selected data-i18n="contact.subject_placeholder">Selecciona un asunto</option>
+                  <option value="booking" data-i18n="contact.subject_booking">Consulta sobre reserva</option>
+                  <option value="cancel" data-i18n="contact.subject_cancel">Cancelación de reserva</option>
+                  <option value="lost" data-i18n="contact.subject_lost">Objetos perdidos</option>
+                  <option value="complaint" data-i18n="contact.subject_complaint">Reclamación o queja</option>
+                  <option value="other" data-i18n="contact.subject_other">Otro</option>
+                </select>
+              </div>
+
+              <div class="cf-group">
+                <label for="cf-booking" data-i18n="contact.field_booking">Código de reserva (opcional)</label>
+                <input type="text" id="cf-booking" name="booking_code" placeholder="Ej. NT-20251234" data-i18n-placeholder="contact.field_booking_placeholder" autocomplete="off" autocapitalize="characters" maxlength="20">
+              </div>
+
+              <div class="cf-group">
+                <label for="cf-message" data-i18n="contact.field_message">Mensaje *</label>
+                <textarea id="cf-message" name="message" rows="5" placeholder="Escribe aquí tu consulta…" data-i18n-placeholder="contact.field_message_placeholder" required aria-required="true"></textarea>
+              </div>
+
+              <div class="cf-check">
+                <input type="checkbox" id="cf-privacy" name="privacy" required aria-required="true">
+                <label for="cf-privacy" data-i18n="contact.privacy_text">
+                  He leído y acepto la <a href="/privacidad.html">Política de privacidad</a> y el tratamiento de mis datos para la gestión de la consulta.
+                </label>
+              </div>
+
+              <button type="submit" class="btn-send" id="cf-submit">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                <span data-i18n="contact.submit_btn">Enviar mensaje</span>
+              </button>
+
+            </form>
+          </div>
+
+          <!-- Success state -->
+          <div class="send-success" id="send-success" role="status" aria-live="polite">
+            <div class="success-circle">
+              <i class="fa-solid fa-check" aria-hidden="true"></i>
+            </div>
+            <h3 data-i18n="contact.success_title">¡Mensaje enviado!</h3>
+            <p data-i18n="contact.success_desc">Hemos recibido tu consulta. Te responderemos en menos de 24&nbsp;horas en el correo indicado.</p>
+          </div>
+
+        </div>
+        <!-- /form card -->
+
+        <!-- Sidebar -->
+        <aside class="contact-sidebar" aria-label="Información de contacto adicional">
+
+          <!-- Map -->
+          <div class="map-card">
+            <iframe
+              class="map-frame"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-16.26,28.05,-16.24,28.07&amp;layer=mapnik&amp;marker=28.06,-16.25"
+              title="Ubicación de NeedTaxi en Tenerife"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              aria-label="Mapa con la ubicación de las oficinas de NeedTaxi"
+            ></iframe>
+            <div class="map-info">
+              <div class="map-info-header">
+                <div class="map-pin-icon" aria-hidden="true">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3 data-i18n="contact.map_title">Nuestras oficinas</h3>
+              </div>
+              <address class="map-address" style="font-style:normal">
+                Calle Ejemplo 12, 1º A<br>
+                38001 Santa Cruz de Tenerife<br>
+                Islas Canarias, España
+              </address>
+            </div>
+          </div>
+
+          <!-- Opening hours -->
+          <div class="hours-card" role="region" aria-label="Horario de atención al cliente">
+            <div class="hours-card-title">
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              <span data-i18n="contact.hours_title">Horario de atención</span>
+            </div>
+            <dl>
+              <div class="hours-row">
+                <dt class="hours-day" data-i18n="contact.hours_weekday">Lunes – Viernes</dt>
+                <dd class="hours-time" data-i18n="contact.hours_weekday_time">08:00 – 20:00</dd>
+              </div>
+              <div class="hours-row">
+                <dt class="hours-day" data-i18n="contact.hours_saturday">Sábado</dt>
+                <dd class="hours-time" data-i18n="contact.hours_saturday_time">09:00 – 14:00</dd>
+              </div>
+              <div class="hours-row">
+                <dt class="hours-day" data-i18n="contact.hours_sunday">Domingo</dt>
+                <dd class="hours-time" style="color:var(--color-text-secondary)" data-i18n="contact.hours_sunday_closed">Cerrado</dd>
+              </div>
+              <div class="hours-row">
+                <dt class="hours-day" data-i18n="contact.hours_emergency">Urgencias taxi</dt>
+                <dd><span class="badge-24h"><i class="fa-solid fa-circle" style="font-size:6px"></i> 24 / 7</span></dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Social media -->
+          <div class="social-card" role="region" aria-label="Redes sociales">
+            <p class="social-card-title" data-i18n="contact.social_title">Síguenos en redes</p>
+            <div class="social-links">
+
+              <a href="https://instagram.com/needtaxi" target="_blank" rel="noopener noreferrer" class="social-link" style="--sl-color:#E1306C" aria-label="NeedTaxi en Instagram">
+                <div class="social-link-icon" style="background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);" aria-hidden="true">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="social-link-text">
+                  <strong>Instagram</strong>
+                  <span>@needtaxi</span>
+                </div>
+                <i class="fa-solid fa-chevron-right social-link-arrow" aria-hidden="true"></i>
+              </a>
+
+              <a href="https://facebook.com/needtaxi" target="_blank" rel="noopener noreferrer" class="social-link" style="--sl-color:#1877F2" aria-label="NeedTaxi en Facebook">
+                <div class="social-link-icon" style="background:#1877F2;" aria-hidden="true">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="social-link-text">
+                  <strong>Facebook</strong>
+                  <span>NeedTaxi Tenerife</span>
+                </div>
+                <i class="fa-solid fa-chevron-right social-link-arrow" aria-hidden="true"></i>
+              </a>
+
+              <a href="https://twitter.com/needtaxi" target="_blank" rel="noopener noreferrer" class="social-link" style="--sl-color:#000" aria-label="NeedTaxi en X (Twitter)">
+                <div class="social-link-icon" style="background:#000000;" aria-hidden="true">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                <div class="social-link-text">
+                  <strong>X / Twitter</strong>
+                  <span>@needtaxi</span>
+                </div>
+                <i class="fa-solid fa-chevron-right social-link-arrow" aria-hidden="true"></i>
+              </a>
+
+              <a href="https://wa.me/34922000000" target="_blank" rel="noopener noreferrer" class="social-link" style="--sl-color:#25D366" aria-label="Escríbenos por WhatsApp">
+                <div class="social-link-icon" style="background:#25D366;" aria-hidden="true">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="social-link-text">
+                  <strong>WhatsApp</strong>
+                  <span data-i18n="contact.social_whatsapp_text">Escríbenos directamente</span>
+                </div>
+                <i class="fa-solid fa-chevron-right social-link-arrow" aria-hidden="true"></i>
+              </a>
+
+            </div>
+          </div>
+
+        </aside>
+        <!-- /sidebar -->
+
+      </div>
+      <!-- /contact-grid -->
+
+      <!-- ── FAQ ── -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" data-i18n="contact.faq_title">Preguntas frecuentes</h2>
+        <p data-i18n="contact.faq_subtitle">Respuestas rápidas a las dudas más comunes.</p>
+
+        <div class="faq-grid" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+              <span data-i18n="contact.faq_q1">¿Cómo puedo modificar mi reserva?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+              <span data-i18n="contact.faq_a1">Puedes modificar tu reserva desde la sección <strong>Gestionar reserva</strong> introduciendo tu código y correo electrónico. También puedes contactarnos por teléfono o WhatsApp y gestionamos el cambio por ti.</span>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+              <span data-i18n="contact.faq_q2">¿Cuál es el plazo para cancelar sin coste?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+              <span data-i18n="contact.faq_a2">Las cancelaciones realizadas con más de 24 horas de antelación son gratuitas. Para cancelaciones en menos tiempo, revisa los términos del servicio o escríbenos para valorar tu caso particular.</span>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+              <span data-i18n="contact.faq_q3">¿Cómo recibo la confirmación de reserva?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+              <span data-i18n="contact.faq_a3">Recibirás un correo de confirmación inmediatamente tras completar el pago. En él encontrarás tu <strong>código de reserva</strong>, los detalles del trayecto y los datos del conductor asignado.</span>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+              <span data-i18n="contact.faq_q4">¿Ofrecéis vehículos adaptados para PMR?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+              <span data-i18n="contact.faq_a4">Sí. Al hacer la reserva puedes indicar si necesitas asistencia o espacio adicional para personas con movilidad reducida. También puedes contactarnos directamente para gestionar cualquier necesidad especial.</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer-taxi></footer-taxi>
+
+  </div>
+
+  <script>
+    // ── FAQ accordion ──
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const answerId = btn.getAttribute('aria-controls');
+        const answer   = document.getElementById(answerId);
+
+        btn.setAttribute('aria-expanded', String(!expanded));
+        answer.classList.toggle('open', !expanded);
+      });
+    });
+
+    // ── Contact form submit (demo) ──
+    document.getElementById('cf-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const btn = document.getElementById('cf-submit');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Enviando…';
+
+      // Simulate API call
+      await new Promise(r => setTimeout(r, 1200));
+
+      document.getElementById('form-body').style.display = 'none';
+      document.getElementById('send-success').classList.add('visible');
+    });
+  </script>
+
+</body>
+
+</html>
