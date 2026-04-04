@@ -8,3 +8,4 @@ import "./booking.js";
 import "./summary.js";
 import "./home.js";
 import "./sign-up.js";
+import "./login.js";
