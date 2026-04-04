@@ -35,7 +35,9 @@
             <form action="" method="post" novalidate>
 
                 <fieldset>
-                    <legend>Datos</legend>
+                    <legend>
+                        <h2>Datos</h2>
+                    </legend>
                     <section id="booking-form-main-view">
 
                         <div class="form-row date-container" hidden>
@@ -146,46 +148,48 @@
 
 
                     <section id="booking-form-options-view" hidden>
-                        <h3 data-i18n="booking.additional_options">Opciones adicionales</h2>
-                            <div class="additional-options-group">
-                                <label for="pets" class="additional-option-label">
-                                    <span class="switch">
-                                        <input type="checkbox" id="pets" name="pets" aria-describedby="pets-help">
-                                        <span class="slider round" aria-hidden="true"></span>
-                                    </span>
 
-                                    <span class="additional-option-text" data-i18n="booking.pets">
-                                        Mascotas
-                                    </span>
+                        <h3 data-i18n="booking.additional_options">Opciones adicionales</h3>
 
-                                    <i class="fa-solid fa-paw" aria-hidden="true"></i>
-                                </label>
+                        <div class="additional-options-group">
+                            <label for="pets" class="additional-option-label">
+                                <span class="switch">
+                                    <input type="checkbox" id="pets" name="pets" aria-describedby="pets-help">
+                                    <span class="slider round" aria-hidden="true"></span>
+                                </span>
 
-                                <p id="pets-help" class="help-text" data-i18n="booking.pets_details">
-                                    Indicar si viajarán mascotas en el trayecto
-                                </p>
-                            </div>
+                                <span class="additional-option-text" data-i18n="booking.pets">
+                                    Mascotas
+                                </span>
 
-                            <div class="additional-options-group">
-                                <label for="special-luggage" class="additional-option-label">
-                                    <span class="switch">
-                                        <input type="checkbox" id="special-luggage" name="special_goods"
-                                            aria-describedby="special-luggage-help">
-                                        <span class="slider round" aria-hidden="true"></span>
-                                    </span>
+                                <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                            </label>
 
-                                    <span class="additional-option-text" data-i18n="booking.special_goods">
-                                        Mercancías especiales
-                                    </span>
+                            <p id="pets-help" class="help-text" data-i18n="booking.pets_details">
+                                Indicar si viajarán mascotas en el trayecto
+                            </p>
+                        </div>
 
-                                    <i class="fa-solid fa-box-open" aria-hidden="true"></i>
-                                </label>
+                        <div class="additional-options-group">
+                            <label for="special-luggage" class="additional-option-label">
+                                <span class="switch">
+                                    <input type="checkbox" id="special-luggage" name="special_luggage"
+                                        aria-describedby="special-luggage-help">
+                                    <span class="slider round" aria-hidden="true"></span>
+                                </span>
 
-                                <p id="special-luggage-help" class="help-text"
-                                    data-i18n="booking.special_goods_details">
-                                    Indicar si transportas mercancías especiales o equipaje no habitual
-                                </p>
+                                <span class="additional-option-text" data-i18n="booking.special_luggage">
+                                    Mercancías especiales
+                                </span>
 
+                                <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                            </label>
+
+                            <p id="special-luggage-help" class="help-text" data-i18n="booking.special_luggage_details">
+                                Indicar si transportas mercancías especiales o equipaje no habitual
+                            </p>
+
+                            <div class="form-row">
                                 <div class="form-group">
                                     <label for="accessibility-notes" data-i18n="booking.accessibility_notes">
                                         Observaciones de accesibilidad (PRM)
@@ -194,20 +198,33 @@
                                     <textarea id="accessibility-notes" name="accessibility_notes" rows="4"></textarea>
                                 </div>
                             </div>
+                        </div>
                     </section>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" data-i18n="booking.confirm">
+                                Continuar al pago
+                            </button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+
+            <summary-taxi></summary-taxi>
+
+
+
+
         </div>
 
 
-        <summary-taxi></summary-taxi>
 
-        <button type="submit" class="btn btn-primary" data-i18n="booking.confirm">
-            Continuar al pago
-        </button>
-        </fieldset>
-        </form>
-    </div>
 
-    <footer-taxi></footer-taxi>
+
+
+        <footer-taxi></footer-taxi>
 
 
 

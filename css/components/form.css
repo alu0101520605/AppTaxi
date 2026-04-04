@@ -2,7 +2,6 @@
   max-width: 780px;
   margin: 2rem auto;
   padding: 1rem 1.25rem;
-  /* ! PROBLEMA CON COLORES*/
   background-color: var(--color-surface);
   border-radius: 1rem;
   box-sizing: border-box;
@@ -21,8 +20,8 @@ form {
 
 fieldset{
   border-radius:0.5rem ;
-  border-color: --base-neutral-dark ;
-  padding: 0.3rem;
+  border-color: var(--base-neutral-dark);
+  padding: 0.4rem;
 }
 
 #booking-form-main-view,
@@ -71,7 +70,6 @@ fieldset{
 }
 
 .booking-type label:hover {
-  /*! TEMP Revisar con 0.1. cuidado con cambiar el valor de la variable en root*/
   background-color: var(--color-surface);
   color: var(--color-text-primary);
 }
