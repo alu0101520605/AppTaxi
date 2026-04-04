@@ -56,9 +56,13 @@ if (bookingNowRadio) {
 
   function validateSelect(selectElement, errorElement) {
     const isValid = selectElement.value !== "";
-
     errorElement.hidden = isValid;
-    selectElement.setAttribute("aria-invalid", String(!isValid));
+
+    if (isValid) {
+      selectElement.removeAttribute("aria-invalid");
+    } else {
+      selectElement.setAttribute("aria-invalid", "true");
+    }
 
     return isValid;
   }
@@ -99,14 +103,19 @@ if (bookingNowRadio) {
     if (!isOriginValid || !isDestinationValid) {
       event.preventDefault();
     }
+
+    if (!isOriginValid) {
+      originSelect.focus();
+    } else {
+      destinationSelect.focus();
+    }
+    
   });
 
   setMinDateToday();
   updateDateRowVisibility();
 
-  const buttonOptions = document.getElementById(
-    "button-additional-options",
-  );
+  const buttonOptions = document.getElementById("button-additional-options");
   const moreOptions = document.getElementById("booking-form-options-view");
 
   function toggleAdditionalOptions() {
@@ -114,12 +123,14 @@ if (bookingNowRadio) {
 
     if (isHidden) {
       moreOptions.removeAttribute("hidden");
+      buttonOptions.setAttribute("aria-expanded", "true");
     } else {
       moreOptions.setAttribute("hidden", "");
+      buttonOptions.setAttribute("aria-expanded", "false");
     }
   }
 
-  if (buttonOptions  && moreOptions) {
-    buttonOptions .addEventListener("click", toggleAdditionalOptions);
+  if (buttonOptions && moreOptions) {
+    buttonOptions.addEventListener("click", toggleAdditionalOptions);
   }
 }

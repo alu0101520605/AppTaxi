@@ -23,20 +23,20 @@
         <header-taxi></header-taxi>
 
         <div class="container-form">
-            <h1 data-i18n="booking.h1.title">Reserva</h1>
+            <h1 data-i18n="booking.h1.title">reserva</h1>
             <div class="booking-type">
                 <input type="radio" id="booking-now" name="booking-type" value="now" checked>
-                <label for="booking-now" data-i18n="booking.tabs.request_now">Ahora</label>
+                <label for="booking-now" data-i18n="booking.tabs.request_now">ahora</label>
 
                 <input type="radio" id="booking-later" name="booking-type" value="date-time">
-                <label for="booking-later" data-i18n="booking.tabs.schedule">Programar</label>
+                <label for="booking-later" data-i18n="booking.tabs.schedule">programar</label>
             </div>
 
             <form action="" method="post" novalidate>
 
                 <fieldset>
-                    <legend>
-                        <h2>Datos</h2>
+                    <legend data-i18n="booking.legend.trip_data">
+                        Datos
                     </legend>
                     <section id="booking-form-main-view">
 
@@ -57,16 +57,16 @@
 
                                 <label for="origin" data-i18n="booking.origin">Origen</label>
 
-                                <select id="origin" name="origin" required>
+                                <select id="origin" name="origin" required aria-describedby="origin-error">
                                     <option value="" disabled selected>Selecciona un origen</option>
                                     <option value="tfs">Aeropuerto Tenerife Sur</option>
                                     <option value="tfn">Aeropuerto Tenerife Norte</option>
                                     <option value="lpa">Aeropuerto Gran Canaria</option>
                                 </select>
 
-                                <p id="origin-error" class="error" hidden>
-                                    <i class="fa-regular fa-circle-xmark"></i>
-                                    <span data-i18n="booking.errors.destination_invalid">Selecciona un origen
+                                <p id="origin-error" class="error" hidden aria-live="polite">
+                                    <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+                                    <span data-i18n="booking.errors.origin_invalid">Selecciona un origen
                                         válido</span>
                                 </p>
 
@@ -74,14 +74,15 @@
 
                             <div class="form-group">
                                 <label for="destination" data-i18n="booking.destination">Destino</label>
-                                <select id="destination" name="destination" required>
+                                <select id="destination" name="destination" required
+                                    aria-describedby="destination-error">
                                     <option value="" disabled selected>Selecciona un destino</option>
                                     <option value="DST1">DST1</option>
                                     <option value="DST2">DST2</option>
                                 </select>
 
-                                <p id="destination-error" class="error" hidden>
-                                    <i class="fa-regular fa-circle-xmark"></i>
+                                <p id="destination-error" class="error" hidden aria-live="polite">
+                                    <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
                                     <span data-i18n="booking.errors.destination_invalid">Selecciona un destino
                                         válido</span>
                                 </p>
@@ -147,9 +148,10 @@
                     </section>
 
 
-                    <section id="booking-form-options-view" hidden>
+                    <section id="booking-form-options-view" hidden aria-labelledby="additional-options-title">
 
-                        <h3 data-i18n="booking.additional_options">Opciones adicionales</h3>
+                        <h3 data-i18n="booking.additional_options" id="additional-options-title">Opciones adicionales
+                        </h3>
 
                         <div class="additional-options-group">
                             <label for="pets" class="additional-option-label">
@@ -191,11 +193,12 @@
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="accessibility-notes" data-i18n="booking.accessibility_notes">
-                                        Observaciones de accesibilidad (PRM)
+                                    <label for="special-luggage-notes" data-i18n="booking.special_luggage_notes">
+                                        Observaciones
                                     </label>
 
-                                    <textarea id="accessibility-notes" name="accessibility_notes" rows="4"></textarea>
+                                    <textarea id="special-luggage-notes" name="special_luggage_notes"
+                                        rows="4"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -214,18 +217,9 @@
 
             <summary-taxi></summary-taxi>
 
-
-
-
         </div>
 
-
-
-
-
-
         <footer-taxi></footer-taxi>
-
 
 
     </div>
