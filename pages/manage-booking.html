@@ -8,10 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="icon" href="../assets/icons/favicon-96x96.png" type="image/png">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/pages/gestionar.css">
-  <script type="module" src="../js/app.js"></script>
+  <link rel="icon" href="/assets/icons/favicon-96x96.png" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/pages/gestionar.css">
+  <script type="module" src="/js/app.js"></script>
   <title>Gestionar reserva | Need Taxi</title>
 </head>
 
@@ -41,7 +41,7 @@
             <p data-i18n="manage.hint">Introduce el <strong>código de reserva</strong> y el <strong>correo electrónico</strong> con el que realizaste la reserva.</p>
           </div>
 
-          <form id="manage-form" novalidate aria-label="Formulario de búsqueda de reserva">
+          <form id="manage-form" novalidate aria-label="Formulario de búsqueda de reserva" data-i18n-aria-label="manage.form_aria_label">
 
             <div class="field-group">
               <label for="booking-code">
@@ -73,6 +73,7 @@
                 id="booking-email"
                 name="email"
                 placeholder="tu@correo.com"
+                data-i18n-placeholder="manage.email_placeholder"
                 autocomplete="email"
                 required
                 aria-required="true"
@@ -84,7 +85,7 @@
                 <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 <span data-i18n="manage.search_btn">Buscar reserva</span>
               </span>
-              <span class="spinner" role="status" aria-label="Buscando reserva…"></span>
+              <span class="spinner" role="status" aria-label="Buscando reserva…" data-i18n-aria-label="manage.spinner_aria_label"></span>
             </button>
 
           </form>
@@ -160,11 +161,11 @@
             </div>
 
             <div class="result-actions">
-              <button type="button" class="btn-outline" id="btn-download" aria-label="Descargar confirmación de reserva en PDF">
+              <button type="button" class="btn-outline" id="btn-download" aria-label="Descargar confirmación de reserva en PDF" data-i18n-aria-label="manage.btn_download_aria">
                 <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
                 <span data-i18n="manage.btn_download">Descargar</span>
               </button>
-              <button type="button" class="btn-danger" id="btn-cancel" aria-label="Solicitar cancelación de esta reserva">
+              <button type="button" class="btn-danger" id="btn-cancel" aria-label="Solicitar cancelación de esta reserva" data-i18n-aria-label="manage.btn_cancel_aria">
                 <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                 <span data-i18n="manage.btn_cancel">Cancelar reserva</span>
               </button>
@@ -177,7 +178,7 @@
         <!-- /widget-body -->
 
         <div class="widget-footer-note">
-          <p><span data-i18n="manage.footer_note">¿Tienes cuenta?</span> <a href="/login.html" data-i18n="manage.footer_link">Inicia sesión</a> para ver todas tus reservas.</p>
+          <p><span data-i18n="manage.footer_note">¿Tienes cuenta?</span> <a href="/login.html" data-i18n="manage.footer_link">Inicia sesión</a> <span data-i18n="manage.footer_link_pt2">para ver todas tus reservas.</span></p>
         </div>
 
       </article>
