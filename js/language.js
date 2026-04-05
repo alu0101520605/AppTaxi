@@ -51,7 +51,7 @@ function translatePage(translations) {
     const translatedText = getTranslation(translations, translationKey);
 
     if (typeof translatedText === "string") {
-      element.textContent = translatedText;
+      element.innerHTML = translatedText;
     } else {
       console.warn(`Falta traducción para: ${translationKey}`);
     }
