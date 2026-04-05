@@ -252,6 +252,9 @@
       "login": "Acceder",
       "contact": "Contacto",
       "profile": "Perfil",
+      "nav_aria_label": "Menú principal",
+      "mobile_nav_aria_label": "Navegación principal de la aplicación",
+      "language_selector_aria_label": "Seleccionar idioma",
       "mobile": {
         "request_reservation": "Solicitar",
         "manage_reservation": "Gestionar"
@@ -266,7 +269,8 @@
       "terms": "Términos de servicio",
       "privacy": "Política de privacidad",
       "cookies": "Política de cookies",
-      "copyright": " 2026 NeedTaxi. Todos los derechos reservados."
+      "copyright": "2026 NeedTaxi. Todos los derechos reservados.",
+      "wcag_badge_alt": "Conformidad Nivel AA, Directrices de Accesibilidad para el Contenido Web 2.1 del W3C"
     }
   },
   "language_selector": {

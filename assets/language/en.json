@@ -248,10 +248,13 @@
       "home": "Home",
       "request_reservation": "Request Reservation",
       "manage_reservation": "Manage Reservation",
-      "logo_alt": "NeedTaxi - Back to Home",
+      "logo_alt": "NeedTaxi - Back to home",
       "login": "Login",
       "contact": "Contact",
       "profile": "Profile",
+      "nav_aria_label": "Main menu",
+      "mobile_nav_aria_label": "Main application navigation",
+      "language_selector_aria_label": "Select language",
       "mobile": {
         "request_reservation": "Request",
         "manage_reservation": "Manage"
@@ -266,14 +269,15 @@
       "terms": "Terms of service",
       "privacy": "Privacy policy",
       "cookies": "Cookies policy",
-      "copyright": " 2026 NeedTaxi. All rights reserved."
+      "copyright": "2026 NeedTaxi. All rights reserved.",
+      "wcag_badge_alt": "Level AA Conformance, W3C Web Content Accessibility Guidelines 2.1"
     }
   },
   "language_selector": {
-    "language": "Idioma",
-    "english": "Inglés",
-    "spanish": "Español",
-    "switch": "Español",
+    "language": "Language",
+    "english": "English",
+    "spanish": "Spanish",
+    "switch": "English",
     "es": "ES",
     "en": "EN"
   }
