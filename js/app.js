@@ -13,9 +13,5 @@ window.addEventListener("load", async () => {
   const browserLanguage = navigator.language.startsWith("es") ? "es" : "en";
   const initialLanguage = savedLanguage || browserLanguage;
 
-  console.log("Idioma guardado en localStorage:", savedLanguage);
-  console.log("Idioma del navegador:", browserLanguage);
-  console.log("Idioma inicial a cargar:", initialLanguage);
-
   await loadLanguage(initialLanguage);
 });

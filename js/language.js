@@ -13,14 +13,8 @@ export async function loadLanguage(language) {
     translatePage(translations);
     document.documentElement.lang = language;
 
-    console.log(
-      "document.documentElement.lang =",
-      document.documentElement.lang,
-    );
-
     document.querySelectorAll(".language-selector").forEach((select) => {
       select.value = language;
-      console.log("Selector actualizado a:", select.value);
     });
   } catch (error) {
     console.error("Error loading translations:", error);
@@ -78,21 +72,13 @@ function translatePage(translations) {
   );
 
   translateAttribute(translations, "[data-i18n-alt]", "alt", "data-i18n-alt");
-
-  console.log("Página traducida");
 }
 
 document.addEventListener("change", async (event) => {
   if (event.target && event.target.classList.contains("language-selector")) {
     const newLanguage = event.target.value;
 
-    console.log("Cambio detectado en selector:", newLanguage);
-
     localStorage.setItem("language", newLanguage);
-    console.log(
-      "Idioma guardado en localStorage:",
-      localStorage.getItem("language"),
-    );
 
     await loadLanguage(newLanguage);
   }
