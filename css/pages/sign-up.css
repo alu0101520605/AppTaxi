@@ -20,6 +20,17 @@
     color: var(--base-blue);
 }
 
+.verification-method {
+    border: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+.verification-method legend {
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
 @media (max-width: 480px) {
     .booking-type {
         flex-direction: column;

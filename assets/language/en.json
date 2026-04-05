@@ -10,10 +10,12 @@
       "continue_with_apple": "Continue with Apple",
       "continue_with_google": "Continue with Google",
       "continue_with_phone": "Continue with phone",
-      "no_account": "Don't have an account?"
+      "no_account": "Don't have an account?",
+      "sign_up": "Sign up"
     },
     "register": {
       "title": "Registration",
+      "form_aria_label": "Registration form",
       "prefix": "Prefix",
       "phone_label": "Phone number",
       "phone_placeholder": "E.g: 600123456",
@@ -28,7 +30,7 @@
       "first_name": "First name",
       "last_name": "Last name",
       "email": "Email",
-      "email_optional": "Email (Optional - For billing)",
+      "email_optional": "Email",
       "terms": "I accept the Terms and Conditions",
       "privacy": "I accept the Privacy Policy",
       "terms_error": "You must accept the terms to continue.",
@@ -121,7 +123,8 @@
   },
   "pages": {
     "titles": {
-      "index": "Safe, fast, and stress-free transfers : Need Taxi"
+      "index": "Safe, fast, and stress-free transfers : Need Taxi",
+      "signup": "Sign up : Need Taxi"
     },
     "landing": {
       "carousel": {

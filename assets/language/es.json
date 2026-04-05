@@ -10,10 +10,12 @@
       "continue_with_apple": "Continuar con Apple",
       "continue_with_google": "Continuar con Google",
       "continue_with_phone": "Continuar con teléfono",
-      "no_account": "¿No tienes cuenta?"
+      "no_account": "¿No tienes cuenta?",
+      "sign_up": "Regístrate"
     },
     "register": {
       "title": "Registro",
+      "form_aria_label": "Formulario de registro",
       "prefix": "Prefijo",
       "phone_label": "Número de teléfono",
       "phone_placeholder": "Ej: 600123456",
@@ -28,7 +30,7 @@
       "first_name": "Nombre",
       "last_name": "Apellido",
       "email": "Correo electrónico",
-      "email_optional": "E-mail (Opcional - Para facturación)",
+      "email_optional": "E-mail",
       "terms": "Acepto los Términos y Condiciones",
       "privacy": "Acepto la Política de Privacidad",
       "terms_error": "Debes aceptar los términos para continuar.",
@@ -121,7 +123,8 @@
   },
   "pages": {
     "titles": {
-      "index": "Tu traslado seguro, rápido y sin complicaciones : Need Taxi"
+      "index": "Tu traslado seguro, rápido y sin complicaciones : Need Taxi",
+      "signup": "Registro : Need Taxi"
     },
     "landing": {
       "carousel": {
