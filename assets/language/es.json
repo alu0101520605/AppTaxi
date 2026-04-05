@@ -58,6 +58,7 @@
     }
   },
   "booking": {
+    "page_title": "Reserva : Need Taxi",
     "h1": {
       "title": "Reserva"
     },

@@ -58,6 +58,7 @@
     }
   },
   "booking": {
+    "page_title": "Booking : Need Taxi",
     "h1": {
       "title": "Booking"
     },

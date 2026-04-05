@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <script type="module" src="/js/app.js"></script>
 
-    <title>Reserva : Need Taxi</title>
+    <title data-i18n="booking.page_title">Reserva : Need Taxi</title>
 </head>
 
 <body>
@@ -45,7 +45,7 @@
                         <div class="form-row date-container" hidden>
                             <div class="form-group ">
                                 <label for="date" data-i18n="booking.date">Fecha</label>
-                                <input type="date" id="date" name="date">
+                                <input type="date" id="date" name="date" aria-describedby="date-error">
                                 <p id="date-error" class="error" hidden aria-live="polite" aria-atomic="true">
                                     <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
                                     <span data-i18n="booking.errors.date_invalid">Selecciona una fecha válida</span>
@@ -54,7 +54,7 @@
 
                             <div class="form-group ">
                                 <label for="time" data-i18n="booking.time">Hora</label>
-                                <input type="time" id="time" name="time">
+                                <input type="time" id="time" name="time" aria-describedby="time-error">
                                 <p id="time-error" class="error" hidden aria-live="polite" aria-atomic="true">
                                     <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
                                     <span data-i18n="booking.errors.time_invalid">Selecciona una hora válida</span>
@@ -73,7 +73,7 @@
                                         origen</option>
                                     <option value="tfs" data-i18n="booking.origins.tfs">Aeropuerto Tenerife Sur
                                     </option>
-                                    <option value="tfn" data-i18n="booking.origins.tfs">Aeropuerto Tenerife
+                                    <option value="tfn" data-i18n="booking.origins.tfn">Aeropuerto Tenerife
                                         Norte
                                     </option>
                                 </select>
@@ -150,7 +150,8 @@
                                 Observaciones de accesibilidad (PRM)
                             </label>
 
-                            <textarea id="accessibility-notes" name="accessibility_notes" rows="4"></textarea>
+                            <textarea id="accessibility-notes" name="accessibility_notes" rows="4"
+                                aria-describedby="reduced-mobility-help"></textarea>
                         </div>
 
                         <div>
@@ -213,8 +214,8 @@
                                         Observaciones
                                     </label>
 
-                                    <textarea id="special-luggage-notes" name="special_luggage_notes"
-                                        rows="4"></textarea>
+                                    <textarea id="special-luggage-notes" name="special_luggage_notes" rows="4"
+                                        aria-describedby="special-luggage-help"></textarea>
                                 </div>
                             </div>
                         </div>

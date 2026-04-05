@@ -77,13 +77,6 @@ function translatePage(translations) {
     "data-i18n-aria-label",
   );
 
-  translateAttribute(
-    translations,
-    "[data-i18n-title]",
-    "title",
-    "data-i18n-title",
-  );
-
   translateAttribute(translations, "[data-i18n-alt]", "alt", "data-i18n-alt");
 
   console.log("Página traducida");
