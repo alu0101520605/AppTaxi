@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.getElementById('otp-success').removeAttribute('hidden');
                         setTimeout(() => {
                             goToStep(2, 3);
-                        }, 2000); 
+                        }, 4000); 
                     } else {
                         document.getElementById('otp-error').removeAttribute('hidden');
                         setTimeout(() => {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             // Accesibilidad: Mover el foco al mensaje de error para que el lector lo lea inmediatamente
                             globalErrorMsg.setAttribute('tabindex', '-1');
                             globalErrorMsg.focus();
-                        }, 2500); 
+                        }, 4000); 
                     }
                 }, 1000); 
             }
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Simular carga de login
             setTimeout(() => {
             window.location.href = '/pages/login.html';
-            }, 3000);
+            }, 5000);
         });
 
         // Función auxiliar para cambiar de paso
