@@ -96,7 +96,10 @@
     "special_luggage_details": "Indicar si transportas mercancías especiales o equipaje no habitual",
     "special_luggage_notes": "Observaciones",
     "summary": {
-      "title": "Resumen"
+      "title": "Resumen",
+      "origin": "Origen",
+      "destination": "Destino",
+      "price": "Precio estimado"
     },
     "errors": {
       "origin_invalid": "Selecciona un origen válido",
@@ -115,36 +118,32 @@
     "total": "Precio total",
     "pay": "Pagar"
   },
-  "additional_options": {
-    "pets": "Animales de compañía",
-    "pets_hint": "No incluye animales de asistencia.",
-    "special_luggage": "Equipaje especial",
-    "special_luggage_examples": "Carritos plegables, bicicletas, tablas de surf...",
-    "notes": "Detalles adicionales",
-    "notes_placeholder": "Añade detalles sobre animales o equipaje especial.",
-    "origin": "Origen",
-    "destination": "Destino",
-    "continue_to_payment": "Continuar al pago",
-    "pay": "Pagar"
-  },
   "pages": {
+    "titles": {
+      "index": "Tu traslado seguro, rápido y sin complicaciones : Need Taxi"
+    },
     "landing": {
       "carousel": {
+        "aria_label": "Carrusel de nuestra flota de vehículos y servicios",
         "slide1": {
           "title": "¡Bienvenido!",
-          "text": "Disfruta sin preocupaciones. <br>Nosotros nos encargamos del transporte."
+          "text": "Disfruta sin preocupaciones. <br>Nosotros nos encargamos del transporte.",
+          "image_alt": "Joven sonriendo mientras usa su móvil en el asiento trasero de un taxi"
         },
         "slide2": {
           "title": "CUALQUIER ZONA DE TENERIFE",
-          "text": "Servicio en toda la isla, traslados al aeropuerto, playas y zonas turísticas.<br> Cobertura en Canarias."
+          "text": "Servicio en toda la isla, traslados al aeropuerto, playas y zonas turísticas.<br> Cobertura en Canarias.",
+          "image_alt": "Vista de la costa de Tenerife con el volcán Teide al fondo"
         },
         "slide3": {
           "title": "MOVILIDAD ADAPTADA",
-          "text": "Vehículos amplios y equipados con rampa."
+          "text": "Vehículos amplios y equipados con rampa.",
+          "image_alt": "Flota de taxis de diferentes modelos aparcados en líneas"
         },
         "slide4": {
           "title": "RÁPIDO Y SEGURO",
-          "text": "Llegamos en minutos. <br>Conductores profesionales para un viaje con total tranquilidad."
+          "text": "Llegamos en minutos. <br>Conductores profesionales para un viaje con total tranquilidad.",
+          "image_alt": "Avión en la pista del aeropuerto de Tenerife Sur"
         }
       },
       "intro_form": {
@@ -157,6 +156,7 @@
         "submit_btn": "Continuar"
       },
       "features": {
+        "title": "Nuestras Ventajas",
         "airport": {
           "title": "Traslados desde Aeropuerto",
           "text": "Conexión directa con Tenerife Sur (TFS) y Tenerife Norte (TFN). Sin esperas."
@@ -182,22 +182,28 @@
         "tours": {
           "title": "Excursiones y Tours",
           "text": "Descubre el Parque Nacional del Teide, Masca o Garachico con nuestros conductores locales expertos.",
-          "btn": "Ver Rutas"
+          "btn": "Ver Rutas",
+          "aria_label": "Ver rutas de excursiones y tours",
+          "image_alt": "Paisaje natural del Parque Nacional del Teide"
         },
         "business": {
           "title": "Servicio para Empresas",
           "text": "Gestión de traslados corporativos, facturación mensual y atención prioritaria para tus empleados.",
-          "btn": "Saber más"
+          "btn": "Saber más",
+          "aria_label": "Saber más sobre nuestro servicio para empresas",
+          "image_alt": "Mujer de negocios sonriendo satisfecha en el interior de un vehículo de traslado"
         },
         "app": {
           "title": "Reserva desde la App",
           "text": "Descarga nuestra aplicación gratuita. Rastrea tu taxi en tiempo real y gestiona tus reservas fácilmente.",
-          "btn": "Descargar App"
+          "btn": "Descargar App",
+          "aria_label": "Descargar la aplicación Need Taxi",
+          "image_alt": "Logotipo oficial de la aplicación Need Taxi"
         }
       }
     }
   },
-  "home":{
+  "home": {
     "greeting": {
       "wellcome": "Bienvenido de nuevo",
       "name": "¡Hola, Carlos! 👋",
@@ -268,6 +274,7 @@
     "english": "Inglés",
     "spanish": "Español",
     "switch": "Español",
-    "es": "ES"
+    "es": "ES",
+    "en": "EN"
   }
 }

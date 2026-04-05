@@ -1,5 +1,7 @@
 export async function loadLanguage(language) {
   try {
+    console.log("Cargando idioma:", language);
+
     const response = await fetch(`/assets/language/${language}.json`);
 
     if (!response.ok) {
@@ -11,8 +13,14 @@ export async function loadLanguage(language) {
     translatePage(translations);
     document.documentElement.lang = language;
 
+    console.log(
+      "document.documentElement.lang =",
+      document.documentElement.lang,
+    );
+
     document.querySelectorAll(".language-selector").forEach((select) => {
       select.value = language;
+      console.log("Selector actualizado a:", select.value);
     });
   } catch (error) {
     console.error("Error loading translations:", error);
@@ -37,6 +45,8 @@ function translateAttribute(
 
     if (typeof translatedText === "string") {
       element.setAttribute(attributeName, translatedText);
+    } else {
+      console.warn(`Falta traducción para: ${translationKey}`);
     }
   });
 }
@@ -47,11 +57,9 @@ function translatePage(translations) {
     const translatedText = getTranslation(translations, translationKey);
 
     if (typeof translatedText === "string") {
-      if (translatedText.includes("<")) {
-        element.innerHTML = translatedText;
-      } else {
-        element.textContent = translatedText;
-      }
+      element.textContent = translatedText;
+    } else {
+      console.warn(`Falta traducción para: ${translationKey}`);
     }
   });
 
@@ -68,16 +76,31 @@ function translatePage(translations) {
     "aria-label",
     "data-i18n-aria-label",
   );
+
+  translateAttribute(
+    translations,
+    "[data-i18n-title]",
+    "title",
+    "data-i18n-title",
+  );
+
+  translateAttribute(translations, "[data-i18n-alt]", "alt", "data-i18n-alt");
+
+  console.log("Página traducida");
 }
 
-document.addEventListener("change", (event) => {
+document.addEventListener("change", async (event) => {
   if (event.target && event.target.classList.contains("language-selector")) {
-    const nuevoIdioma = event.target.value;
+    const newLanguage = event.target.value;
 
-    loadLanguage(nuevoIdioma);
+    console.log("Cambio detectado en selector:", newLanguage);
 
-    document.querySelectorAll(".language-selector").forEach((select) => {
-      select.value = nuevoIdioma;
-    });
+    localStorage.setItem("language", newLanguage);
+    console.log(
+      "Idioma guardado en localStorage:",
+      localStorage.getItem("language"),
+    );
+
+    await loadLanguage(newLanguage);
   }
 });

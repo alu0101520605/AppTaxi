@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Need Taxi",
-    "tagline": "Safe, fast, and stress-free transfers. Wherever you are, we’re there."
+    "tagline": "Safe, fast, and stress-free transfers. Wherever you are, we\u2019re there."
   },
   "auth": {
     "login": {
@@ -118,36 +118,32 @@
     "total": "Total price",
     "pay": "Pay"
   },
-  "additional_options": {
-    "pets": "Pets",
-    "pets_hint": "Does not include assistance animals.",
-    "special_luggage": "Special luggage",
-    "special_luggage_examples": "Foldable strollers, bicycles, surfboards...",
-    "notes": "Additional details",
-    "notes_placeholder": "Add details about pets or special luggage.",
-    "origin": "Origin",
-    "destination": "Destination",
-    "continue_to_payment": "Continue",
-    "pay": "Pay"
-  },
   "pages": {
+    "titles": {
+      "index": "Safe, fast, and stress-free transfers : Need Taxi"
+    },
     "landing": {
       "carousel": {
+        "aria_label": "Carousel of our vehicle fleet and services",
         "slide1": {
           "title": "Welcome!",
-          "text": "Enjoy without worries. <br>We take care of the transport."
+          "text": "Enjoy without worries. <br>We take care of the transport.",
+          "image_alt": "Young person smiling while using their phone in the back seat of a taxi"
         },
         "slide2": {
           "title": "ANYWHERE IN TENERIFE",
-          "text": "Service across the island, airport transfers, beaches, and tourist areas.<br> Coverage in the Canary Islands."
+          "text": "Service across the island, airport transfers, beaches, and tourist areas.<br> Coverage in the Canary Islands.",
+          "image_alt": "View of the Tenerife coast with Mount Teide in the background"
         },
         "slide3": {
           "title": "ADAPTED MOBILITY",
-          "text": "Spacious vehicles equipped with ramps."
+          "text": "Spacious vehicles equipped with ramps.",
+          "image_alt": "Fleet of taxis of different models parked in rows"
         },
         "slide4": {
           "title": "FAST AND SECURE",
-          "text": "We arrive in minutes. <br>Professional drivers for a journey with total peace of mind."
+          "text": "We arrive in minutes. <br>Professional drivers for a journey with total peace of mind.",
+          "image_alt": "Airplane on the runway at Tenerife South Airport"
         }
       },
       "intro_form": {
@@ -160,6 +156,7 @@
         "submit_btn": "Continue"
       },
       "features": {
+        "title": "Our Advantages",
         "airport": {
           "title": "Airport Transfers",
           "text": "Direct connection to Tenerife South (TFS) and Tenerife North (TFN). No waiting."
@@ -185,17 +182,23 @@
         "tours": {
           "title": "Excursions and Tours",
           "text": "Discover Teide National Park, Masca, or Garachico with our expert local drivers.",
-          "btn": "View Routes"
+          "btn": "View Routes",
+          "aria_label": "View excursion and tour routes",
+          "image_alt": "Natural landscape of Teide National Park"
         },
         "business": {
           "title": "Business Service",
           "text": "Corporate transfer management, monthly billing, and priority support for your employees.",
-          "btn": "Learn more"
+          "btn": "Learn more",
+          "aria_label": "Learn more about our business service",
+          "image_alt": "Businesswoman smiling inside a transfer vehicle"
         },
         "app": {
           "title": "Book from the App",
           "text": "Download our free app. Track your taxi in real-time and manage your bookings easily.",
-          "btn": "Download App"
+          "btn": "Download App",
+          "aria_label": "Download the Need Taxi app",
+          "image_alt": "Official Need Taxi app logo"
         }
       }
     }
@@ -267,10 +270,11 @@
     }
   },
   "language_selector": {
-    "language": "Language",
-    "english": "English",
-    "spanish": "Spanish",
-    "switch": "English",
+    "language": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español",
+    "switch": "Español",
+    "es": "ES",
     "en": "EN"
   }
 }
