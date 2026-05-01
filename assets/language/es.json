@@ -39,7 +39,7 @@
       "success_subtitle": "Tu cuenta se ha creado correctamente",
       "loading_session": "Cargando tu sesión...",
       "go_to_login": "Ir al inicio de sesión",
-      "phone_error": "Por favor, introduce un número válido.",
+      "phone_error": "Por favor, introduce un número válido (9 dígitos).",
       "otp_expired": "El código OTP es incorrecto o ha expirado. Vuelve a intentarlo."
     },
     "otp": {
