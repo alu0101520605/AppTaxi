@@ -213,6 +213,10 @@
     display: inline-block;
 }
 
+.booking {
+    animation: gaming-glow 2.5s ease-in-out 2 forwards;
+}
+
 @media (max-width: 992px) {
     .intro-section {
         /* En pantallas pequeñas, pasa a 1 sola columna */

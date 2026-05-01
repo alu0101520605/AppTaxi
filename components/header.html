@@ -1,7 +1,13 @@
 <header class="header">
     <nav class="navigation" aria-label="main menu" data-i18n-aria-label="components.header.nav_aria_label">
         <ul class="nav-left">
-            <li><a href="/pages/booking.html" data-i18n="components.header.request_reservation">Solicitar reserva</a>
+            <li class="booking">
+                <a href="/pages/booking.html">
+                    <i class="fa-solid fa-car-side"></i> 
+                    <span data-i18n="components.header.request_reservation">
+                        Solicitar reserva
+                    </span>
+                </a>
             </li>
             <li><a href="/pages/manage-booking.html" data-i18n="components.header.manage_reservation">Gestionar
                     reserva</a></li>
@@ -34,7 +40,7 @@
 <nav class="navigation-mobile" aria-label="Navegación principal de la aplicación"
     data-i18n-aria-label="components.header.mobile_nav_aria_label">
     <ul class="nav-mobile-list">
-        <li>
+        <li class="booking">
             <a href="/pages/booking.html">
                 <i class="fa-solid fa-taxi icon" aria-hidden="true"></i>
                 <span class="text" data-i18n="components.header.mobile.request_reservation">Solicitar</span>
