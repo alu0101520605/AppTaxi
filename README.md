@@ -10,3 +10,5 @@
 **NeedTaxi** es un prototipo de interfaz web para un servicio ficticio de reserva de taxis. Este proyecto ha sido desarrollado como parte de la evaluación práctica de la asignatura de **Usabilidad y Accesibilidad** del Grado en Ingeniería Informática.
 
 El objetivo principal de este repositorio es demostrar la aplicación de buenas prácticas en el diseño de interfaces de usuario (UI), la experiencia de usuario (UX) y el estricto cumplimiento de las pautas de accesibilidad web (WCAG).
+
+![Need Taxi](/assets/imagenes/logo-long.png)
