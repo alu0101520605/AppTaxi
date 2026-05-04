@@ -10,6 +10,8 @@
 .container-form h1 {
   max-width: 640px;
   margin: 0 auto 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 form {
