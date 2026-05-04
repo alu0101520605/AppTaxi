@@ -333,6 +333,10 @@
   "search": {
     "placeholder": "¿A dónde te apetece ir o viajar?"
   },
+  "sign_up": {
+    "name": "Nombre",
+    "surname": "Apellido"
+  },
   "components": {
     "header": {
       "home": "Inicio",

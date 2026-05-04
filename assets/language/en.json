@@ -333,6 +333,10 @@
   "search": {
     "placeholder": "Where do you want to go?"
   },
+  "sign_up": {
+    "name": "Name",
+    "surname": "Surname"
+  },
   "components": {
     "header": {
       "home": "Home",
