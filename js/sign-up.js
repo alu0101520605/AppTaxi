@@ -100,6 +100,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const title = nextStep.querySelector('h1');
             if (title) title.focus();
+
+            updateStepperUI(next);
+        }
+
+        function updateStepperUI(stepNumber) {
+            const steps = document.querySelectorAll('#signup-stepper .step-item');
+            
+            steps.forEach((step, index) => {
+                const stepIdx = index + 1;
+                
+                step.classList.remove('active', 'completed');
+                step.removeAttribute('aria-current');
+
+                if (stepIdx < stepNumber) {
+                    step.classList.add('completed');
+                } else if (stepIdx === stepNumber) {
+                    step.classList.add('active');
+                    step.setAttribute('aria-current', 'step');
+                }
+
+                // Resto de pasos
+            });
         }
     }
 });

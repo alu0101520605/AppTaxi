@@ -31,17 +31,6 @@
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: 480px) {
-    .booking-type {
-        flex-direction: column;
-        border-radius: 1rem;
-    }
-    .booking-type label {
-        flex: 1 1 auto !important;
-        width: 100%;
-    }
-}
-
 .text-center { text-align: center; }
 .mt-1 { margin-top: 1rem; }
 .mt-1-5 { margin-top: 1.5rem; }
@@ -62,3 +51,19 @@
 .feedback-icon-success { color: green; font-size: 3rem; }
 .feedback-icon-error { color: var(--color-error); font-size: 3rem; }
 .step-completed-container { text-align: center; padding: 3rem 0; }
+
+@media (max-width: 768px) {
+    .prefix-group { flex: 0 1 50px; }
+    .phone-group { flex: 1 1 100px; }
+}
+
+@media (max-width: 480px) {
+    .booking-type {
+        flex-direction: column;
+        border-radius: 1rem;
+    }
+    .booking-type label {
+        flex: 1 1 auto !important;
+        width: 100%;
+    }
+}

@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/pages/sign-up.css">
+  <link rel="stylesheet" href="/css/components/breadcrumb.css">
   <script type="module" src="/js/app.js"></script>
 
   <title data-i18n="pages.titles.signup">Registro : Need Taxi</title>
@@ -28,8 +29,24 @@
       <form id="registration-form" aria-label="Formulario de registro"
         data-i18n-aria-label="auth.register.form_aria_label" novalidate>
 
+        <h1 tabindex="-1" class="text-center" data-i18n="auth.register.title">Registro</h1>
+
+        <nav id="signup-stepper" class="stepper-container" aria-label="Progreso del registro">
+            <div class="step-item active" data-step-indicator="1" aria-current="step">
+                <div class="step-circle">1</div>
+                <span class="step-label" data-i18n="auth.register.step1_label">Método</span>
+            </div>
+            <div class="step-item" data-step-indicator="2">
+                <div class="step-circle">2</div>
+                <span class="step-label" data-i18n="auth.register.step2_label">Confirmación</span>
+            </div>
+            <div class="step-item" data-step-indicator="3">
+                <div class="step-circle">3</div>
+                <span class="step-label" data-i18n="auth.register.step3_label">Datos</span>
+            </div>
+        </nav>
+
         <div id="step-1" class="form-step">
-          <h1 tabindex="-1" class="text-center" data-i18n="auth.register.title">Registro</h1>
 
           <p id="global-step-1-error" class="error global-error text-center" hidden aria-live="assertive"
             aria-atomic="true">
@@ -81,7 +98,7 @@
         </div>
 
         <div id="step-2" class="form-step" hidden>
-          <h1 tabindex="-1" class="text-center" data-i18n="auth.otp.verify_number">Verifica tu número</h1>
+          <h2 tabindex="-1" class="text-center" data-i18n="auth.otp.verify_number">Verifica tu número</h2>
           <p class="help-text text-center">
             <span data-i18n="auth.otp.sent_to">Hemos enviado un código al</span> <span id="display-phone"
               class="display-phone"></span>
@@ -106,7 +123,7 @@
         </div>
 
         <div id="step-3" class="form-step" hidden>
-          <h1 tabindex="-1" class="text-center" data-i18n="auth.register.your_data">Tus Datos</h1>
+          <h2 tabindex="-1" class="text-center" data-i18n="auth.register.your_data">Rellena tus datos</h2>
 
           <div class="form-row">
             <div class="form-group">
@@ -154,10 +171,10 @@
         </div>
 
         <div id="step-4" class="form-step step-completed-container" hidden>
-          <h1 tabindex="-1" class="text-success">
+          <h2 tabindex="-1" class="text-success">
             <i class="fa-regular fa-face-smile-wink"></i>
             <span data-i18n="auth.register.success_title">¡Registro completado!</span>
-          </h1>
+          </h2>
           <p class="help-text" data-i18n="auth.register.loading_session">Cargando tu sesión...</p>
         </div>
 
