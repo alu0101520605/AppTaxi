@@ -10,8 +10,8 @@ if (bookingNowRadio) {
   const luggageInput = document.getElementById("luggage");
 
   const bookingForm = document.querySelector("form");
-  const originSelect = document.getElementById("origin");
-  const destinationSelect = document.getElementById("destination");
+  const originInput = document.getElementById("origin");
+  const destinationInput = document.getElementById("destination");
   const originError = document.getElementById("origin-error");
   const destinationError = document.getElementById("destination-error");
 
@@ -63,14 +63,14 @@ if (bookingNowRadio) {
     }
   }
 
-  function validateSelect(selectElement, errorElement) {
-    const isValid = selectElement.value !== "";
+  function validateField(inputElement, errorElement) {
+    const isValid = inputElement.value.trim() !== "";
     errorElement.hidden = isValid;
 
     if (isValid) {
-      selectElement.removeAttribute("aria-invalid");
+      inputElement.removeAttribute("aria-invalid");
     } else {
-      selectElement.setAttribute("aria-invalid", "true");
+      inputElement.setAttribute("aria-invalid", "true");
     }
 
     return isValid;
@@ -94,20 +94,17 @@ if (bookingNowRadio) {
     }
   });
 
-  originSelect.addEventListener("change", () => {
-    validateSelect(originSelect, originError);
+  originInput.addEventListener("input", () => {
+    validateField(originInput, originError);
   });
 
-  destinationSelect.addEventListener("change", () => {
-    validateSelect(destinationSelect, destinationError);
+  destinationInput.addEventListener("input", () => {
+    validateField(destinationInput, destinationError);
   });
 
   bookingForm.addEventListener("submit", (event) => {
-    const isOriginValid = validateSelect(originSelect, originError);
-    const isDestinationValid = validateSelect(
-      destinationSelect,
-      destinationError,
-    );
+    const isOriginValid = validateField(originInput, originError);
+    const isDestinationValid = validateField(destinationInput, destinationError);
 
     let isDateValid = true;
     let isTimeValid = true;
@@ -115,25 +112,23 @@ if (bookingNowRadio) {
     if (bookingLaterRadio.checked) {
       isDateValid = dateInput.value !== "";
       isTimeValid = timeInput.value !== "";
-      
+
       document.getElementById("date-error").hidden = isDateValid;
       dateInput.setAttribute("aria-invalid", !isDateValid);
-      
+
       document.getElementById("time-error").hidden = isTimeValid;
       timeInput.setAttribute("aria-invalid", !isTimeValid);
     }
 
     if (!isOriginValid || !isDestinationValid || !isDateValid || !isTimeValid) {
       event.preventDefault();
-        
-      if (!isOriginValid) originSelect.focus();
-      else if (!isDestinationValid) destinationSelect.focus();
+
+      if (!isOriginValid) originInput.focus();
+      else if (!isDestinationValid) destinationInput.focus();
       else if (!isDateValid) dateInput.focus();
       else if (!isTimeValid) timeInput.focus();
     }
-
-    event.preventDefault(); // Bloqueo de salto de página por novalidate
-    
+    // Si todo es válido, el formulario continúa normalmente sin preventDefault
   });
 
   setMinDateToday();

@@ -73,8 +73,8 @@
       "schedule": "Programar"
     },
     "origin": "Origen *",
-    "origin_placeholder": "Selecciona un origen",
-    "destination_placeholder": "Selecciona un destino",
+    "origin_placeholder": "Selecciona o escribe un origen",
+    "destination_placeholder": "Selecciona o escribe un destino",
     "origins": {
       "tfs": "Aeropuerto Tenerife Sur",
       "tfn": "Aeropuerto Tenerife Norte"
@@ -328,7 +328,15 @@
     "faq_q3": "¿Cómo recibo la confirmación de reserva?",
     "faq_a3": "Recibirás un correo de confirmación inmediatamente tras completar el pago. En él encontrarás tu <strong>código de reserva</strong>, los detalles del trayecto y los datos del conductor asignado.",
     "faq_q4": "¿Ofrecéis vehículos adaptados para PMR?",
-    "faq_a4": "Sí. Al hacer la reserva puedes indicar si necesitas asistencia o espacio adicional para personas con movilidad reducida. También puedes contactarnos directamente para gestionar cualquier necesidad especial."
+    "faq_a4": "Sí. Al hacer la reserva puedes indicar si necesitas asistencia o espacio adicional para personas con movilidad reducida. También puedes contactarnos directamente para gestionar cualquier necesidad especial.",
+    "errors": {
+      "name_required": "El nombre es obligatorio.",
+      "email_invalid": "Introduce un correo electrónico válido.",
+      "phone_invalid": "Introduce un teléfono válido de 9 dígitos.",
+      "subject_required": "Selecciona un asunto.",
+      "message_required": "El mensaje es obligatorio.",
+      "privacy_required": "Debes aceptar la política de privacidad."
+    }
   },
   "search": {
     "placeholder": "¿A dónde te apetece ir o viajar?"

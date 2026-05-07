@@ -23,6 +23,9 @@
 
   background-color: var(--base-neutral-dark);
 
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  
   clip-path: polygon(3% 0,
       97% 0,
       100% 100%,
@@ -42,6 +45,9 @@
       #ffffff 0%,
       #f9fafb 48%,
       #eef2f7 100%);
+
+    border-top-left-radius: 46px;
+    border-top-right-radius: 46px;
 
   clip-path: polygon(3% 0,
       97% 0,
@@ -126,14 +132,33 @@
 
 @media (max-width: 480px) {
   .booking-type-copete {
-    max-width: 100%;
+    max-width: 80%;
     min-height: 3.6rem;
     margin-bottom: 0;
-    padding: 0.3rem 0.7rem;
+ 
+    
   }
 
+
   .booking-type-copete::before {
-    border-bottom-width: 5px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+    clip-path: polygon(4% 0,
+        96% 0,
+        100% 100%,
+        0 100%);
+  }
+
+  .booking-type-copete::after {
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 5px;
+
+    border-top-left-radius: 46px;
+    border-top-right-radius: 46px;
+
     clip-path: polygon(4% 0,
         96% 0,
         100% 100%,
@@ -141,8 +166,11 @@
   }
 
   .booking-type-copete label {
-    min-height: 2.8rem;
-    padding: 0.65rem 0.5rem;
-    font-size: 0.95rem;
+    min-height: 0.9rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+    
   }
+
+  
 }

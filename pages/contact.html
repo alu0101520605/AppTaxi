@@ -30,7 +30,8 @@
             <span data-i18n="contact.eyebrow">Contacto</span>
           </div>
           <h1 id="contact-page-title" data-i18n="contact.page_title">Estamos aquí para ayudarte</h1>
-          <p data-i18n="contact.page_subtitle">Escríbenos, llámanos o acércate a nuestras oficinas. Nuestro equipo responde en menos de 24&nbsp;horas.</p>
+          <p data-i18n="contact.page_subtitle">Escríbenos, llámanos o acércate a nuestras oficinas. Nuestro equipo
+            responde en menos de 24&nbsp;horas.</p>
         </div>
       </section>
 
@@ -58,7 +59,8 @@
             </div>
           </a>
 
-          <a href="https://wa.me/34922000000" target="_blank" rel="noopener noreferrer" class="method-item" aria-label="Escríbenos por WhatsApp">
+          <a href="https://wa.me/34922000000" target="_blank" rel="noopener noreferrer" class="method-item"
+            aria-label="Escríbenos por WhatsApp">
             <div class="method-icon" aria-hidden="true">
               <i class="fa-brands fa-whatsapp"></i>
             </div>
@@ -89,59 +91,98 @@
 
           <div id="form-body">
             <h2 class="form-card-title" data-i18n="contact.form_title">Envíanos un mensaje</h2>
-            <p class="form-card-sub" data-i18n="contact.form_subtitle">Rellena el formulario y te contestaremos lo antes posible.</p>
+            <p class="form-card-sub" data-i18n="contact.form_subtitle">Rellena el formulario y te contestaremos lo antes
+              posible.</p>
 
-            <form id="cf-form" novalidate aria-label="Formulario de contacto" data-i18n-aria-label="contact.form_aria_label">
+            <form id="cf-form" novalidate aria-label="Formulario de contacto"
+              data-i18n-aria-label="contact.form_aria_label">
 
               <div class="cf-row-group">
                 <div class="cf-group">
                   <label for="cf-name" data-i18n="contact.field_name">Nombre *</label>
-                  <input type="text" id="cf-name" name="name" placeholder="Tu nombre" data-i18n-placeholder="contact.field_name_placeholder" autocomplete="given-name" required aria-required="true">
+                  <input type="text" id="cf-name" name="name" placeholder="Tu nombre"
+                    data-i18n-placeholder="contact.field_name_placeholder" autocomplete="off" required
+                    aria-required="true" aria-describedby="cf-name-error">
+                  <p id="cf-name-error" class="error" hidden aria-live="polite" aria-atomic="true">
+                    <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+                    <span data-i18n="contact.errors.name_required">El nombre es obligatorio.</span>
+                  </p>
                 </div>
                 <div class="cf-group">
                   <label for="cf-surname" data-i18n="contact.field_surname">Apellidos</label>
-                  <input type="text" id="cf-surname" name="surname" placeholder="Tus apellidos" data-i18n-placeholder="contact.field_surname_placeholder" autocomplete="family-name">
+                  <input type="text" id="cf-surname" name="surname" placeholder="Tus apellidos"
+                    data-i18n-placeholder="contact.field_surname_placeholder" autocomplete="off">
                 </div>
               </div>
 
               <div class="cf-row-group">
                 <div class="cf-group">
                   <label for="cf-email" data-i18n="contact.field_email">Correo electrónico *</label>
-                  <input type="email" id="cf-email" name="email" placeholder="tu@correo.com" data-i18n-placeholder="contact.field_email_placeholder" autocomplete="email" required aria-required="true">
+                  <input type="email" id="cf-email" name="email" placeholder="tu@correo.com"
+                    data-i18n-placeholder="contact.field_email_placeholder" autocomplete="off" required
+                    aria-required="true" aria-describedby="cf-email-error">
+                  <p id="cf-email-error" class="error" hidden aria-live="polite" aria-atomic="true">
+                    <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+                    <span data-i18n="contact.errors.email_invalid">Introduce un correo electrónico válido.</span>
+                  </p>
                 </div>
                 <div class="cf-group">
                   <label for="cf-phone" data-i18n="contact.field_phone">Teléfono</label>
-                  <input type="tel" id="cf-phone" name="phone" placeholder="+34 6XX XXX XXX" data-i18n-placeholder="contact.field_phone_placeholder" autocomplete="tel">
+                  <input type="tel" id="cf-phone" name="phone" placeholder="XXX XXX XXX"
+                    data-i18n-placeholder="contact.field_phone_placeholder" autocomplete="off"
+                    aria-describedby="cf-phone-error">
+                  <p id="cf-phone-error" class="error" hidden aria-live="polite" aria-atomic="true">
+                    <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+                    <span data-i18n="contact.errors.phone_invalid">Introduce un teléfono válido de 9 dígitos.</span>
+                  </p>
                 </div>
               </div>
 
               <div class="cf-group">
                 <label for="cf-subject" data-i18n="contact.field_subject">Asunto *</label>
                 <select id="cf-subject" name="subject" required aria-required="true">
-                  <option value="" disabled selected data-i18n="contact.subject_placeholder">Selecciona un asunto</option>
+                  <option value="" disabled selected data-i18n="contact.subject_placeholder">Selecciona un asunto
+                  </option>
                   <option value="booking" data-i18n="contact.subject_booking">Consulta sobre reserva</option>
                   <option value="cancel" data-i18n="contact.subject_cancel">Cancelación de reserva</option>
                   <option value="lost" data-i18n="contact.subject_lost">Objetos perdidos</option>
                   <option value="complaint" data-i18n="contact.subject_complaint">Reclamación o queja</option>
                   <option value="other" data-i18n="contact.subject_other">Otro</option>
                 </select>
+                <p id="cf-subject-error" class="error" hidden aria-live="polite" aria-atomic="true">
+                  <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+                  <span data-i18n="contact.errors.subject_required">Selecciona un asunto.</span>
+                </p>
               </div>
 
               <div class="cf-group">
                 <label for="cf-booking" data-i18n="contact.field_booking">Código de reserva (opcional)</label>
-                <input type="text" id="cf-booking" name="booking_code" placeholder="Ej. NT-20251234" data-i18n-placeholder="contact.field_booking_placeholder" autocomplete="off" autocapitalize="characters" maxlength="20">
+                <input type="text" id="cf-booking" name="booking_code" placeholder="Ej. NT-20251234"
+                  data-i18n-placeholder="contact.field_booking_placeholder" autocomplete="off"
+                  autocapitalize="characters" maxlength="20">
               </div>
 
               <div class="cf-group">
                 <label for="cf-message" data-i18n="contact.field_message">Mensaje *</label>
-                <textarea id="cf-message" name="message" rows="5" placeholder="Escribe aquí tu consulta…" data-i18n-placeholder="contact.field_message_placeholder" required aria-required="true"></textarea>
+                <textarea id="cf-message" name="message" rows="5" placeholder="Escribe aquí tu consulta…"
+                  data-i18n-placeholder="contact.field_message_placeholder" required aria-required="true"
+                  aria-describedby="cf-message-error"></textarea>
+                <p id="cf-message-error" class="error" hidden aria-live="polite" aria-atomic="true">
+                  <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+                  <span data-i18n="contact.errors.message_required">El mensaje es obligatorio.</span>
+                </p>
               </div>
 
               <div class="cf-check">
                 <input type="checkbox" id="cf-privacy" name="privacy" required aria-required="true">
                 <label for="cf-privacy" data-i18n="contact.privacy_text">
-                  He leído y acepto la <a href="/privacidad.html">Política de privacidad</a> y el tratamiento de mis datos para la gestión de la consulta.
+                  He leído y acepto la <a href="/privacidad.html">Política de privacidad</a> y el tratamiento de mis
+                  datos para la gestión de la consulta.
                 </label>
+                <p id="cf-privacy-error" class="error" hidden aria-live="polite" aria-atomic="true">
+                  <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+                  <span data-i18n="contact.errors.privacy_required">Debes aceptar la política de privacidad.</span>
+                </p>
               </div>
 
               <button type="submit" class="btn-send" id="cf-submit">
@@ -158,7 +199,8 @@
               <i class="fa-solid fa-check" aria-hidden="true"></i>
             </div>
             <h3 data-i18n="contact.success_title">¡Mensaje enviado!</h3>
-            <p data-i18n="contact.success_desc">Hemos recibido tu consulta. Te responderemos en menos de 24&nbsp;horas en el correo indicado.</p>
+            <p data-i18n="contact.success_desc">Hemos recibido tu consulta. Te responderemos en menos de 24&nbsp;horas
+              en el correo indicado.</p>
           </div>
 
         </div>
@@ -169,14 +211,10 @@
 
           <!-- Map -->
           <div class="map-card">
-            <iframe
-              class="map-frame"
+            <iframe class="map-frame"
               src="https://www.openstreetmap.org/export/embed.html?bbox=-16.26,28.05,-16.24,28.07&amp;layer=mapnik&amp;marker=28.06,-16.25"
-              title="Ubicación de NeedTaxi en Tenerife"
-              loading="lazy"
-              referrerpolicy="no-referrer"
-              aria-label="Mapa con la ubicación de las oficinas de NeedTaxi"
-            ></iframe>
+              title="Ubicación de NeedTaxi en Tenerife" loading="lazy" referrerpolicy="no-referrer"
+              aria-label="Mapa con la ubicación de las oficinas de NeedTaxi"></iframe>
             <div class="map-info">
               <div class="map-info-header">
                 <div class="map-pin-icon" aria-hidden="true">
@@ -209,7 +247,8 @@
               </div>
               <div class="hours-row">
                 <dt class="hours-day" data-i18n="contact.hours_sunday">Domingo</dt>
-                <dd class="hours-time" style="color:var(--color-text-secondary)" data-i18n="contact.hours_sunday_closed">Cerrado</dd>
+                <dd class="hours-time" style="color:var(--color-text-secondary)"
+                  data-i18n="contact.hours_sunday_closed">Cerrado</dd>
               </div>
               <div class="hours-row">
                 <dt class="hours-day" data-i18n="contact.hours_emergency">Urgencias taxi</dt>
@@ -223,8 +262,11 @@
             <p class="social-card-title" data-i18n="contact.social_title">Síguenos en redes</p>
             <div class="social-links">
 
-              <a href="https://instagram.com/needtaxi" target="_blank" rel="noopener noreferrer" class="social-link" style="--sl-color:#E1306C" aria-label="NeedTaxi en Instagram">
-                <div class="social-link-icon" style="background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);" aria-hidden="true">
+              <a href="https://instagram.com/needtaxi" target="_blank" rel="noopener noreferrer" class="social-link"
+                style="--sl-color:#E1306C" aria-label="NeedTaxi en Instagram">
+                <div class="social-link-icon"
+                  style="background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);"
+                  aria-hidden="true">
                   <i class="fa-brands fa-instagram"></i>
                 </div>
                 <div class="social-link-text">
@@ -234,7 +276,8 @@
                 <i class="fa-solid fa-chevron-right social-link-arrow" aria-hidden="true"></i>
               </a>
 
-              <a href="https://facebook.com/needtaxi" target="_blank" rel="noopener noreferrer" class="social-link" style="--sl-color:#1877F2" aria-label="NeedTaxi en Facebook">
+              <a href="https://facebook.com/needtaxi" target="_blank" rel="noopener noreferrer" class="social-link"
+                style="--sl-color:#1877F2" aria-label="NeedTaxi en Facebook">
                 <div class="social-link-icon" style="background:#1877F2;" aria-hidden="true">
                   <i class="fa-brands fa-facebook-f"></i>
                 </div>
@@ -245,7 +288,8 @@
                 <i class="fa-solid fa-chevron-right social-link-arrow" aria-hidden="true"></i>
               </a>
 
-              <a href="https://twitter.com/needtaxi" target="_blank" rel="noopener noreferrer" class="social-link" style="--sl-color:#000" aria-label="NeedTaxi en X (Twitter)">
+              <a href="https://twitter.com/needtaxi" target="_blank" rel="noopener noreferrer" class="social-link"
+                style="--sl-color:#000" aria-label="NeedTaxi en X (Twitter)">
                 <div class="social-link-icon" style="background:#000000;" aria-hidden="true">
                   <i class="fa-brands fa-x-twitter"></i>
                 </div>
@@ -256,7 +300,8 @@
                 <i class="fa-solid fa-chevron-right social-link-arrow" aria-hidden="true"></i>
               </a>
 
-              <a href="https://wa.me/34922000000" target="_blank" rel="noopener noreferrer" class="social-link" style="--sl-color:#25D366" aria-label="Escríbenos por WhatsApp">
+              <a href="https://wa.me/34922000000" target="_blank" rel="noopener noreferrer" class="social-link"
+                style="--sl-color:#25D366" aria-label="Escríbenos por WhatsApp">
                 <div class="social-link-icon" style="background:#25D366;" aria-hidden="true">
                   <i class="fa-brands fa-whatsapp"></i>
                 </div>
@@ -289,7 +334,9 @@
               <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
-              <span data-i18n="contact.faq_a1">Puedes modificar tu reserva desde la sección <strong>Gestionar reserva</strong> introduciendo tu código y correo electrónico. También puedes contactarnos por teléfono o WhatsApp y gestionamos el cambio por ti.</span>
+              <span data-i18n="contact.faq_a1">Puedes modificar tu reserva desde la sección <strong>Gestionar
+                  reserva</strong> introduciendo tu código y correo electrónico. También puedes contactarnos por
+                teléfono o WhatsApp y gestionamos el cambio por ti.</span>
             </div>
           </div>
 
@@ -299,7 +346,9 @@
               <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-              <span data-i18n="contact.faq_a2">Las cancelaciones realizadas con más de 24 horas de antelación son gratuitas. Para cancelaciones en menos tiempo, revisa los términos del servicio o escríbenos para valorar tu caso particular.</span>
+              <span data-i18n="contact.faq_a2">Las cancelaciones realizadas con más de 24 horas de antelación son
+                gratuitas. Para cancelaciones en menos tiempo, revisa los términos del servicio o escríbenos para
+                valorar tu caso particular.</span>
             </div>
           </div>
 
@@ -309,7 +358,9 @@
               <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
-              <span data-i18n="contact.faq_a3">Recibirás un correo de confirmación inmediatamente tras completar el pago. En él encontrarás tu <strong>código de reserva</strong>, los detalles del trayecto y los datos del conductor asignado.</span>
+              <span data-i18n="contact.faq_a3">Recibirás un correo de confirmación inmediatamente tras completar el
+                pago. En él encontrarás tu <strong>código de reserva</strong>, los detalles del trayecto y los datos del
+                conductor asignado.</span>
             </div>
           </div>
 
@@ -319,7 +370,9 @@
               <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
-              <span data-i18n="contact.faq_a4">Sí. Al hacer la reserva puedes indicar si necesitas asistencia o espacio adicional para personas con movilidad reducida. También puedes contactarnos directamente para gestionar cualquier necesidad especial.</span>
+              <span data-i18n="contact.faq_a4">Sí. Al hacer la reserva puedes indicar si necesitas asistencia o espacio
+                adicional para personas con movilidad reducida. También puedes contactarnos directamente para gestionar
+                cualquier necesidad especial.</span>
             </div>
           </div>
 
@@ -338,22 +391,130 @@
       btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true';
         const answerId = btn.getAttribute('aria-controls');
-        const answer   = document.getElementById(answerId);
-
+        const answer = document.getElementById(answerId);
         btn.setAttribute('aria-expanded', String(!expanded));
         answer.classList.toggle('open', !expanded);
       });
     });
 
-    // ── Contact form submit (demo) ──
-    document.getElementById('cf-form').addEventListener('submit', async (e) => {
+    // ── Contact form validation & submit ──
+    const form = document.getElementById('cf-form');
+    const fields = {
+      name: document.getElementById('cf-name'),
+      email: document.getElementById('cf-email'),
+      phone: document.getElementById('cf-phone'),
+      subject: document.getElementById('cf-subject'),
+      message: document.getElementById('cf-message'),
+      privacy: document.getElementById('cf-privacy'),
+    };
+    const errors = {
+      name: document.getElementById('cf-name-error'),
+      email: document.getElementById('cf-email-error'),
+      phone: document.getElementById('cf-phone-error'),
+      subject: document.getElementById('cf-subject-error'),
+      message: document.getElementById('cf-message-error'),
+      privacy: document.getElementById('cf-privacy-error'),
+    };
+
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const PHONE_RE = /^[6789]\d{8}$/;
+
+    function setError(input, errorEl) {
+      input.setAttribute('aria-invalid', 'true');
+      errorEl.hidden = false;
+    }
+
+    function clearError(input, errorEl) {
+      input.removeAttribute('aria-invalid');
+      errorEl.hidden = true;
+    }
+
+    function validateName() {
+      if (fields.name.value.trim() === '') {
+        setError(fields.name, errors.name);
+        return false;
+      }
+      clearError(fields.name, errors.name);
+      return true;
+    }
+
+    function validateEmail() {
+      const val = fields.email.value.trim();
+      if (val === '' || !EMAIL_RE.test(val)) {
+        setError(fields.email, errors.email);
+        return false;
+      }
+      clearError(fields.email, errors.email);
+      return true;
+    }
+
+    function validatePhone() {
+      const val = fields.phone.value.trim();
+      if (val !== '' && !PHONE_RE.test(val)) {
+        setError(fields.phone, errors.phone);
+        return false;
+      }
+      clearError(fields.phone, errors.phone);
+      return true;
+    }
+
+    function validateSubject() {
+      if (fields.subject.value === '') {
+        setError(fields.subject, errors.subject);
+        return false;
+      }
+      clearError(fields.subject, errors.subject);
+      return true;
+    }
+
+    function validateMessage() {
+      if (fields.message.value.trim() === '') {
+        setError(fields.message, errors.message);
+        return false;
+      }
+      clearError(fields.message, errors.message);
+      return true;
+    }
+
+    function validatePrivacy() {
+      if (!fields.privacy.checked) {
+        setError(fields.privacy, errors.privacy);
+        return false;
+      }
+      clearError(fields.privacy, errors.privacy);
+      return true;
+    }
+
+    fields.name.addEventListener('blur', validateName);
+    fields.email.addEventListener('blur', validateEmail);
+    fields.phone.addEventListener('blur', validatePhone);
+    fields.subject.addEventListener('change', validateSubject);
+    fields.message.addEventListener('blur', validateMessage);
+    fields.privacy.addEventListener('change', validatePrivacy);
+
+    // ── Submit ──
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const isValid = [
+        validateName(),
+        validateEmail(),
+        validatePhone(),
+        validateSubject(),
+        validateMessage(),
+        validatePrivacy(),
+      ].every(Boolean);
+
+      if (!isValid) {
+        const firstInvalid = form.querySelector('[aria-invalid="true"]');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
 
       const btn = document.getElementById('cf-submit');
       btn.disabled = true;
       btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Enviando…';
 
-      // Simulate API call
       await new Promise(r => setTimeout(r, 1200));
 
       document.getElementById('form-body').style.display = 'none';

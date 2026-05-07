@@ -61,7 +61,7 @@
             </fieldset>
             <hr class="booking-copete-bottom" aria-hidden="true">
 
-            <form action="/pages/home.html" method="post" novalidate>
+            <form action="/pages/home.html" method="get" novalidate>
 
                 <fieldset>
                     <legend data-i18n="booking.legend.trip_data">
@@ -91,38 +91,36 @@
 
                         <div class="form-row">
                             <div class="form-group">
-
                                 <label for="origin" data-i18n="booking.origin">Origen</label>
 
-                                <select id="origin" name="origin" required aria-describedby="origin-error">
-                                    <option value="" disabled selected data-i18n="booking.origin_placeholder">Selecciona
-                                        un
-                                        origen</option>
-                                    <option value="tfs" data-i18n="booking.origins.tfs">Aeropuerto Tenerife Sur
-                                    </option>
-                                    <option value="tfn" data-i18n="booking.origins.tfn">Aeropuerto Tenerife
-                                        Norte
-                                    </option>
-                                </select>
+                                <input type="text" id="origin" name="origin" list="origin-options"
+                                    placeholder="Selecciona o escribe un origen"
+                                    data-i18n-placeholder="booking.origin_placeholder" required
+                                    aria-describedby="origin-error" autocomplete="off">
+
+                                <datalist id="origin-options">
+                                    <option value="Aeropuerto Tenerife Sur" data-value="tfs"></option>
+                                    <option value="Aeropuerto Tenerife Norte" data-value="tfn"></option>
+                                </datalist>
 
                                 <p id="origin-error" class="error" hidden aria-live="polite" aria-atomic="true">
                                     <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
-                                    <span data-i18n="booking.errors.origin_invalid">Selecciona un origen
-                                        válido</span>
+                                    <span data-i18n="booking.errors.origin_invalid"> Selecciona un origen válido</span>
                                 </p>
-
                             </div>
 
                             <div class="form-group">
                                 <label for="destination" data-i18n="booking.destination">Destino</label>
-                                <select id="destination" name="destination" required
-                                    aria-describedby="destination-error">
-                                    <option value="" disabled selected data-i18n="booking.destination_placeholder">
-                                        Selecciona un destino
-                                    </option>
-                                    <option value="DST1">DST1</option>
-                                    <option value="DST2">DST2</option>
-                                </select>
+
+                                <input type="text" id="destination" name="destination" list="destination-options"
+                                    placeholder="Selecciona o escribe un destino"
+                                    data-i18n-placeholder="booking.destination_placeholder" required
+                                    aria-describedby="destination-error" autocomplete="off">
+
+                                <datalist id="destination-options">
+                                    <option value="DST1"></option>
+                                    <option value="DST2"></option>
+                                </datalist>
 
                                 <p id="destination-error" class="error" hidden aria-live="polite" aria-atomic="true">
                                     <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>

@@ -73,8 +73,8 @@
       "schedule": "Schedule"
     },
     "origin": "Origin *",
-    "origin_placeholder": "Select an origin",
-    "destination_placeholder": "Select a destination",
+    "origin_placeholder": "Select or introduce an origin",
+    "destination_placeholder": "Select or introduce a destination",
     "origins": {
       "tfs": "Tenerife South Airport",
       "tfn": "Tenerife North Airport"
@@ -328,7 +328,15 @@
     "faq_q3": "How do I receive my booking confirmation?",
     "faq_a3": "You will receive a confirmation email immediately after completing payment. It will include your <strong>booking code</strong>, trip details, and your assigned driver's information.",
     "faq_q4": "Do you offer vehicles adapted for PRM?",
-    "faq_a4": "Yes. When booking, you can indicate whether you need assistance or extra space for passengers with reduced mobility. You can also contact us directly to arrange any special requirements."
+    "faq_a4": "Yes. When booking, you can indicate whether you need assistance or extra space for passengers with reduced mobility. You can also contact us directly to arrange any special requirements.",
+    "errors": {
+      "name_required": "Name is required.",
+      "email_invalid": "Introduce a valid email address.",
+      "phone_invalid": "Introduce a valid 9-digit phone number.",
+      "subject_required": "Please select a subject.",
+      "message_required": "Message required.",
+      "privacy_required": "You must accept the privacy policy."
+    }
   },
   "search": {
     "placeholder": "Where do you want to go?"
