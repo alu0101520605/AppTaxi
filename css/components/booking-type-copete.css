@@ -130,10 +130,15 @@
   outline-offset: -5px;
 }
 
+.booking-copete-bottom{
+  padding: 0.1rem;
+  border-radius: 0.5rem;
+  background-color: black;
+}
 @media (max-width: 480px) {
   .booking-type-copete {
     max-width: 80%;
-    min-height: 3.6rem;
+    min-height: 0rem;
     margin-bottom: 0;
  
     

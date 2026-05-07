@@ -40,7 +40,12 @@
       "loading_session": "Cargando tu sesión...",
       "go_to_login": "Ir al inicio de sesión",
       "phone_error": "Por favor, introduce un número válido (9 dígitos).",
-      "otp_expired": "El código OTP es incorrecto o ha expirado. Vuelve a intentarlo."
+      "otp_expired": "El código OTP es incorrecto o ha expirado. Vuelve a intentarlo.",
+      "stepper": {
+        "step1_label": "Teléfono",
+        "step2_label": "Verificación",
+        "step3_label": "Datos"
+      }
     },
     "otp": {
       "title": "Verificación",
@@ -73,8 +78,8 @@
       "schedule": "Programar"
     },
     "origin": "Origen *",
-    "origin_placeholder": "Selecciona o escribe un origen",
-    "destination_placeholder": "Selecciona o escribe un destino",
+    "origin_placeholder": "Selecciona origen",
+    "destination_placeholder": "Selecciona destino",
     "origins": {
       "tfs": "Aeropuerto Tenerife Sur",
       "tfn": "Aeropuerto Tenerife Norte"
@@ -111,7 +116,12 @@
       "time_invalid": "Selecciona una hora válida"
     },
     "confirm": "Confirmar",
-    "continue_to_payment": "Continuar al pago"
+    "continue_to_payment": "Continuar al pago",
+    "stepper": {
+      "details": "Datos",
+      "pay": "Pago",
+      "verify": "Verificación"
+    }
   },
   "payment": {
     "title": "Pago",

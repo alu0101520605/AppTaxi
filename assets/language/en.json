@@ -40,7 +40,12 @@
       "loading_session": "Loading your session...",
       "go_to_login": "Go to login",
       "phone_error": "Please enter a valid number (9 digits).",
-      "otp_expired": "The OTP code is incorrect or has expired. Please try again."
+      "otp_expired": "The OTP code is incorrect or has expired. Please try again.",
+      "stepper": {
+        "step1_label": "Phone",
+        "step2_label": "Verify",
+        "step3_label": "Data"
+      }
     },
     "otp": {
       "title": "Verification",
@@ -73,8 +78,8 @@
       "schedule": "Schedule"
     },
     "origin": "Origin *",
-    "origin_placeholder": "Select or introduce an origin",
-    "destination_placeholder": "Select or introduce a destination",
+    "origin_placeholder": "Select origin",
+    "destination_placeholder": "Select destination",
     "origins": {
       "tfs": "Tenerife South Airport",
       "tfn": "Tenerife North Airport"
@@ -111,7 +116,12 @@
       "time_invalid": "Select a valid time"
     },
     "confirm": "Continue to payment",
-    "continue_to_payment": "Continue to payment"
+    "continue_to_payment": "Continue to payment",
+    "stepper": {
+      "details": "Data",
+      "pay": "Pay",
+      "verify": "Verify"
+    }
   },
   "payment": {
     "title": "Payment",

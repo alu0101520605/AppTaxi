@@ -32,18 +32,18 @@
         <h1 tabindex="-1" class="text-center" data-i18n="auth.register.title">Registro</h1>
 
         <nav id="signup-stepper" class="stepper-container" aria-label="Progreso del registro">
-            <div class="step-item active" data-step-indicator="1" aria-current="step">
-                <div class="step-circle">1</div>
-                <span class="step-label" data-i18n="auth.register.step1_label">Método</span>
-            </div>
-            <div class="step-item" data-step-indicator="2">
-                <div class="step-circle">2</div>
-                <span class="step-label" data-i18n="auth.register.step2_label">Confirmación</span>
-            </div>
-            <div class="step-item" data-step-indicator="3">
-                <div class="step-circle">3</div>
-                <span class="step-label" data-i18n="auth.register.step3_label">Datos</span>
-            </div>
+          <div class="step-item active" data-step-indicator="1" aria-current="step">
+            <div class="step-circle">1</div>
+            <span class="step-label" data-i18n="auth.register.stepper.step1_label">Teléfono</span>
+          </div>
+          <div class="step-item" data-step-indicator="2">
+            <div class="step-circle">2</div>
+            <span class="step-label" data-i18n="auth.register.stepper.step2_label">Verificación</span>
+          </div>
+          <div class="step-item" data-step-indicator="3">
+            <div class="step-circle">3</div>
+            <span class="step-label" data-i18n="auth.register.stepper.step3_label">Datos</span>
+          </div>
         </nav>
 
         <div id="step-1" class="form-step">
@@ -129,19 +129,19 @@
             <div class="form-group">
               <label for="first-name" data-i18n="auth.register.first_name">Nombre</label>
               <input type="text" id="first-name" name="first-name" autocomplete="given-name" required
-              placeholder="Nombre" data-i18n-placeholder="sign_up.name">
+                placeholder="Nombre" data-i18n-placeholder="sign_up.name">
             </div>
             <div class="form-group">
               <label for="last-name" data-i18n="auth.register.last_name">Apellido</label>
-              <input type="text" id="last-name" name="last-name" autocomplete="family-name" required 
-              placeholder="Apellido" data-i18n-placeholder="sign_up.surname">
+              <input type="text" id="last-name" name="last-name" autocomplete="family-name" required
+                placeholder="Apellido" data-i18n-placeholder="sign_up.surname">
             </div>
           </div>
 
           <div class="form-group mt-1">
             <label for="email" data-i18n="auth.register.email_optional">E-mail</label>
             <input type="email" id="email" name="email" autocomplete="email" placeholder="tu@correo.com"
-                 data-i18n-placeholder="pages.landing.intro_form.email_placeholder">
+              data-i18n-placeholder="pages.landing.intro_form.email_placeholder">
           </div>
 
           <div class="reduced-mobility-group mt-1-5">
