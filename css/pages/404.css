@@ -1,0 +1,223 @@
+/* ── 404 Error Page ── */
+
+.error-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+/* ── Hero ── */
+.error-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Animated taxi icon */
+.error-icon-wrap {
+  animation: floatTaxi 3s ease-in-out infinite;
+}
+
+@keyframes floatTaxi {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+.error-icon-ring {
+  width: 96px;
+  height: 96px;
+  background: #EFF6FF;
+  border: 2px solid #BFDBFE;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: var(--base-blue);
+  box-shadow: 0 8px 28px rgba(30, 58, 138, 0.13);
+}
+
+/* Large 404 number */
+.error-code {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(80px, 18vw, 140px);
+  font-weight: 700;
+  line-height: 1;
+  color: transparent;
+  background: linear-gradient(135deg, var(--base-blue) 0%, var(--base-blue-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  letter-spacing: -4px;
+  user-select: none;
+}
+
+.error-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.error-subtitle {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 440px;
+  margin: 0;
+}
+
+/* CTA buttons */
+.error-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.error-btn-primary,
+.error-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+}
+
+.error-btn-primary {
+  background: var(--base-blue);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.25);
+}
+
+.error-btn-primary:hover {
+  background: var(--base-blue-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(30, 58, 138, 0.32);
+}
+
+.error-btn-secondary {
+  background: #fff;
+  color: var(--base-blue);
+  border: 1.5px solid #BFDBFE;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.error-btn-secondary:hover {
+  background: #EFF6FF;
+  border-color: var(--base-blue-light);
+  transform: translateY(-2px);
+}
+
+/* ── Quick links section ── */
+.error-links-section {
+  width: 100%;
+}
+
+.error-links-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.error-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Individual link card */
+.error-link-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+
+.error-link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(30, 58, 138, 0.12);
+  border-color: var(--base-blue-light);
+}
+
+.elc-icon {
+  width: 44px;
+  height: 44px;
+  background: #EFF6FF;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--base-blue);
+  flex-shrink: 0;
+}
+
+.elc-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.elc-text strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.elc-text span {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.elc-arrow {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .error-page {
+    padding: 40px 16px 100px;
+    gap: 40px;
+  }
+
+  .error-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .error-btn-primary,
+  .error-btn-secondary {
+    justify-content: center;
+  }
+}

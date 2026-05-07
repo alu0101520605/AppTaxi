@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="icon" href="/assets/icons/favicon-96x96.png" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/pages/404.css">
+  <script type="module" src="/js/app.js"></script>
+  <title>Página no encontrada | Need Taxi</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <header-taxi></header-taxi>
+
+    <main class="error-page" aria-labelledby="error-title">
+
+      <section class="error-hero">
+
+        <div class="error-icon-wrap" aria-hidden="true">
+          <div class="error-icon-ring">
+            <i class="fa-solid fa-taxi"></i>
+          </div>
+        </div>
+
+        <div class="error-code" aria-hidden="true">404</div>
+
+        <h1 id="error-title" class="error-title">Página no encontrada</h1>
+        <p class="error-subtitle">
+          Parece que esta ruta no existe en nuestro mapa.<br>
+          Puede que la dirección sea incorrecta o que la página haya sido eliminada.
+        </p>
+
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary error-btn-primary">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            Volver al inicio
+          </a>
+          <a href="/pages/contact.html" class="btn btn-secondary error-btn-secondary">
+            <i class="fa-solid fa-headset" aria-hidden="true"></i>
+            Contactar soporte
+          </a>
+        </div>
+
+      </section>
+
+      <section class="error-links-section" aria-label="Páginas útiles">
+        <p class="error-links-label">O quizás buscabas…</p>
+        <div class="error-links-grid">
+
+          <a href="/" class="error-link-card">
+            <div class="elc-icon" aria-hidden="true">
+              <i class="fa-solid fa-plane-departure"></i>
+            </div>
+            <div class="elc-text">
+              <strong>Reservar traslado</strong>
+              <span>Aeropuerto, hotel o cualquier destino</span>
+            </div>
+            <i class="fa-solid fa-chevron-right elc-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="/pages/manage-booking.html" class="error-link-card">
+            <div class="elc-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="elc-text">
+              <strong>Gestionar reserva</strong>
+              <span>Consulta o cancela tu traslado</span>
+            </div>
+            <i class="fa-solid fa-chevron-right elc-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="/pages/contact.html" class="error-link-card">
+            <div class="elc-icon" aria-hidden="true">
+              <i class="fa-solid fa-comment-dots"></i>
+            </div>
+            <div class="elc-text">
+              <strong>Contacto</strong>
+              <span>Llámanos o escríbenos</span>
+            </div>
+            <i class="fa-solid fa-chevron-right elc-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="/pages/login.html" class="error-link-card">
+            <div class="elc-icon" aria-hidden="true">
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </div>
+            <div class="elc-text">
+              <strong>Iniciar sesión</strong>
+              <span>Accede a tu cuenta</span>
+            </div>
+            <i class="fa-solid fa-chevron-right elc-arrow" aria-hidden="true"></i>
+          </a>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer-taxi></footer-taxi>
+
+  </div>
+</body>
+
+</html>
