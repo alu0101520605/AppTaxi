@@ -10,6 +10,10 @@
   gap: 56px;
 }
 
+.error-image {
+    width: 250px;
+}
+
 /* ── Hero ── */
 .error-hero {
   display: flex;
